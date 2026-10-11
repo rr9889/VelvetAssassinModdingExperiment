@@ -1,0 +1,15 @@
+Continue the Velvet Assassin player-model / Violette model-selection investigation only when explicitly instructed by the user.
+
+First read all documentation in C:\Users\Admin\Documents\Velvet Assassin\VA_RESEARCH, including README.md, CURRENT_STATE.md, FINDINGS.md, FUNCTIONS.csv, SESSION_LOG.md, NEXT_STEPS.md, and the EVIDENCE/BACKUPS READMEs. Treat notes as prior observations, not verified current session state.
+
+Use REA and Ghidra. Call binary_session first. Reuse the correct open session or reopen C:\Users\Admin\Documents\Velvet Assassin\replay.exe with provider_id: ghidra. Verify target identity and addresses rather than assuming they remain correct. Previously observed SHA-256: 9d18ef1a841526c0c91ce8af5b952c46c7ca0a8a6e8d169e99cc78cf34f8c132; PE x86; Ghidra 12.1.4.
+
+READ-ONLY ONLY. Make no modifications unless explicitly authorized. Do not patch, rename, annotate, export, overwrite, move, or alter game files or session metadata. Do not run a runtime redirection or model-selection test without explicit authorization. Documentation updates also require authorization when the user imposes a strict no-write scope.
+
+Best current candidate: FUN_0061c160 at 0x0061c160. Prior evidence confirms generic scene-identifier consumption and scene loading/instantiation. Relevance to Violette is LIKELY only if her models are scene resources. The actual upstream outfit/model-selection source is unidentified.
+
+Follow NEXT_STEPS.md in order. Fully document the loader parameters and return value; enumerate callers; trace the scene-identifier argument backwards through FUN_0060d970 and its wrappers, including script/indirect dispatch where evidence permits. Determine its origin and whether it is a filename/path, hashed resource ID, script value, scene property, or resource-table entry. Search this chain for Violette/player/character context; do not investigate unrelated systems.
+
+Label every conclusion CONFIRMED, LIKELY, or SPECULATIVE. Include exact strings, addresses, xref instruction locations, containing function entries, important callers/callees, and relevant decompilation/assembly evidence. Do not treat missing defined strings or missing direct callers as proof of absence. Separate simplified pseudocode from verbatim tool output. Reassess the best candidate if evidence changes.
+
+Only identify a smallest reversible model-selection test after the actual selection source is understood. Do not perform that test or patch anything without explicit user authorization.

@@ -1,0 +1,45 @@
+Name,Address,Reference,Role,Confidence,Notes
+Include_Scene::LoadIncludedScene,file:src/live3d.mir.bin+0x0006062a,name@0x00060605,Best upstream model-path selector candidate,LIKELY,423-byte bytecode; initial-outfit and SS-uniform branches assign member slot 0x20; user fresh-level test CONFIRMS level1 configuration control but internal symbol mappings and player predicate still require corroboration
+Include_Scene::LoadIncludedScene2,file:src/live3d.mir.bin+0x00061ab6,name@0x00061a90,Forwards selected scene field to Actor LoadScene candidate,LIKELY,405-byte bytecode; method slot 0x800a; file offset is not native VA
+LeveldataManager::getOutfit,file:src/live3d.mir.bin+0x0007dc4c,name@0x0007dc2c,Retrieves per-level initial outfit,LIKELY,225-byte bytecode; user fresh-level test CONFIRMS levelstructure.aio level1 Outfit 1=Pilot and 0=Campaign; this specific internal function role remains LIKELY
+Player_Character::SetOutfit,file:src/live3d.mir.bin+0x0020ef0b,name@0x0020eeeb,Changes outfit state and visible mesh groups,LIKELY,1436-byte bytecode; strongest appearance selector but not initial scene filename selector
+Player_Character::SetInitialOutfit,file:src/live3d.mir.bin+0x0020f87d,name@0x0020f856,Initial outfit state setter,LIKELY,108-byte bytecode; do not confuse offset with replay.exe address
+Player_Character::Init,file:src/live3d.mir.bin+0x002099e4,name@0x002099c9,Character root initialization,LIKELY,66-byte bytecode; exact stored name is Init rather than printable extraction artifact InitB
+Third_Person_Camera::SetInitialOutfit,file:src/live3d.mir.bin+0x00245d60,name@0x00245d36,Forwards initial outfit to character state,LIKELY,143-byte bytecode; runtime path unobserved
+FUN_00612ab0,0x00612ab0,0x0061419f;0x006141ae;0x006141bd,Creates and registers LoadScene wrapper adapters,CONFIRMED,Wrapper pointer stored at adapter+4; vtable 0x007f3b18
+FUN_00609f60,0x00609f60,0x007f3b18,LoadScene adapter virtual invocation entry,CONFIRMED,Selects FUN_00606840 for non-static adapter path
+FUN_00606840,0x00606840,,Invokes registered wrapper with invocation arguments,CONFIRMED,Indirect pointer call at adapter+4; argument-array values begin at +8
+FUN_006124e0,0x006124e0,,Registers named script adapter,CONFIRMED,Called by FUN_00612ab0 and FUN_00612b30
+FUN_004295c0,0x004295c0,0x0061007d;0x00611473,Copies supplied value text into wide string,CONFIRMED,Source object's textual storage at incoming ECX+0x14
+FUN_00411440,0x00411440,0x0060d9b8,Converts wide scene identifier text into narrow string,CONFIRMED,Argument producer for FUN_0061c160; also used on resource/child dispatch paths
+FUN_00414470,0x00414470,0x0060ff94,Wraps wide string in script value object,CONFIRMED,Value becomes third stack argument of FUN_0060daa0
+FUN_0061c160,0x0061c160,0x0060d970,Scene identifier consumption and scene instantiation,CONFIRMED,Best current candidate; Violette relevance LIKELY conditional on scene resources; outfit selection upstream SPECULATIVE
+FUN_006140e0,0x006140e0,0x006145a6,Registers GetMeshLibID accessor,CONFIRMED,String GetMeshLibID at 0x007f437c; implementation FUN_0060f900
+FUN_00537bf0,0x00537bf0,0x00537c14,SceneResource type construction,CONFIRMED,String SceneResource at 0x007eabec; pointer 0x008c630c
+FUN_0053c320,0x0053c320,0x0053c343,SceneResource diagnostics,CONFIRMED,String SceneResource at 0x007eabec
+FUN_004f0310,0x004f0310,0x004f042d,PlayerRoot script/reflection field registration,LIKELY,String PlayerRoot at 0x007e724c
+FUN_004f12c0,0x004f12c0,0x004f12fd,Character interface registration,LIKELY,String Character at 0x007e766c; caller FUN_00500090
+FUN_004f12c0,0x004f12c0,0x004f1560,GetCharacterType method registration,LIKELY,String GetCharacterType at 0x007e7604
+FUN_004f8e40,0x004f8e40,0x004f8e99,Character-reference registration,LIKELY,String m_pCharacter at 0x007e7818
+FUN_004fa1a0,0x004fa1a0,0x004fa277,Character-reference registration,LIKELY,String m_pCharacter at 0x007e7818
+FUN_004ef720,0x004ef720,0x004efdc4,Active-player field registration,LIKELY,String ActivePlayer at 0x007e7008
+FUN_00638a50,0x00638a50,0x00638a79,Loading-screen texture path construction and acquisition,CONFIRMED,Violette texture string at 0x007f5a74; no player-model selection found
+FUN_004ade60,0x004ade60,0x004ae0bc,Scene extension removal and resource/preload preparation,LIKELY,Extension removal CONFIRMED; caller FUN_004c7b50
+FUN_0052e5b0,0x0052e5b0,0x0052e5eb;0x0052e606,Scene extension removal and resource preparation,LIKELY,Extension removal confirmed in assembly; caller FUN_004bb1b0; decompiler warnings
+FUN_0060fe90,0x0060fe90,0x0060ff50,Dispatches .scene identifiers into scene loading,CONFIRMED,Callers FUN_00610040 and FUN_006113d0
+FUN_0060daa0,0x0060daa0,0x0061419a,LoadScene script wrapper,CONFIRMED,Registration xref in FUN_006140e0; forwards flags 0 and 0 to FUN_0060d970
+FUN_0060dad0,0x0060dad0,0x006141a9,LoadSceneNoCheck script wrapper,CONFIRMED,Registration xref in FUN_006140e0; forwards flags 1 and 0
+FUN_0060db00,0x0060db00,0x006141b8,LoadSceneForceReload script wrapper,CONFIRMED,Registration xref in FUN_006140e0; forwards flags 1 and 1
+FUN_0060d970,0x0060d970,0x0060dabc;0x0060daec;0x0060db1c,Converts supplied value identifier and invokes scene loader,CONFIRMED,Only three resolved direct callers; text source incoming ECX+0x14; no outfit choice
+FUN_00610040,0x00610040,0x006141c7,LoadResource script entry,CONFIRMED,Registration xref in FUN_006140e0; calls FUN_0060fe90
+FUN_006113d0,0x006113d0,0x006141d6,CreateChild generic actor creation and resource dispatch,CONFIRMED,Registration xref in FUN_006140e0; no Violette-specific creation established
+FUN_00610ea0,0x00610ea0,0x0061414c,Registered CreateChilds implementation,CONFIRMED,Registration observed; implementation not decompiled
+FUN_0060f900,0x0060f900,0x006145a6,Registered GetMeshLibID implementation,CONFIRMED,Implementation not decompiled
+FUN_00502020,0x00502020,,Scene resource lookup or construction,CONFIRMED,Called by FUN_0061c160; constructs through FUN_0053bc40
+FUN_0053bc40,0x0053bc40,,SceneResource construction,CONFIRMED,Calls FUN_00537bf0 and creates loader via FUN_007405c0
+FUN_0061a750,0x0061a750,,Recursive actor hierarchy construction from scene data,CONFIRMED,Called by FUN_0061c160 and recursively by itself
+FUN_0061aef0,0x0061aef0,,Recursive scene entity initialization,CONFIRMED,Called by FUN_0061c160; not demonstrated Violette-specific
+FUN_005300c0,0x005300c0,,Wavebank/resource preload processing,LIKELY,Called by FUN_004ade60; no further investigation planned without authorization
+FUN_00530790,0x00530790,,Resource identifier preparation,LIKELY,Called by FUN_004ade60
+FUN_007405c0,0x007405c0,,Resource loader object construction,LIKELY,Called by FUN_0053bc40
+FUN_00751c70,0x00751c70,0x00752100,Enemy/combat logic excluded from scope,LIKELY,String no weapon in basemesh at 0x0082808c; investigation stopped on this branch

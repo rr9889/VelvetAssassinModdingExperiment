@@ -1,0 +1,838 @@
+}
+PS C:\Users\Admin> npx rea-agents@latest setup --client codex
+◆  What you can do now
+│  Agent access: Codex
+│  Guided reverse-engineering workflows: installed
+│  CLI: rea capabilities
+│  Try in Codex: "Explain how a feature works in /path/to/app and show the evidence."
+|
+—  REA is ready for local app analysis.
+
+PS C:\Users\Admin> Set-Location "C:\Users\Admin\Documents\Velvet Assassin"
+PS C:\Users\Admin\Documents\Velvet Assassin> codex
+codex : The term 'codex' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ codex
++ ~~~~~
+    + CategoryInfo          : ObjectNotFound: (codex:String) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Admin\Documents\Velvet Assassin> $VA = "C:\Users\Admin\Documents\Velvet Assassin"
+PS C:\Users\Admin\Documents\Velvet Assassin> $CFG = "$VA\aio\levelstructure.aio"
+PS C:\Users\Admin\Documents\Velvet Assassin>
+PS C:\Users\Admin\Documents\Velvet Assassin> Test-Path $CFG
+True
+PS C:\Users\Admin\Documents\Velvet Assassin> Copy-Item $CFG "$CFG.ORIGINAL" -Force
+PS C:\Users\Admin\Documents\Velvet Assassin> Get-FileHash $CFG
+
+Algorithm       Hash                                                                   Path
+---------       ----                                                                   ----
+SHA256          98B37CEF2D7F605DCCD0F1BF199A0C4C408580989E3B9A41BF039195000BE5D5       C:\Users\Admin\Documents\Velvet Assassin\aio\levelstructure.aio
+
+
+PS C:\Users\Admin\Documents\Velvet Assassin> Get-FileHash "$CFG.ORIGINAL"
+
+Algorithm       Hash                                                                   Path
+---------       ----                                                                   ----
+SHA256          98B37CEF2D7F605DCCD0F1BF199A0C4C408580989E3B9A41BF039195000BE5D5       C:\Users\Admin\Documents\Velvet Assassin\aio\levelstructure.aio.ORIGINAL
+
+
+PS C:\Users\Admin\Documents\Velvet Assassin> Select-String -Path $CFG -Pattern '\[level1\]|Outfit|LoadSSUniform' -Context 0,3
+
+> aio\levelstructure.aio:2:*  NEW: About valid outfit & SS uniform values and combinations:
+> aio\levelstructure.aio:3:*  'Outfit': 0 = campaign; 1 = pilot; 2 = nightdress only
+> aio\levelstructure.aio:4:*  'LoadSSUniform': 1 = load and support SS uniform in that level; it can only be combined with 'Outfit 1' = pilot + ss uniform !!!
+  aio\levelstructure.aio:5:** ------------------------------------------------------------------------------------------------------------------------------------- */
+  aio\levelstructure.aio:6:
+> aio\levelstructure.aio:7:[level1]
+  aio\levelstructure.aio:8:ID                   = 'TL_1'
+  aio\levelstructure.aio:9:SceneName            = 'Levels\\Lost1.scene'
+  aio\levelstructure.aio:10:AlarmFile           = 'snd/sfx.fev;ambient/scenes;distant_alarm'
+> aio\levelstructure.aio:20:Outfit                      = 1
+> aio\levelstructure.aio:21:LoadSSUniform               = 0
+  aio\levelstructure.aio:22:SkipMipMapLevels    = 0     /* -1 = developer.cfg default; 0=skip 0 levels; 1=skip 1; 2=skip 2 */
+  aio\levelstructure.aio:23:CloseKillConfig             = 'aio\closekills\TL1_closekills.cfg'
+  aio\levelstructure.aio:24:SilentKillQuotient  = 0.01
+> aio\levelstructure.aio:45:Outfit                      = 1
+> aio\levelstructure.aio:46:LoadSSUniform               = 0
+  aio\levelstructure.aio:47:SkipMipMapLevels    = 0     /* -1 = developer.cfg default; 0=skip 0 levels; 1=skip 1; 2=skip 2 */
+  aio\levelstructure.aio:48:CloseKillConfig             = 'aio\closekills\TL2_closekills.cfg'
+  aio\levelstructure.aio:49:SilentKillQuotient  = 0.52
+> aio\levelstructure.aio:70:Outfit                      = 1
+> aio\levelstructure.aio:71:LoadSSUniform               = 1
+  aio\levelstructure.aio:72:SkipMipMapLevels    = 0     /* -1 = developer.cfg default; 0=skip 0 levels; 1=skip 1; 2=skip 2 */
+  aio\levelstructure.aio:73:CloseKillConfig             = 'aio\closekills\DOTB1_closekills.cfg'
+  aio\levelstructure.aio:74:SilentKillQuotient  = 0.5
+> aio\levelstructure.aio:95:Outfit                      = 1
+> aio\levelstructure.aio:96:LoadSSUniform               = 1
+  aio\levelstructure.aio:97:SkipMipMapLevels    = 0     /* -1 = developer.cfg default; 0=skip 0 levels; 1=skip 1; 2=skip 2 */
+  aio\levelstructure.aio:98:CloseKillConfig             = 'aio\closekills\DOTB2_closekills.cfg'
+  aio\levelstructure.aio:99:SilentKillQuotient  = 0.65
+> aio\levelstructure.aio:120:Outfit                     = 0
+> aio\levelstructure.aio:121:LoadSSUniform              = 0
+  aio\levelstructure.aio:122:SkipMipMapLevels   = 0     /* -1 = developer.cfg default; 0=skip 0 levels; 1=skip 1; 2=skip 2 */
+  aio\levelstructure.aio:123:CloseKillConfig            = 'aio\closekills\LALO1_closekills.cfg'
+  aio\levelstructure.aio:124:SilentKillQuotient = 0.6
+> aio\levelstructure.aio:145:Outfit                     = 0
+> aio\levelstructure.aio:146:LoadSSUniform              = 0
+  aio\levelstructure.aio:147:SkipMipMapLevels   = 0     /* -1 = developer.cfg default; 0=skip 0 levels; 1=skip 1; 2=skip 2 */
+  aio\levelstructure.aio:148:CloseKillConfig            = 'aio\closekills\LALO2_closekills.cfg'
+  aio\levelstructure.aio:149:SilentKillQuotient = 0.3
+> aio\levelstructure.aio:170:Outfit                     = 1
+> aio\levelstructure.aio:171:LoadSSUniform              = 0
+  aio\levelstructure.aio:172:SkipMipMapLevels   = 0     /* -1 = developer.cfg default; 0=skip 0 levels; 1=skip 1; 2=skip 2 */
+  aio\levelstructure.aio:173:CloseKillConfig            = 'aio\closekills\TTM1_closekills.cfg'
+  aio\levelstructure.aio:174:SilentKillQuotient = 0.65
+> aio\levelstructure.aio:195:Outfit                     = 1
+> aio\levelstructure.aio:196:LoadSSUniform              = 0
+  aio\levelstructure.aio:197:SkipMipMapLevels   = 0     /* -1 = developer.cfg default; 0=skip 0 levels; 1=skip 1; 2=skip 2 */
+  aio\levelstructure.aio:198:CloseKillConfig            = 'aio\closekills\TTM2_closekills.cfg'
+  aio\levelstructure.aio:199:SilentKillQuotient = 0.7
+> aio\levelstructure.aio:220:Outfit                     = 1
+> aio\levelstructure.aio:221:LoadSSUniform              = 1
+  aio\levelstructure.aio:222:SkipMipMapLevels   = 0     /* -1 = developer.cfg default; 0=skip 0 levels; 1=skip 1; 2=skip 2 */
+  aio\levelstructure.aio:223:CloseKillConfig            = 'aio\closekills\TTM3_closekills.cfg'
+  aio\levelstructure.aio:224:SilentKillQuotient = 0.7
+> aio\levelstructure.aio:245:Outfit                     = 1
+> aio\levelstructure.aio:246:LoadSSUniform              = 1
+  aio\levelstructure.aio:247:SkipMipMapLevels   = 0     /* -1 = developer.cfg default; 0=skip 0 levels; 1=skip 1; 2=skip 2 */
+  aio\levelstructure.aio:248:CloseKillConfig            = 'aio\closekills\LB_closekills.cfg'
+  aio\levelstructure.aio:249:SilentKillQuotient = 0.7
+> aio\levelstructure.aio:270:Outfit                     = 2
+> aio\levelstructure.aio:271:LoadSSUniform              = 0
+  aio\levelstructure.aio:272:SkipMipMapLevels   = 0     /* -1 = developer.cfg default; 0=skip 0 levels; 1=skip 1; 2=skip 2 */
+  aio\levelstructure.aio:273:CloseKillConfig            = 'aio\closekills\FTG1_closekills.cfg'
+  aio\levelstructure.aio:274:SilentKillQuotient = 0.45
+> aio\levelstructure.aio:295:Outfit                     = 2
+> aio\levelstructure.aio:296:LoadSSUniform              = 0
+  aio\levelstructure.aio:297:SkipMipMapLevels   = 0     /* -1 = developer.cfg default; 0=skip 0 levels; 1=skip 1; 2=skip 2 */
+  aio\levelstructure.aio:298:CloseKillConfig            = 'aio\closekills\FTG2_closekills.cfg'
+  aio\levelstructure.aio:299:SilentKillQuotient = 0.19
+
+
+PS C:\Users\Admin\Documents\Velvet Assassin> notepad $CFG
+PS C:\Users\Admin\Documents\Velvet Assassin> Select-String -Path $CFG -Pattern '\[level1\]|Outfit|LoadSSUniform' -Context 0,3
+
+> aio\levelstructure.aio:2:*  NEW: About valid outfit & SS uniform values and combinations:
+> aio\levelstructure.aio:3:*  'Outfit': 0 = campaign; 1 = pilot; 2 = nightdress only
+> aio\levelstructure.aio:4:*  'LoadSSUniform': 1 = load and support SS uniform in that level; it can only be combined with 'Outfit 1' = pilot + ss uniform !!!
+  aio\levelstructure.aio:5:** ------------------------------------------------------------------------------------------------------------------------------------- */
+  aio\levelstructure.aio:6:
+> aio\levelstructure.aio:7:[level1]
+  aio\levelstructure.aio:8:ID                   = 'TL_1'
+  aio\levelstructure.aio:9:SceneName            = 'Levels\\Lost1.scene'
+  aio\levelstructure.aio:10:AlarmFile           = 'snd/sfx.fev;ambient/scenes;distant_alarm'
+> aio\levelstructure.aio:20:Outfit                      = 1
+> aio\levelstructure.aio:21:LoadSSUniform               = 0
+  aio\levelstructure.aio:22:SkipMipMapLevels    = 0     /* -1 = developer.cfg default; 0=skip 0 levels; 1=skip 1; 2=skip 2 */
+  aio\levelstructure.aio:23:CloseKillConfig             = 'aio\closekills\TL1_closekills.cfg'
+  aio\levelstructure.aio:24:SilentKillQuotient  = 0.01
+> aio\levelstructure.aio:45:Outfit                      = 1
+> aio\levelstructure.aio:46:LoadSSUniform               = 0
+  aio\levelstructure.aio:47:SkipMipMapLevels    = 0     /* -1 = developer.cfg default; 0=skip 0 levels; 1=skip 1; 2=skip 2 */
+  aio\levelstructure.aio:48:CloseKillConfig             = 'aio\closekills\TL2_closekills.cfg'
+  aio\levelstructure.aio:49:SilentKillQuotient  = 0.52
+> aio\levelstructure.aio:70:Outfit                      = 1
+> aio\levelstructure.aio:71:LoadSSUniform               = 1
+  aio\levelstructure.aio:72:SkipMipMapLevels    = 0     /* -1 = developer.cfg default; 0=skip 0 levels; 1=skip 1; 2=skip 2 */
+  aio\levelstructure.aio:73:CloseKillConfig             = 'aio\closekills\DOTB1_closekills.cfg'
+  aio\levelstructure.aio:74:SilentKillQuotient  = 0.5
+> aio\levelstructure.aio:95:Outfit                      = 1
+> aio\levelstructure.aio:96:LoadSSUniform               = 1
+  aio\levelstructure.aio:97:SkipMipMapLevels    = 0     /* -1 = developer.cfg default; 0=skip 0 levels; 1=skip 1; 2=skip 2 */
+  aio\levelstructure.aio:98:CloseKillConfig             = 'aio\closekills\DOTB2_closekills.cfg'
+  aio\levelstructure.aio:99:SilentKillQuotient  = 0.65
+> aio\levelstructure.aio:120:Outfit                     = 0
+> aio\levelstructure.aio:121:LoadSSUniform              = 0
+  aio\levelstructure.aio:122:SkipMipMapLevels   = 0     /* -1 = developer.cfg default; 0=skip 0 levels; 1=skip 1; 2=skip 2 */
+  aio\levelstructure.aio:123:CloseKillConfig            = 'aio\closekills\LALO1_closekills.cfg'
+  aio\levelstructure.aio:124:SilentKillQuotient = 0.6
+> aio\levelstructure.aio:145:Outfit                     = 0
+> aio\levelstructure.aio:146:LoadSSUniform              = 0
+  aio\levelstructure.aio:147:SkipMipMapLevels   = 0     /* -1 = developer.cfg default; 0=skip 0 levels; 1=skip 1; 2=skip 2 */
+  aio\levelstructure.aio:148:CloseKillConfig            = 'aio\closekills\LALO2_closekills.cfg'
+  aio\levelstructure.aio:149:SilentKillQuotient = 0.3
+> aio\levelstructure.aio:170:Outfit                     = 1
+> aio\levelstructure.aio:171:LoadSSUniform              = 0
+  aio\levelstructure.aio:172:SkipMipMapLevels   = 0     /* -1 = developer.cfg default; 0=skip 0 levels; 1=skip 1; 2=skip 2 */
+  aio\levelstructure.aio:173:CloseKillConfig            = 'aio\closekills\TTM1_closekills.cfg'
+  aio\levelstructure.aio:174:SilentKillQuotient = 0.65
+> aio\levelstructure.aio:195:Outfit                     = 1
+> aio\levelstructure.aio:196:LoadSSUniform              = 0
+  aio\levelstructure.aio:197:SkipMipMapLevels   = 0     /* -1 = developer.cfg default; 0=skip 0 levels; 1=skip 1; 2=skip 2 */
+  aio\levelstructure.aio:198:CloseKillConfig            = 'aio\closekills\TTM2_closekills.cfg'
+  aio\levelstructure.aio:199:SilentKillQuotient = 0.7
+> aio\levelstructure.aio:220:Outfit                     = 1
+> aio\levelstructure.aio:221:LoadSSUniform              = 1
+  aio\levelstructure.aio:222:SkipMipMapLevels   = 0     /* -1 = developer.cfg default; 0=skip 0 levels; 1=skip 1; 2=skip 2 */
+  aio\levelstructure.aio:223:CloseKillConfig            = 'aio\closekills\TTM3_closekills.cfg'
+  aio\levelstructure.aio:224:SilentKillQuotient = 0.7
+> aio\levelstructure.aio:245:Outfit                     = 1
+> aio\levelstructure.aio:246:LoadSSUniform              = 1
+  aio\levelstructure.aio:247:SkipMipMapLevels   = 0     /* -1 = developer.cfg default; 0=skip 0 levels; 1=skip 1; 2=skip 2 */
+  aio\levelstructure.aio:248:CloseKillConfig            = 'aio\closekills\LB_closekills.cfg'
+  aio\levelstructure.aio:249:SilentKillQuotient = 0.7
+> aio\levelstructure.aio:270:Outfit                     = 2
+> aio\levelstructure.aio:271:LoadSSUniform              = 0
+  aio\levelstructure.aio:272:SkipMipMapLevels   = 0     /* -1 = developer.cfg default; 0=skip 0 levels; 1=skip 1; 2=skip 2 */
+  aio\levelstructure.aio:273:CloseKillConfig            = 'aio\closekills\FTG1_closekills.cfg'
+  aio\levelstructure.aio:274:SilentKillQuotient = 0.45
+> aio\levelstructure.aio:295:Outfit                     = 2
+> aio\levelstructure.aio:296:LoadSSUniform              = 0
+  aio\levelstructure.aio:297:SkipMipMapLevels   = 0     /* -1 = developer.cfg default; 0=skip 0 levels; 1=skip 1; 2=skip 2 */
+  aio\levelstructure.aio:298:CloseKillConfig            = 'aio\closekills\FTG2_closekills.cfg'
+  aio\levelstructure.aio:299:SilentKillQuotient = 0.19
+
+
+PS C:\Users\Admin\Documents\Velvet Assassin> $CFG = "C:\Users\Admin\Documents\Velvet Assassin\aio\levelstructure.aio"
+PS C:\Users\Admin\Documents\Velvet Assassin>
+PS C:\Users\Admin\Documents\Velvet Assassin> $lines = Get-Content $CFG
+PS C:\Users\Admin\Documents\Velvet Assassin> $start = ($lines | Select-String '^\[level1\]$').LineNumber
+PS C:\Users\Admin\Documents\Velvet Assassin>
+PS C:\Users\Admin\Documents\Velvet Assassin> $lines[($start-1)..([Math]::Min($start+20,$lines.Count-1))]
+[level1]
+ID                      = 'TL_1'
+SceneName               = 'Levels\\Lost1.scene'
+AlarmFile               = 'snd/sfx.fev;ambient/scenes;distant_alarm'
+SuspenseFile            = 'snd/sfx.fev;music/events;edit_SS774_DYN_MRO_rising_drums'
+AlarmSuppressesSuspense = 0
+SuspenseSuppressesMusic = 1
+BriefingVideoFile       = 'Lost1
+BriefingAudioFile       = 'snd/vox.fev;sequences/briefings;tl1'
+BriefingLocaID          = 'VIOLETTE_BRIEFING_THE_LOST_PART_1'
+SecretLevelID           = 'SECRET_TL_1'
+IsSubmission            = 0
+MorphineEnabled         = 1
+Outfit                  = 1
+LoadSSUniform           = 0
+SkipMipMapLevels        = 0     /* -1 = developer.cfg default; 0=skip 0 levels; 1=skip 1; 2=skip 2 */
+CloseKillConfig         = 'aio\closekills\TL1_closekills.cfg'
+SilentKillQuotient      = 0.01
+MapPosX                 = 2758
+MapPosY                 = 8235
+MapWidth                = 11750
+MapHeight               = 15667
+PS C:\Users\Admin\Documents\Velvet Assassin> $BACKUP = "$CFG.TESTBACKUP"
+PS C:\Users\Admin\Documents\Velvet Assassin>
+PS C:\Users\Admin\Documents\Velvet Assassin> Copy-Item $CFG $BACKUP -Force
+PS C:\Users\Admin\Documents\Velvet Assassin>
+PS C:\Users\Admin\Documents\Velvet Assassin> Get-FileHash $CFG
+
+Algorithm       Hash                                                                   Path
+---------       ----                                                                   ----
+SHA256          98B37CEF2D7F605DCCD0F1BF199A0C4C408580989E3B9A41BF039195000BE5D5       C:\Users\Admin\Documents\Velvet Assassin\aio\levelstructure.aio
+
+
+PS C:\Users\Admin\Documents\Velvet Assassin> Get-FileHash $BACKUP
+
+Algorithm       Hash                                                                   Path
+---------       ----                                                                   ----
+SHA256          98B37CEF2D7F605DCCD0F1BF199A0C4C408580989E3B9A41BF039195000BE5D5       C:\Users\Admin\Documents\Velvet Assassin\aio\levelstructure.aio.TESTBACKUP
+
+
+PS C:\Users\Admin\Documents\Velvet Assassin> notepad $CFG
+PS C:\Users\Admin\Documents\Velvet Assassin> Select-String -Path $CFG -Pattern '^\[level1\]$|^Outfit=|^LoadSSUniform=' -Context 0,4
+
+> aio\levelstructure.aio:7:[level1]
+  aio\levelstructure.aio:8:ID                   = 'TL_1'
+  aio\levelstructure.aio:9:SceneName            = 'Levels\\Lost1.scene'
+  aio\levelstructure.aio:10:AlarmFile           = 'snd/sfx.fev;ambient/scenes;distant_alarm'
+  aio\levelstructure.aio:11:SuspenseFile                = 'snd/sfx.fev;music/events;edit_SS774_DYN_MRO_rising_drums'
+
+
+PS C:\Users\Admin\Documents\Velvet Assassin> $CFG = "C:\Users\Admin\Documents\Velvet Assassin\aio\levelstructure.aio"
+PS C:\Users\Admin\Documents\Velvet Assassin>
+PS C:\Users\Admin\Documents\Velvet Assassin> Select-String -Path $CFG `
+>>     -Pattern 'Lost|^\[.+\]$|^Outfit=|^LoadSSUniform='
+
+aio\levelstructure.aio:7:[level1]
+aio\levelstructure.aio:9:SceneName              = 'Levels\\Lost1.scene'
+aio\levelstructure.aio:14:BriefingVideoFile     = 'Lost1
+aio\levelstructure.aio:16:BriefingLocaID                = 'VIOLETTE_BRIEFING_THE_LOST_PART_1'
+aio\levelstructure.aio:32:[level2]
+aio\levelstructure.aio:34:SceneName             = 'Levels\\Lost2.scene'
+aio\levelstructure.aio:39:BriefingVideoFile     = 'Lost2
+aio\levelstructure.aio:41:BriefingLocaID                = 'VIOLETTE_BRIEFING_THE_LOST_PART_2'
+aio\levelstructure.aio:57:[level3]
+aio\levelstructure.aio:82:[level4]
+aio\levelstructure.aio:107:[level5]
+aio\levelstructure.aio:132:[level6]
+aio\levelstructure.aio:157:[level7]
+aio\levelstructure.aio:182:[level8]
+aio\levelstructure.aio:207:[level9]
+aio\levelstructure.aio:232:[level10]
+aio\levelstructure.aio:257:[level11]
+aio\levelstructure.aio:282:[level12]
+
+
+PS C:\Users\Admin\Documents\Velvet Assassin> $CFG = "C:\Users\Admin\Documents\Velvet Assassin\aio\levelstructure.aio"
+PS C:\Users\Admin\Documents\Velvet Assassin>
+PS C:\Users\Admin\Documents\Velvet Assassin> $lines = Get-Content $CFG
+PS C:\Users\Admin\Documents\Velvet Assassin> $start = ($lines | Select-String '^\[level1\]$').LineNumber
+PS C:\Users\Admin\Documents\Velvet Assassin>
+PS C:\Users\Admin\Documents\Velvet Assassin> $lines[($start-1)..($start+18)]
+[level1]
+ID                      = 'TL_1'
+SceneName               = 'Levels\\Lost1.scene'
+AlarmFile               = 'snd/sfx.fev;ambient/scenes;distant_alarm'
+SuspenseFile            = 'snd/sfx.fev;music/events;edit_SS774_DYN_MRO_rising_drums'
+AlarmSuppressesSuspense = 0
+SuspenseSuppressesMusic = 1
+BriefingVideoFile       = 'Lost1
+BriefingAudioFile       = 'snd/vox.fev;sequences/briefings;tl1'
+BriefingLocaID          = 'VIOLETTE_BRIEFING_THE_LOST_PART_1'
+SecretLevelID           = 'SECRET_TL_1'
+IsSubmission            = 0
+MorphineEnabled         = 1
+Outfit                  = 1
+LoadSSUniform           = 0
+SkipMipMapLevels        = 0     /* -1 = developer.cfg default; 0=skip 0 levels; 1=skip 1; 2=skip 2 */
+CloseKillConfig         = 'aio\closekills\TL1_closekills.cfg'
+SilentKillQuotient      = 0.01
+MapPosX                 = 2758
+MapPosY                 = 8235
+PS C:\Users\Admin\Documents\Velvet Assassin> notepad $CFG
+PS C:\Users\Admin\Documents\Velvet Assassin> notepad $CFG
+PS C:\Users\Admin\Documents\Velvet Assassin> Select-String -Path $CFG -Pattern '^\[level1\]$|^\s*Outfit\s*=|^\s*LoadSSUniform\s*=' -Context 0,16
+
+> aio\levelstructure.aio:7:[level1]
+  aio\levelstructure.aio:8:ID                   = 'TL_1'
+  aio\levelstructure.aio:9:SceneName            = 'Levels\\Lost1.scene'
+  aio\levelstructure.aio:10:AlarmFile           = 'snd/sfx.fev;ambient/scenes;distant_alarm'
+  aio\levelstructure.aio:11:SuspenseFile                = 'snd/sfx.fev;music/events;edit_SS774_DYN_MRO_rising_drums'
+  aio\levelstructure.aio:12:AlarmSuppressesSuspense     = 0
+  aio\levelstructure.aio:13:SuspenseSuppressesMusic     = 1
+  aio\levelstructure.aio:14:BriefingVideoFile           = 'Lost1
+  aio\levelstructure.aio:15:BriefingAudioFile   = 'snd/vox.fev;sequences/briefings;tl1'
+  aio\levelstructure.aio:16:BriefingLocaID              = 'VIOLETTE_BRIEFING_THE_LOST_PART_1'
+  aio\levelstructure.aio:17:SecretLevelID               = 'SECRET_TL_1'
+  aio\levelstructure.aio:18:IsSubmission                = 0
+  aio\levelstructure.aio:19:MorphineEnabled     = 1
+> aio\levelstructure.aio:20:Outfit                      = 0
+> aio\levelstructure.aio:21:LoadSSUniform               = 0
+  aio\levelstructure.aio:22:SkipMipMapLevels    = 0     /* -1 = developer.cfg default; 0=skip 0 levels; 1=skip 1; 2=skip 2 */
+  aio\levelstructure.aio:23:CloseKillConfig             = 'aio\closekills\TL1_closekills.cfg'
+  aio\levelstructure.aio:24:SilentKillQuotient  = 0.01
+  aio\levelstructure.aio:25:MapPosX             = 2758
+  aio\levelstructure.aio:26:MapPosY                     = 8235
+  aio\levelstructure.aio:27:MapWidth            = 11750
+  aio\levelstructure.aio:28:MapHeight           = 15667
+  aio\levelstructure.aio:29:MapRotation         = 1
+  aio\levelstructure.aio:30:
+  aio\levelstructure.aio:31:
+  aio\levelstructure.aio:32:[level2]
+  aio\levelstructure.aio:33:ID                  = 'TL_2'
+  aio\levelstructure.aio:34:SceneName           = 'Levels\\Lost2.scene'
+  aio\levelstructure.aio:35:AlarmFile           = 'snd/sfx.fev;ambient/scenes;distant_alarm'
+  aio\levelstructure.aio:36:SuspenseFile                = 'snd/sfx.fev;music/events;edit_29_ss_military_suspense'
+  aio\levelstructure.aio:37:AlarmSuppressesSuspense     = 0
+> aio\levelstructure.aio:45:Outfit                      = 1
+> aio\levelstructure.aio:46:LoadSSUniform               = 0
+  aio\levelstructure.aio:47:SkipMipMapLevels    = 0     /* -1 = developer.cfg default; 0=skip 0 levels; 1=skip 1; 2=skip 2 */
+  aio\levelstructure.aio:48:CloseKillConfig             = 'aio\closekills\TL2_closekills.cfg'
+  aio\levelstructure.aio:49:SilentKillQuotient  = 0.52
+  aio\levelstructure.aio:50:MapPosX             = 7928
+  aio\levelstructure.aio:51:MapPosY                     = -8219
+  aio\levelstructure.aio:52:MapWidth            = 15615
+  aio\levelstructure.aio:53:MapHeight           = 20820
+  aio\levelstructure.aio:54:MapRotation         = 1
+  aio\levelstructure.aio:55:
+  aio\levelstructure.aio:56:
+  aio\levelstructure.aio:57:[level3]
+  aio\levelstructure.aio:58:ID                  = 'DOTB_1'
+  aio\levelstructure.aio:59:SceneName           = 'Levels\\Butchers_Death1.scene'
+  aio\levelstructure.aio:60:AlarmFile           = 'snd/sfx.fev;ambient/scenes;distant_alarm'
+  aio\levelstructure.aio:61:SuspenseFile        = 'snd/sfx.fev;music/events;edit_VEN06_MKS_Clone'
+  aio\levelstructure.aio:62:AlarmSuppressesSuspense     = 0
+> aio\levelstructure.aio:70:Outfit                      = 1
+> aio\levelstructure.aio:71:LoadSSUniform               = 1
+  aio\levelstructure.aio:72:SkipMipMapLevels    = 0     /* -1 = developer.cfg default; 0=skip 0 levels; 1=skip 1; 2=skip 2 */
+  aio\levelstructure.aio:73:CloseKillConfig             = 'aio\closekills\DOTB1_closekills.cfg'
+  aio\levelstructure.aio:74:SilentKillQuotient  = 0.5
+  aio\levelstructure.aio:75:MapPosX             = 8339
+  aio\levelstructure.aio:76:MapPosY                     = -4209
+  aio\levelstructure.aio:77:MapWidth            = 17304
+  aio\levelstructure.aio:78:MapHeight           = 23073
+  aio\levelstructure.aio:79:MapRotation         = 1
+  aio\levelstructure.aio:80:
+  aio\levelstructure.aio:81:
+  aio\levelstructure.aio:82:[level4]
+  aio\levelstructure.aio:83:ID                  = 'DOTB_2'
+  aio\levelstructure.aio:84:SceneName           = 'Levels\\Butchers_Death2.scene'
+  aio\levelstructure.aio:85:AlarmFile           = 'snd/sfx.fev;ambient/scenes;distant_alarm'
+  aio\levelstructure.aio:86:SuspenseFile        = 'snd/sfx.fev;music/events;edit_29_ss_military_suspense'
+  aio\levelstructure.aio:87:AlarmSuppressesSuspense     = 0
+> aio\levelstructure.aio:95:Outfit                      = 1
+> aio\levelstructure.aio:96:LoadSSUniform               = 1
+  aio\levelstructure.aio:97:SkipMipMapLevels    = 0     /* -1 = developer.cfg default; 0=skip 0 levels; 1=skip 1; 2=skip 2 */
+  aio\levelstructure.aio:98:CloseKillConfig             = 'aio\closekills\DOTB2_closekills.cfg'
+  aio\levelstructure.aio:99:SilentKillQuotient  = 0.65
+  aio\levelstructure.aio:100:MapPosX            = 2664
+  aio\levelstructure.aio:101:MapPosY                    = -1894
+  aio\levelstructure.aio:102:MapWidth           = 8141
+  aio\levelstructure.aio:103:MapHeight          = 10854
+  aio\levelstructure.aio:104:MapRotation                = 1
+  aio\levelstructure.aio:105:
+  aio\levelstructure.aio:106:
+  aio\levelstructure.aio:107:[level5]
+  aio\levelstructure.aio:108:ID                 = 'LALO_1'
+  aio\levelstructure.aio:109:SceneName          = 'Levels\\Leave_Light_On_1.scene'
+  aio\levelstructure.aio:110:AlarmFile          = 'snd/sfx.fev;ambient/scenes;distant_alarm'
+  aio\levelstructure.aio:111:SuspenseFile       = 'snd/sfx.fev;music/events;comp_edit_28_ss_military_aggressive'
+  aio\levelstructure.aio:112:AlarmSuppressesSuspense    = 0
+> aio\levelstructure.aio:120:Outfit                     = 0
+> aio\levelstructure.aio:121:LoadSSUniform              = 0
+  aio\levelstructure.aio:122:SkipMipMapLevels   = 0     /* -1 = developer.cfg default; 0=skip 0 levels; 1=skip 1; 2=skip 2 */
+  aio\levelstructure.aio:123:CloseKillConfig            = 'aio\closekills\LALO1_closekills.cfg'
+  aio\levelstructure.aio:124:SilentKillQuotient = 0.6
+  aio\levelstructure.aio:125:MapPosX            = 9263
+  aio\levelstructure.aio:126:MapPosY                    = 2366
+  aio\levelstructure.aio:127:MapWidth           = 16315
+  aio\levelstructure.aio:128:MapHeight          = 21753
+  aio\levelstructure.aio:129:MapRotation                = 1
+  aio\levelstructure.aio:130:
+  aio\levelstructure.aio:131:
+  aio\levelstructure.aio:132:[level6]
+  aio\levelstructure.aio:133:ID                 = 'LALO_2'
+  aio\levelstructure.aio:134:SceneName                  = 'Levels\\Leave_Light_On_2.scene'
+  aio\levelstructure.aio:135:AlarmFile          = 'snd/sfx.fev;ambient/scenes;distant_alarm'
+  aio\levelstructure.aio:136:SuspenseFile       = 'snd/sfx.fev;music/events;edit_VEN06_MKS_Clone'
+  aio\levelstructure.aio:137:AlarmSuppressesSuspense    = 0
+> aio\levelstructure.aio:145:Outfit                     = 0
+> aio\levelstructure.aio:146:LoadSSUniform              = 0
+  aio\levelstructure.aio:147:SkipMipMapLevels   = 0     /* -1 = developer.cfg default; 0=skip 0 levels; 1=skip 1; 2=skip 2 */
+  aio\levelstructure.aio:148:CloseKillConfig            = 'aio\closekills\LALO2_closekills.cfg'
+  aio\levelstructure.aio:149:SilentKillQuotient = 0.3
+  aio\levelstructure.aio:150:MapPosX            = 3831
+  aio\levelstructure.aio:151:MapPosY                    = -569
+  aio\levelstructure.aio:152:MapWidth           = 15481
+  aio\levelstructure.aio:153:MapHeight          = 11610
+  aio\levelstructure.aio:154:MapRotation                = 1.5
+  aio\levelstructure.aio:155:
+  aio\levelstructure.aio:156:
+  aio\levelstructure.aio:157:[level7]
+  aio\levelstructure.aio:158:ID                 = 'TTM_1'
+  aio\levelstructure.aio:159:SceneName          = 'Levels\\Third_Man1.scene'
+  aio\levelstructure.aio:160:AlarmFile          = 'snd/sfx.fev;ambient/scenes;distant_alarm'
+  aio\levelstructure.aio:161:SuspenseFile       = 'snd/sfx.fev;music/events;mona05'
+  aio\levelstructure.aio:162:AlarmSuppressesSuspense    = 0
+> aio\levelstructure.aio:170:Outfit                     = 1
+> aio\levelstructure.aio:171:LoadSSUniform              = 0
+  aio\levelstructure.aio:172:SkipMipMapLevels   = 0     /* -1 = developer.cfg default; 0=skip 0 levels; 1=skip 1; 2=skip 2 */
+  aio\levelstructure.aio:173:CloseKillConfig            = 'aio\closekills\TTM1_closekills.cfg'
+  aio\levelstructure.aio:174:SilentKillQuotient = 0.65
+  aio\levelstructure.aio:175:MapPosX            = 386
+  aio\levelstructure.aio:176:MapPosY                    = -5360
+  aio\levelstructure.aio:177:MapWidth           = 13747
+  aio\levelstructure.aio:178:MapHeight          = 10310
+  aio\levelstructure.aio:179:MapRotation                = 1.5
+  aio\levelstructure.aio:180:
+  aio\levelstructure.aio:181:
+  aio\levelstructure.aio:182:[level8]
+  aio\levelstructure.aio:183:ID                 = 'TTM_2'
+  aio\levelstructure.aio:184:SceneName          = 'Levels\\Third_Man2.scene'
+  aio\levelstructure.aio:185:AlarmFile          = 'snd/sfx.fev;ambient/scenes;distant_alarm'
+  aio\levelstructure.aio:186:SuspenseFile       = 'snd/sfx.fev;music/events;edit_SS774_DYN_MRO_rising_drums'
+  aio\levelstructure.aio:187:AlarmSuppressesSuspense    = 0
+> aio\levelstructure.aio:195:Outfit                     = 1
+> aio\levelstructure.aio:196:LoadSSUniform              = 0
+  aio\levelstructure.aio:197:SkipMipMapLevels   = 0     /* -1 = developer.cfg default; 0=skip 0 levels; 1=skip 1; 2=skip 2 */
+  aio\levelstructure.aio:198:CloseKillConfig            = 'aio\closekills\TTM2_closekills.cfg'
+  aio\levelstructure.aio:199:SilentKillQuotient = 0.7
+  aio\levelstructure.aio:200:MapPosX            = 1440
+  aio\levelstructure.aio:201:MapPosY                    = 415
+  aio\levelstructure.aio:202:MapWidth           = 23801
+  aio\levelstructure.aio:203:MapHeight          = 17851
+  aio\levelstructure.aio:204:MapRotation                = 1.5
+  aio\levelstructure.aio:205:
+  aio\levelstructure.aio:206:
+  aio\levelstructure.aio:207:[level9]
+  aio\levelstructure.aio:208:ID                 = 'TTM_3'
+  aio\levelstructure.aio:209:SceneName          = 'Levels\\Third_Man3.scene'
+  aio\levelstructure.aio:210:AlarmFile          = 'snd/sfx.fev;ambient/scenes;distant_alarm'
+  aio\levelstructure.aio:211:SuspenseFile       = 'snd/sfx.fev;music/events;edit_29_ss_military_suspense'
+  aio\levelstructure.aio:212:AlarmSuppressesSuspense    = 0
+> aio\levelstructure.aio:220:Outfit                     = 1
+> aio\levelstructure.aio:221:LoadSSUniform              = 1
+  aio\levelstructure.aio:222:SkipMipMapLevels   = 0     /* -1 = developer.cfg default; 0=skip 0 levels; 1=skip 1; 2=skip 2 */
+  aio\levelstructure.aio:223:CloseKillConfig            = 'aio\closekills\TTM3_closekills.cfg'
+  aio\levelstructure.aio:224:SilentKillQuotient = 0.7
+  aio\levelstructure.aio:225:MapPosX            = -221
+  aio\levelstructure.aio:226:MapPosY                    = 978
+  aio\levelstructure.aio:227:MapWidth           = 11348
+  aio\levelstructure.aio:228:MapHeight          = 15130
+  aio\levelstructure.aio:229:MapRotation                = 1
+  aio\levelstructure.aio:230:
+  aio\levelstructure.aio:231:
+  aio\levelstructure.aio:232:[level10]
+  aio\levelstructure.aio:233:ID                 = 'LB_1'
+  aio\levelstructure.aio:234:SceneName          = 'Levels\\Le_Boeuf1.scene'
+  aio\levelstructure.aio:235:AlarmFile          = 'snd/sfx.fev;ambient/scenes;distant_alarm'
+  aio\levelstructure.aio:236:SuspenseFile       = 'snd/sfx.fev;music/events;edit_SS780_DYN_MRO_lonely_outback'
+  aio\levelstructure.aio:237:AlarmSuppressesSuspense    = 0
+> aio\levelstructure.aio:245:Outfit                     = 1
+> aio\levelstructure.aio:246:LoadSSUniform              = 1
+  aio\levelstructure.aio:247:SkipMipMapLevels   = 0     /* -1 = developer.cfg default; 0=skip 0 levels; 1=skip 1; 2=skip 2 */
+  aio\levelstructure.aio:248:CloseKillConfig            = 'aio\closekills\LB_closekills.cfg'
+  aio\levelstructure.aio:249:SilentKillQuotient = 0.7
+  aio\levelstructure.aio:250:MapPosX            = 11675
+  aio\levelstructure.aio:251:MapPosY                    = -3167
+  aio\levelstructure.aio:252:MapWidth           = 31146
+  aio\levelstructure.aio:253:MapHeight          = 23359
+  aio\levelstructure.aio:254:MapRotation                = 1.5
+  aio\levelstructure.aio:255:
+  aio\levelstructure.aio:256:
+  aio\levelstructure.aio:257:[level11]
+  aio\levelstructure.aio:258:ID                 = 'FTG_1'
+  aio\levelstructure.aio:259:SceneName          = 'Levels\\Fade_To_Grey1.scene'
+  aio\levelstructure.aio:260:AlarmFile          = 'snd/sfx.fev;ambient/scenes;distant_alarm'
+  aio\levelstructure.aio:261:SuspenseFile       = 'snd/sfx.fev;music/events;edit_29_ss_military_suspense'
+  aio\levelstructure.aio:262:AlarmSuppressesSuspense    = 0
+> aio\levelstructure.aio:270:Outfit                     = 2
+> aio\levelstructure.aio:271:LoadSSUniform              = 0
+  aio\levelstructure.aio:272:SkipMipMapLevels   = 0     /* -1 = developer.cfg default; 0=skip 0 levels; 1=skip 1; 2=skip 2 */
+  aio\levelstructure.aio:273:CloseKillConfig            = 'aio\closekills\FTG1_closekills.cfg'
+  aio\levelstructure.aio:274:SilentKillQuotient = 0.45
+  aio\levelstructure.aio:275:MapPosX            = -5305
+  aio\levelstructure.aio:276:MapPosY                    = -446
+  aio\levelstructure.aio:277:MapWidth           = 13839
+  aio\levelstructure.aio:278:MapHeight          = 10379
+  aio\levelstructure.aio:279:MapRotation                = 1.5
+  aio\levelstructure.aio:280:
+  aio\levelstructure.aio:281:
+  aio\levelstructure.aio:282:[level12]
+  aio\levelstructure.aio:283:ID                 = 'FTG_2'
+  aio\levelstructure.aio:284:SceneName          = 'Levels\\Fade_To_Grey2.scene'
+  aio\levelstructure.aio:285:AlarmFile          = 'snd/sfx.fev;ambient/scenes;distant_alarm'
+  aio\levelstructure.aio:286:SuspenseFile       = 'snd/sfx.fev;music/events;mona04'
+  aio\levelstructure.aio:287:AlarmSuppressesSuspense    = 0
+> aio\levelstructure.aio:295:Outfit                     = 2
+> aio\levelstructure.aio:296:LoadSSUniform              = 0
+  aio\levelstructure.aio:297:SkipMipMapLevels   = 0     /* -1 = developer.cfg default; 0=skip 0 levels; 1=skip 1; 2=skip 2 */
+  aio\levelstructure.aio:298:CloseKillConfig            = 'aio\closekills\FTG2_closekills.cfg'
+  aio\levelstructure.aio:299:SilentKillQuotient = 0.19
+  aio\levelstructure.aio:300:MapPosX            = 24595
+  aio\levelstructure.aio:301:MapPosY                    = -2529
+  aio\levelstructure.aio:302:MapWidth           = 27397
+  aio\levelstructure.aio:303:MapHeight          = 20548
+  aio\levelstructure.aio:304:MapRotation                = 1.5
+  aio\levelstructure.aio:305:
+
+
+PS C:\Users\Admin\Documents\Velvet Assassin> $R = "C:\Users\Admin\Documents\Velvet Assassin\VA_RESEARCH"
+PS C:\Users\Admin\Documents\Velvet Assassin>
+PS C:\Users\Admin\Documents\Velvet Assassin> Select-String `
+>>     -Path "$R\*.md","$R\FUNCTIONS.csv" `
+>>     -Pattern 'uniform|camouflage|outfit|mesh.group|animation|exposure|disguise|undercover|Pilot_SS' `
+>>     -Context 4,8
+
+  VA_RESEARCH\CURRENT_STATE.md:1:# Current State
+  VA_RESEARCH\CURRENT_STATE.md:2:
+> VA_RESEARCH\CURRENT_STATE.md:3:## Current milestone — successful in-game outfit test
+  VA_RESEARCH\CURRENT_STATE.md:4:
+  VA_RESEARCH\CURRENT_STATE.md:5:Recorded: 2026-10-11 15:13:55 America/Toronto / 19:13:55 UTC. This is the documentation timestamp; the exact test time was not supplied.
+  VA_RESEARCH\CURRENT_STATE.md:6:
+  VA_RESEARCH\CURRENT_STATE.md:7:CONFIRMED — user-reported in-game test for THE LOST Part 1:
+  VA_RESEARCH\CURRENT_STATE.md:8:
+  VA_RESEARCH\CURRENT_STATE.md:9:- Configuration: `aio\levelstructure.aio`, `[level1]`.
+  VA_RESEARCH\CURRENT_STATE.md:10:- ID: `TL_1`.
+  VA_RESEARCH\CURRENT_STATE.md:11:- SceneName: `Levels\\Lost1.scene`.
+> VA_RESEARCH\CURRENT_STATE.md:12:- Original `Outfit = 1`: Pilot Violette.
+> VA_RESEARCH\CURRENT_STATE.md:13:- Modified `Outfit = 0`: Campaign Violette.
+> VA_RESEARCH\CURRENT_STATE.md:14:- The level was started fresh, and the Campaign outfit appeared successfully.
+> VA_RESEARCH\CURRENT_STATE.md:15:- `aio\levelstructure.aio` directly controls Violette's outfit selection for THE LOST Part 1 at level load.
+  VA_RESEARCH\CURRENT_STATE.md:16:- No `replay.exe` patch was required.
+  VA_RESEARCH\CURRENT_STATE.md:17:
+  VA_RESEARCH\CURRENT_STATE.md:18:This confirms the configuration-level selection source for the tested level. The compiled-script selector and symbol mappings remain LIKELY where previously labeled; the test does not independently verify each internal function or dispatch edge.
+  VA_RESEARCH\CURRENT_STATE.md:19:
+> VA_RESEARCH\CURRENT_STATE.md:20:Only research documentation was changed during this update. The configuration change above was performed and reported by the user; the assistant did not modify game files. Whether the user has restored Outfit=1 was not reported. Earlier statements below about unchanged assets and an unperformed test describe prior checkpoints, not the current
+user-reported test.
+  VA_RESEARCH\CURRENT_STATE.md:21:
+  VA_RESEARCH\CURRENT_STATE.md:22:## Latest milestone — 2026-10-11 15:00 America/Toronto
+  VA_RESEARCH\CURRENT_STATE.md:23:
+  VA_RESEARCH\CURRENT_STATE.md:24:The upstream investigation has stopped at the highest-confidence selector candidate (criterion B), not at a runtime-confirmed Violette load.
+  VA_RESEARCH\CURRENT_STATE.md:25:
+  VA_RESEARCH\CURRENT_STATE.md:26:- CONFIRMED: the native loader chain and direct callers were rechecked in the matching open Ghidra session.
+  VA_RESEARCH\CURRENT_STATE.md:27:- CONFIRMED: `src\live3d.mir.bin` contains the Violette model-path constants and an `Include_Scene::LoadIncludedScene` bytecode record.
+> VA_RESEARCH\CURRENT_STATE.md:28:- LIKELY / BEST UPSTREAM CANDIDATE: `Include_Scene::LoadIncludedScene`, script code file offset `0x0006062a`, named record at `0x00060605` in `src\live3d.mir.bin`. Its 423-byte body branches on initial-outfit and SS-uniform inputs and assigns the model identifier before calling `LoadIncludedScene2`.
+  VA_RESEARCH\CURRENT_STATE.md:29:- LIKELY: `LoadIncludedScene2`, code file offset `0x00061ab6`, forwards the selected field through the Actor method slot corresponding to LoadScene.
+> VA_RESEARCH\CURRENT_STATE.md:30:- CONFIRMED: `aio\levelstructure.aio` documents Outfit 0=campaign, 1=pilot, 2=nightdress; LoadSSUniform=1 is supported with Outfit=1. Level1 currently has Outfit=1 and LoadSSUniform=0.
+  VA_RESEARCH\CURRENT_STATE.md:31:- LIKELY: model path selection comes from these level settings and compiled script constants, rather than a hardcoded Violette choice in FUN_0061c160.
+  VA_RESEARCH\CURRENT_STATE.md:32:- SPECULATIVE / unresolved: the precise actor-property predicate that activates the player replacement branch, complete script-symbol/index validation, and the observed runtime identifier for Violette.
+  VA_RESEARCH\CURRENT_STATE.md:33:- `FUN_0061c160` at `0x0061c160` remains the best confirmed generic scene-instantiation point, but is superseded as the selection candidate by the script function above.
+  VA_RESEARCH\CURRENT_STATE.md:34:- Script offsets are file offsets, NOT replay.exe virtual addresses. No native patch address is implied.
+  VA_RESEARCH\CURRENT_STATE.md:35:- Game files, script bytecode, scene files, and configuration files remain unchanged. Only the four requested existing research documents were updated.
+  VA_RESEARCH\CURRENT_STATE.md:36:
+> VA_RESEARCH\CURRENT_STATE.md:37:Proposed shortest reversible behavior test, NOT performed: after explicit authorization and a verified original backup, change only `[level1] Outfit` in `aio\levelstructure.aio` from 1 to 0, leave LoadSSUniform=0, start a fresh level1, inspect the model, then restore the exact original file. LIKELY expected result: Pilot -> Campaign.
+Runtime/debugger observation can first verify the actual identifier without changing the configuration.
+  VA_RESEARCH\CURRENT_STATE.md:38:
+  VA_RESEARCH\CURRENT_STATE.md:39:## Current executable verification — CONFIRMED
+  VA_RESEARCH\CURRENT_STATE.md:40:
+  VA_RESEARCH\CURRENT_STATE.md:41:- Full path: `C:\Users\Admin\Documents\Velvet Assassin\replay.exe`
+  VA_RESEARCH\CURRENT_STATE.md:42:- File size: 5,164,544 bytes.
+  VA_RESEARCH\CURRENT_STATE.md:43:- SHA-256: `9d18ef1a841526c0c91ce8af5b952c46c7ca0a8a6e8d169e99cc78cf34f8c132`.
+  VA_RESEARCH\CURRENT_STATE.md:44:- Verified: 2026-10-11 14:49:48.8452217 America/Toronto / 2026-10-11T18:49:48.8452217Z UTC.
+  VA_RESEARCH\CURRENT_STATE.md:45:- Read-only filesystem metadata/hash check matches the active REA session hash and target path.
+  VA_RESEARCH\CURRENT_STATE.md:54:- Primary objective: player-model / Violette model selection.
+  VA_RESEARCH\CURRENT_STATE.md:55:- Best candidate currently identified: `FUN_0061c160` at `0x0061c160`.
+  VA_RESEARCH\CURRENT_STATE.md:56:- CONFIRMED: this function consumes a scene identifier and loads/instantiates that scene.
+  VA_RESEARCH\CURRENT_STATE.md:57:- LIKELY: this is relevant to Violette model loading if her models are supplied as scenes.
+> VA_RESEARCH\CURRENT_STATE.md:58:- SPECULATIVE: the actual outfit/model-selection decision happens upstream in script or scene/resource configuration.
+  VA_RESEARCH\CURRENT_STATE.md:59:- Exact upstream selection source is still unidentified.
+  VA_RESEARCH\CURRENT_STATE.md:60:
+  VA_RESEARCH\CURRENT_STATE.md:61:Target: `C:\Users\Admin\Documents\Velvet Assassin\replay.exe`
+  VA_RESEARCH\CURRENT_STATE.md:62:
+  VA_RESEARCH\CURRENT_STATE.md:63:Previously observed identity: PE, x86; SHA-256 `9d18ef1a841526c0c91ce8af5b952c46c7ca0a8a6e8d169e99cc78cf34f8c132`; Ghidra 12.1.4.
+  VA_RESEARCH\CURRENT_STATE.md:64:
+  VA_RESEARCH\CURRENT_STATE.md:65:This document preserves prior observations; session status and target identity must be verified when resuming. No new reverse engineering was performed to create this workspace.
+  VA_RESEARCH\FINDINGS.md:12:```
+  VA_RESEARCH\FINDINGS.md:13:
+  VA_RESEARCH\FINDINGS.md:14:| Setting | Observed in-game result | Confidence |
+  VA_RESEARCH\FINDINGS.md:15:|---|---|---|
+> VA_RESEARCH\FINDINGS.md:16:| Original Outfit = 1 | Pilot Violette | CONFIRMED |
+> VA_RESEARCH\FINDINGS.md:17:| Modified Outfit = 0 | Campaign Violette | CONFIRMED |
+  VA_RESEARCH\FINDINGS.md:18:
+> VA_RESEARCH\FINDINGS.md:19:CONFIRMED: the level was started fresh and the Campaign outfit appeared successfully.
+  VA_RESEARCH\FINDINGS.md:20:
+> VA_RESEARCH\FINDINGS.md:21:CONFIRMED: `aio\levelstructure.aio` directly controls Violette's outfit selection for THE LOST Part 1 at level load. No `replay.exe` patch was required.
+  VA_RESEARCH\FINDINGS.md:22:
+> VA_RESEARCH\FINDINGS.md:23:Scope: this verifies the tested level and the Pilot-to-Campaign change. It does not establish checkpoint restoration behavior, all other levels/outfits, or every reconstructed bytecode symbol and native dispatch edge. Those retain their prior confidence labels.
+  VA_RESEARCH\FINDINGS.md:24:
+> VA_RESEARCH\FINDINGS.md:25:The proposed Outfit 1 -> 0 test below has now been successfully performed by the user. Earlier 'NOT performed' statements are historical. Restoration of the original configuration was not reported and is not assumed.
+  VA_RESEARCH\FINDINGS.md:26:
+  VA_RESEARCH\FINDINGS.md:27:## Upstream investigation checkpoint — 2026-10-11
+  VA_RESEARCH\FINDINGS.md:28:
+  VA_RESEARCH\FINDINGS.md:29:This checkpoint supersedes the earlier statement that no upstream model-selection candidate was identified. It does not claim runtime execution was observed.
+  VA_RESEARCH\FINDINGS.md:30:
+  VA_RESEARCH\FINDINGS.md:31:### Complete observed direct callers and entry references
+  VA_RESEARCH\FINDINGS.md:32:
+  VA_RESEARCH\FINDINGS.md:33:| Target | Resolved direct callers / call instructions | Additional function-pointer references |
+  VA_RESEARCH\FINDINGS.md:51:CONFIRMED from assembly: the wrappers do not choose a model path. At FUN_0060daa0 entry, the third stack argument (`[ESP+0x0c]`, before its first PUSH) is the script/value object placed into ECX by the wrapper. The first two stack arguments are the result storage and target actor. FUN_0060d970 copies/converts the textual storage at incoming
+ECX+0x14 using FUN_00411440, then calls FUN_0061c160 with the target actor in ECX and the converted identifier as its first stack argument. The NoCheck/ForceReload wrappers change flags, not the identifier source.
+  VA_RESEARCH\FINDINGS.md:52:
+  VA_RESEARCH\FINDINGS.md:53:Assembly Evidence: `ev_e92b48c91f0562b05b12e3ddcd6f3ab3718455b4fcca704614e3db41a460efa9` and `ev_4d7dd8754a5f5d8b2dccac0366a9d7249f47f44692df913eb04b4d1ef573b4d0`.
+  VA_RESEARCH\FINDINGS.md:54:
+> VA_RESEARCH\FINDINGS.md:55:CONFIRMED: FUN_0060fe90 receives a narrow string object in ECX and actor in ESI. It searches the string for `.scene`, converts it to a wide string (FUN_00411540), wraps it in a value object (FUN_00414470), and calls FUN_0060daa0 at 0x0060ffa8. Its callers FUN_00610040 (LoadResource) and FUN_006113d0 (CreateChild) derive this text from their
+supplied value argument through FUN_004295c0 and FUN_00411440; they do not contain a Violette filename literal or outfit-selection branch. Assembly Evidence: `ev_124abf9b253d189385bd86cbc8a465f83aa3a5f85b146d81094d2a111da10c24`, `ev_5da49d0c0b2f23314bcbcd1d9d533e7ee285d5879a6fc986ad589d3bf64aa1d5`, and `ev_f6c731c8aab82c72994da1e83c8bffdb4d64dd999781f7d3a6c15ce139e92925`.
+  VA_RESEARCH\FINDINGS.md:56:
+  VA_RESEARCH\FINDINGS.md:57:### Indirect script invocation boundary
+  VA_RESEARCH\FINDINGS.md:58:
+  VA_RESEARCH\FINDINGS.md:59:CONFIRMED: FUN_00612ab0 allocates a 0x30-byte adapter, stores the registered wrapper pointer at adapter+4, installs vtable 0x007f3b18, and registers it through FUN_006124e0. That vtable's first entry is FUN_00609f60; it selects FUN_00606840 for the non-static adapter path. FUN_00606840 calls the stored pointer and passes argument values from the
+invocation argument array, beginning at argument-array+8. This explains why script calls do not appear as ordinary direct native callers.
+  VA_RESEARCH\FINDINGS.md:60:
+  VA_RESEARCH\FINDINGS.md:61:Evidence: registration decompilation `ev_5ea0bfde61cb7c95a83b7cc2312073f931a751ef93cc204a3555905a62636933`; adapter `ev_65117c565c887f6f51efb330afdb761cae461fd20952071629660ab31e54d891`; indirect invocation `ev_fbf596f9281fec20e585591a2b7c85ccae56516831770946fd867cbe1798d9b8`.
+  VA_RESEARCH\FINDINGS.md:62:
+  VA_RESEARCH\FINDINGS.md:63:### External compiled script identity and model constants
+  VA_RESEARCH\FINDINGS.md:74:| Constant | Name offset | Exact UTF-16LE path | Path offset |
+  VA_RESEARCH\FINDINGS.md:75:|---|---|---|---|
+  VA_RESEARCH\FINDINGS.md:76:| FILENAME_VIOLETTE_ALL_MESHES | 0x0005f5ba | Models/Characters/Violette_All_Meshes.scene | 0x0005f5e2 |
+  VA_RESEARCH\FINDINGS.md:77:| FILENAME_VIOLETTE_PILOT | 0x0005f63c | Models/Characters/Violette_Pilot.scene | 0x0005f65f |
+> VA_RESEARCH\FINDINGS.md:78:| FILENAME_VIOLETTE_PILOT_SS | 0x0005f6af | Models/Characters/Violette_Pilot_SS.scene | 0x0005f6d5 |
+  VA_RESEARCH\FINDINGS.md:79:| FILENAME_VIOLETTE_CAMPAIGN | 0x0005f72b | Models/Characters/Violette_Campaign.scene | 0x0005f751 |
+  VA_RESEARCH\FINDINGS.md:80:| FILENAME_VIOLETTE_NIGHTDRESS | 0x0005f7a7 | Models/Characters/Violette_Nightdress.scene | 0x0005f7cf |
+  VA_RESEARCH\FINDINGS.md:81:
+  VA_RESEARCH\FINDINGS.md:82:The corresponding loose model assets exist in Models\Characters. Their existing backup directory was observed but neither created nor changed; this investigation does not establish historical asset originality.
+  VA_RESEARCH\FINDINGS.md:83:
+> VA_RESEARCH\FINDINGS.md:84:### Initial outfit configuration
+  VA_RESEARCH\FINDINGS.md:85:
+  VA_RESEARCH\FINDINGS.md:86:CONFIRMED: `aio\levelstructure.aio` lines 3-4 explicitly document:
+  VA_RESEARCH\FINDINGS.md:87:
+> VA_RESEARCH\FINDINGS.md:88:- Outfit=0: campaign.
+> VA_RESEARCH\FINDINGS.md:89:- Outfit=1: pilot.
+> VA_RESEARCH\FINDINGS.md:90:- Outfit=2: nightdress only.
+> VA_RESEARCH\FINDINGS.md:91:- LoadSSUniform=1 loads/supports the SS uniform and is supported with Outfit=1.
+  VA_RESEARCH\FINDINGS.md:92:
+> VA_RESEARCH\FINDINGS.md:93:CONFIRMED: `[level1]` uses `Levels\\Lost1.scene` (line 9), Outfit=1 (line 20), LoadSSUniform=0 (line 21). `[level5]` uses Outfit=0 (line 120); `[level11]` uses Outfit=2 (line 270). These are current file contents, not proof of runtime use.
+  VA_RESEARCH\FINDINGS.md:94:
+> VA_RESEARCH\FINDINGS.md:95:CONFIRMED: `aio\player_exdata.cfg` [OBJECTS] defines SSUniformObjects (line 60), Campaign_UpperMeshes (line 63), Pilot_UpperMeshes (line 65), and VisionMode_UpperMeshes (line 67). The nightdress group's mesh names are Nightdress_Arm_R, Nightdress_Arm_L, Nightdress_Body, and Nightdress_Head.
+  VA_RESEARCH\FINDINGS.md:96:
+  VA_RESEARCH\FINDINGS.md:97:CONFIRMED: `Levels\Lost1.scene` contains `.\models\characters\violette.scene` at file offset 0x000084ac. This placeholder reference is distinct from the variant filenames. The owning scene property/node was not decoded.
+  VA_RESEARCH\FINDINGS.md:98:
+  VA_RESEARCH\FINDINGS.md:99:CONFIRMED: relevant compiled-script records exist:
+  VA_RESEARCH\FINDINGS.md:100:
+  VA_RESEARCH\FINDINGS.md:101:| Function | Name file offset | Bytecode file offset | Bytecode bytes |
+  VA_RESEARCH\FINDINGS.md:102:|---|---|---|---|
+  VA_RESEARCH\FINDINGS.md:103:| Include_Scene::LoadIncludedScene | 0x00060605 | 0x0006062a | 423 |
+  VA_RESEARCH\FINDINGS.md:104:| Include_Scene::LoadIncludedScene2 | 0x00061a90 | 0x00061ab6 | 405 |
+> VA_RESEARCH\FINDINGS.md:105:| LeveldataManager::getOutfit | 0x0007dc2c | 0x0007dc4c | 225 |
+  VA_RESEARCH\FINDINGS.md:106:| Player_Character::Init | 0x002099c9 | 0x002099e4 | 66 |
+> VA_RESEARCH\FINDINGS.md:107:| Player_Character::SetOutfit | 0x0020eeeb | 0x0020ef0b | 1436 |
+> VA_RESEARCH\FINDINGS.md:108:| Player_Character::SetInitialOutfit | 0x0020f856 | 0x0020f87d | 108 |
+> VA_RESEARCH\FINDINGS.md:109:| Third_Person_Camera::SetInitialOutfit | 0x00245d36 | 0x00245d60 | 143 |
+  VA_RESEARCH\FINDINGS.md:110:
+  VA_RESEARCH\FINDINGS.md:111:The compiler source labels include `src\behaviour\a_include_scene.mir`, `src\core\leveldata.mir`, and `src\behaviour2\player_character.mir`. The loose original .mir source files were not found in the observed Script/src inventory.
+  VA_RESEARCH\FINDINGS.md:112:
+  VA_RESEARCH\FINDINGS.md:113:All addresses below are previously observed Ghidra virtual addresses for the recorded executable. Function names are Ghidra-generated names, not recovered source symbols. Simplified pseudocode is explanatory, not an exact REA transcript.
+  VA_RESEARCH\FINDINGS.md:114:
+  VA_RESEARCH\FINDINGS.md:115:## Best current candidate
+  VA_RESEARCH\FINDINGS.md:116:
+  VA_RESEARCH\FINDINGS.md:117:`FUN_0061c160` at `0x0061c160` consumes a scene identifier and loads/instantiates that scene. Its resolved direct caller is `FUN_0060d970`.
+  VA_RESEARCH\FINDINGS.md:162:`FUN_00610040` and `FUN_006113d0` call `FUN_0060fe90`, whose `.scene` branch reaches `FUN_0060daa0`. CreateChild constructs a generic actor; player-specific creation remains unidentified.
+  VA_RESEARCH\FINDINGS.md:163:
+  VA_RESEARCH\FINDINGS.md:164:## Requested string searches
+  VA_RESEARCH\FINDINGS.md:165:
+> VA_RESEARCH\FINDINGS.md:166:Searches found no defined-string matches for `Violette_Campaign`, `Violette_Pilot`, `Violette_Pilot_SS`, `Violette_Nightdress`, `Violette_New_Basemesh`, or `Models`.
+  VA_RESEARCH\FINDINGS.md:167:
+  VA_RESEARCH\FINDINGS.md:168:`Violette` matched `Textures/GUI/LoadingScreens/violette` at `0x007f5a74`, reference `0x00638a79` in `FUN_00638a50`. Decompilation constructs `Textures/GUI/LoadingScreens/violette` + decimal index 1-7 + `_i.dds`, then calls `FUN_00501ea0(..., 3)`. This is loading-screen texture path construction/resource acquisition, not evidence of player-model
+selection. Direct caller query returned none.
+  VA_RESEARCH\FINDINGS.md:169:
+  VA_RESEARCH\FINDINGS.md:170:`.scene` at `0x007e3a0c` has references:
+  VA_RESEARCH\FINDINGS.md:171:
+  VA_RESEARCH\FINDINGS.md:172:- `0x004ae0bc` in `FUN_004ade60`: extension search/removal.
+  VA_RESEARCH\FINDINGS.md:173:- `0x0052e5eb` and `0x0052e606` in `FUN_0052e5b0`: extension search/removal.
+  VA_RESEARCH\FINDINGS.md:174:- `0x0060ff50` in `FUN_0060fe90`: scene-loader dispatch.
+  VA_RESEARCH\FINDINGS.md:192:
+  VA_RESEARCH\FINDINGS.md:193:```text
+  VA_RESEARCH\FINDINGS.md:194:if the actor matches the special player-include condition:
+  VA_RESEARCH\FINDINGS.md:195:    if level index is valid:
+> VA_RESEARCH\FINDINGS.md:196:        initialOutfit = leveldata.getOutfit(levelIndex)
+> VA_RESEARCH\FINDINGS.md:197:        loadSSUniform = leveldata's SS-uniform setting
+> VA_RESEARCH\FINDINGS.md:198:        if initialOutfit == CAMPAIGN:
+  VA_RESEARCH\FINDINGS.md:199:            selectedIdentifier = FILENAME_VIOLETTE_CAMPAIGN
+> VA_RESEARCH\FINDINGS.md:200:        else if initialOutfit == PILOT:
+> VA_RESEARCH\FINDINGS.md:201:            selectedIdentifier = loadSSUniform
+> VA_RESEARCH\FINDINGS.md:202:                ? FILENAME_VIOLETTE_PILOT_SS
+  VA_RESEARCH\FINDINGS.md:203:                : FILENAME_VIOLETTE_PILOT
+  VA_RESEARCH\FINDINGS.md:204:        else:
+  VA_RESEARCH\FINDINGS.md:205:            selectedIdentifier = FILENAME_VIOLETTE_NIGHTDRESS
+  VA_RESEARCH\FINDINGS.md:206:    else:
+  VA_RESEARCH\FINDINGS.md:207:        selectedIdentifier = FILENAME_VIOLETTE_ALL_MESHES
+  VA_RESEARCH\FINDINGS.md:208:LoadIncludedScene2(actor)
+  VA_RESEARCH\FINDINGS.md:209:```
+  VA_RESEARCH\FINDINGS.md:210:
+> VA_RESEARCH\FINDINGS.md:211:This is analyst reconstruction, NOT original source or a REA decompilation. The function's local records explicitly name `self`, `iInitialOutfit`, and `bLoadSSUniform`. Its branch bodies assign member slot 0x20 from global slots 0x05b1, 0x05b0/0x05af, 0x05b2, or 0x05ae. It compares initial-outfit values against slots 0x02fc and 0x02fd. Mapping
+those symbol slots to the adjacent named global constants remains LIKELY until a complete symbol-table decoder or runtime observation corroborates it. The normal invalid-index fallback interpretation is likewise LIKELY.
+  VA_RESEARCH\FINDINGS.md:212:
+  VA_RESEARCH\FINDINGS.md:213:LIKELY: Include_Scene::LoadIncludedScene2 forwards member slot 0x20 (the selected filename/identifier) into actor method slot 0x800a. Registration order and the native adapter evidence support identifying this as LoadScene. The exact bytecode-to-native runtime dispatch has not been observed.
+  VA_RESEARCH\FINDINGS.md:214:
+  VA_RESEARCH\FINDINGS.md:215:LIKELY shortest selection-to-loader chain:
+  VA_RESEARCH\FINDINGS.md:216:
+> VA_RESEARCH\FINDINGS.md:217:`levelstructure.aio Outfit/LoadSSUniform -> LeveldataManager settings -> Include_Scene::LoadIncludedScene -> selected member slot 0x20 -> Include_Scene::LoadIncludedScene2 -> Actor.LoadScene/FUN_0060daa0 -> FUN_0060d970 -> FUN_0061c160`.
+  VA_RESEARCH\FINDINGS.md:218:
+> VA_RESEARCH\FINDINGS.md:219:LIKELY: Player_Character::SetOutfit controls visible mesh groups after resources are available, rather than choosing the initial scene filename. Its bytecode accesses Campaign/Pilot/NormalMode/Vision/SS group fields and the outfit state. This is a separate candidate for appearance changes, not the best scene-identifier selector.
+  VA_RESEARCH\FINDINGS.md:220:
+  VA_RESEARCH\FINDINGS.md:221:## Proposed smallest reversible test — NOT performed
+  VA_RESEARCH\FINDINGS.md:222:
+> VA_RESEARCH\FINDINGS.md:223:After explicit authorization and a verified original backup/hash, change only `[level1] Outfit` in `aio\levelstructure.aio` from 1 to 0; keep LoadSSUniform=0. Start level1 fresh rather than restoring a checkpoint, observe Pilot vs Campaign appearance, then restore the original file exactly. LIKELY expected result: Campaign model selection. No
+executable patch or model-file replacement is required for this proposed test.
+  VA_RESEARCH\FINDINGS.md:224:
+  VA_RESEARCH\FINDINGS.md:225:An optional first observational check is to inspect the actual string/value argument entering FUN_0060d970 while creating Violette, together with the actor/call stack. No runtime test or debugger action was performed in this investigation.
+  VA_RESEARCH\FINDINGS.md:226:
+  VA_RESEARCH\FINDINGS.md:227:## PlayerRoot
+  VA_RESEARCH\FINDINGS.md:228:
+  VA_RESEARCH\FINDINGS.md:229:String `PlayerRoot`, address `0x007e724c`; function `FUN_004f0310` at `0x004f0310`; reference `0x004f042d`. Role: script/reflection field registration. Confidence: LIKELY.
+  VA_RESEARCH\FINDINGS.md:230:
+  VA_RESEARCH\FINDINGS.md:231:## Character
+  VA_RESEARCH\FINDINGS.md:253:# Speculative
+  VA_RESEARCH\FINDINGS.md:254:
+  VA_RESEARCH\FINDINGS.md:255:The actor-property comparison activating the special replacement branch is not fully decoded. Its relationship to the Lost1 `violette.scene` placeholder is SPECULATIVE. Dynamic script dispatch and symbol slots are not fully validated, so exact live execution of the reconstructed selection chain remains unconfirmed. No evidence establishes that
+changing only an asset filename or patching FUN_0061c160 is the smallest correct modification.
+  VA_RESEARCH\FINDINGS.md:256:
+> VA_RESEARCH\FINDINGS.md:257:Earlier speculation that selection originates upstream is now narrowed to the compiled Include_Scene selector and level outfit configuration. The earlier paragraph below is retained as historical context.
+  VA_RESEARCH\FINDINGS.md:258:
+> VA_RESEARCH\FINDINGS.md:259:The actual model/outfit choice occurs before `FUN_0061c160`, probably from script, scene, or resource configuration. No observed branch selects Campaign, Pilot, Pilot_SS, Nightdress, or New_Basemesh.
+  VA_RESEARCH\FINDINGS.md:260:
+  VA_RESEARCH\FINDINGS.md:261:No function has yet been confirmed to create Violette specifically or initialize her selected model. Generic scene-loading and actor-creation routines must not be labeled Violette-specific without further evidence.
+  VA_RESEARCH\FINDINGS.md:262:
+  VA_RESEARCH\FINDINGS.md:263:# Open Questions
+  VA_RESEARCH\FINDINGS.md:264:
+  VA_RESEARCH\FINDINGS.md:265:Latest checkpoint: stop criterion B has been reached with a high-confidence LIKELY upstream selector; criterion A (fully verified live Violette identifier origin) has not been claimed. Remaining focused questions are exact symbol-slot mappings, the special actor predicate, configuration loading/override behavior, and runtime confirmation of the
+chosen path. Do not continue until requested.
+  VA_RESEARCH\FINDINGS.md:266:
+  VA_RESEARCH\FINDINGS.md:267:- Where does the scene-identifier argument originate?
+  VA_RESEARCH\FINDINGS.md:268:- Is it a path, resource ID, script value, scene property, or resource-table entry?
+  VA_RESEARCH\FINDINGS.md:269:- Which actor corresponds to Violette, and what connects it to PlayerRoot/ActivePlayer?
+> VA_RESEARCH\FINDINGS.md:270:- Are the outfit/model names present in external resources or undefined executable bytes?
+> VA_RESEARCH\FINDINGS.md:271:- Which upstream operation selects the outfit?
+  VA_RESEARCH\FINDINGS.md:272:- What is the smallest reversible test once that selection point is established?
+  VA_RESEARCH\FINDINGS.md:273:
+  VA_RESEARCH\FINDINGS.md:274:Limitations: searches cover Ghidra-defined string data, not all artifact bytes. Static xrefs and direct caller lists may omit indirect calls. Decompilation is provider-generated pseudocode; type propagation and removed-block warnings were observed, especially in `FUN_0052e5b0` and registration code. Verify arguments and addresses with read-only
+assembly where needed. No runtime experiment has established Violette-specific behavior.
+  VA_RESEARCH\NEXT_STEPS.md:1:# Next Steps
+  VA_RESEARCH\NEXT_STEPS.md:2:
+> VA_RESEARCH\NEXT_STEPS.md:3:CONFIRMED milestone: the user successfully tested THE LOST Part 1 with a fresh level start. In aio\levelstructure.aio [level1] (ID=TL_1; SceneName=Levels\\Lost1.scene), Outfit=1 produced Pilot Violette and Outfit=0 produced Campaign Violette. This configuration directly controls the tested outfit selection at level load; no replay.exe patch was
+required.
+  VA_RESEARCH\NEXT_STEPS.md:4:
+  VA_RESEARCH\NEXT_STEPS.md:5:Do not execute further investigation or change game files until explicitly instructed. The current request authorizes documentation updates only.
+  VA_RESEARCH\NEXT_STEPS.md:6:
+  VA_RESEARCH\NEXT_STEPS.md:7:1. Preserve the successful test record as the baseline. The exact test time and whether the original configuration was restored are unspecified.
+  VA_RESEARCH\NEXT_STEPS.md:8:2. If the user requests another configuration edit, first verify the current file and preserve its original contents/hash before that authorized edit. Do not overwrite or restore anything automatically.
+> VA_RESEARCH\NEXT_STEPS.md:9:3. If broader outfit control is requested, test only the requested additional level/outfit with a fresh level start and record the setting and visible result. Existing configuration documents Outfit 0=Campaign, 1=Pilot, 2=Nightdress; these additional combinations are not all runtime-confirmed by this test.
+> VA_RESEARCH\NEXT_STEPS.md:10:4. If SS-uniform behavior is requested, investigate/test the documented Outfit=1 and LoadSSUniform relationship within the authorized scope.
+  VA_RESEARCH\NEXT_STEPS.md:11:5. Investigate checkpoint behavior or the exact compiled-script symbol/dispatch mappings only if needed for the next requested feature. Preserve CONFIRMED / LIKELY / SPECULATIVE distinctions.
+  VA_RESEARCH\NEXT_STEPS.md:12:6. Consider executable patching or runtime redirection only for a requested behavior that configuration cannot provide and only after explicit authorization. The tested Pilot-to-Campaign change needs neither.
+  VA_RESEARCH\NEXT_STEPS.md:13:
+  VA_RESEARCH\NEXT_STEPS.md:14:The prior loader investigation remains documented in FINDINGS.md and FUNCTIONS.csv. FUN_0061c160 is a confirmed generic loader; Include_Scene::LoadIncludedScene remains the LIKELY internal selector. Further generic loader analysis is unnecessary for the successful configuration change.
+  VA_RESEARCH\SESSION_LOG.md:3:## 2026-10-11 15:13:55 America/Toronto / 19:13:55 UTC — successful user-reported in-game test
+  VA_RESEARCH\SESSION_LOG.md:4:
+  VA_RESEARCH\SESSION_LOG.md:5:- Evidence source: user report; exact test time not supplied. Timestamp records this documentation update.
+  VA_RESEARCH\SESSION_LOG.md:6:- CONFIRMED configuration: `aio\levelstructure.aio`, `[level1]`, `ID = TL_1`, `SceneName = Levels\\Lost1.scene`.
+> VA_RESEARCH\SESSION_LOG.md:7:- CONFIRMED original state: `Outfit = 1` produced Pilot Violette.
+> VA_RESEARCH\SESSION_LOG.md:8:- CONFIRMED modified state: `Outfit = 0` produced Campaign Violette.
+  VA_RESEARCH\SESSION_LOG.md:9:- CONFIRMED procedure/result: the level was started fresh and Campaign Violette appeared successfully.
+> VA_RESEARCH\SESSION_LOG.md:10:- CONFIRMED conclusion: `aio\levelstructure.aio` directly controls Violette's outfit selection for THE LOST Part 1 at level load.
+  VA_RESEARCH\SESSION_LOG.md:11:- CONFIRMED: no `replay.exe` patch was required.
+  VA_RESEARCH\SESSION_LOG.md:12:- Internal script-symbol mappings remain LIKELY; the successful configuration test does not independently validate every reconstructed call edge.
+> VA_RESEARCH\SESSION_LOG.md:13:- Original configuration restoration was not reported. No claim is made that the current configuration is back at Outfit=1 or that all game assets are historically unmodified.
+  VA_RESEARCH\SESSION_LOG.md:14:- Assistant updated only CURRENT_STATE.md, FINDINGS.md, SESSION_LOG.md, FUNCTIONS.csv notes, and NEXT_STEPS.md. No game files modified and no further reverse engineering or runtime experiment performed during this update.
+  VA_RESEARCH\SESSION_LOG.md:15:
+  VA_RESEARCH\SESSION_LOG.md:16:## 2026-10-11 15:00 America/Toronto / 19:00 UTC — upstream checkpoint
+  VA_RESEARCH\SESSION_LOG.md:17:
+  VA_RESEARCH\SESSION_LOG.md:18:- CONFIRMED: enumerated all observed direct callers and entry xrefs for FUN_0060d970 and all three wrappers. FUN_0060d970 has only the three wrapper callers; FUN_0060daa0 has FUN_0060fe90; the other wrappers have registration references but no resolved direct callers.
+  VA_RESEARCH\SESSION_LOG.md:19:- CONFIRMED: native assembly shows scene text supplied through a value object, not a wrapper-local model choice. Traced LoadResource/CreateChild argument conversion and the indirect script adapter boundary without revisiting generic loader internals.
+  VA_RESEARCH\SESSION_LOG.md:20:- CONFIRMED: read existing src\live3d.mir.bin and relevant local configuration/scene bytes without extracting, modifying, or executing them. Script size 3,459,973 bytes; SHA-256 404f2905e3eb693745d40a4868d6068b784c46661487dbb6cf7cde27cf4ff099.
+> VA_RESEARCH\SESSION_LOG.md:21:- CONFIRMED: compiled script contains exact Violette variant-path constants; levelstructure.aio documents Outfit and LoadSSUniform controls. Lost1.scene contains the generic violette.scene placeholder.
+> VA_RESEARCH\SESSION_LOG.md:22:- LIKELY: highest-confidence upstream scene-identifier selector is Include_Scene::LoadIncludedScene, bytecode file offset 0x0006062a, named record 0x00060605. It branches on iInitialOutfit/bLoadSSUniform and assigns the selected identifier before LoadIncludedScene2.
+> VA_RESEARCH\SESSION_LOG.md:23:- LIKELY: the reconstructed selection maps Campaign/Pilot/Pilot_SS/Nightdress/All_Meshes constants to the native LoadScene chain. Full bytecode symbol mappings and runtime dispatch remain unverified.
+  VA_RESEARCH\SESSION_LOG.md:24:- SPECULATIVE: exact player predicate linking the scene placeholder to that selection branch.
+  VA_RESEARCH\SESSION_LOG.md:25:- Stopped at criterion B: high-confidence upstream candidate. No claim that criterion A (fully verified live identifier origin) is complete.
+> VA_RESEARCH\SESSION_LOG.md:26:- Proposed but did NOT perform the shortest reversible configuration test: level1 Outfit 1 -> 0 with LoadSSUniform unchanged, fresh level load, then exact restoration after explicit authorization.
+  VA_RESEARCH\SESSION_LOG.md:27:- Updated only CURRENT_STATE.md, SESSION_LOG.md, FINDINGS.md, and FUNCTIONS.csv. No game assets, executable, script, scene, or configuration files patched, renamed, moved, or overwritten. No runtime experiment performed.
+  VA_RESEARCH\SESSION_LOG.md:28:- Active Ghidra session retained for future continuation; no close/reopen lifecycle operation performed.
+  VA_RESEARCH\SESSION_LOG.md:29:- CONFIRMED end-of-investigation check at `2026-10-11T19:03:40.9197307Z` / 15:03:40.9197307 America/Toronto: replay.exe remains 5,164,544 bytes with SHA-256 `9d18ef1a841526c0c91ce8af5b952c46c7ca0a8a6e8d169e99cc78cf34f8c132`. All four requested documentation files exist; FUNCTIONS.csv parses with six required columns and 44 rows.
+  VA_RESEARCH\SESSION_LOG.md:30:
+  VA_RESEARCH\SESSION_LOG.md:31:## 2026-10-11 14:49:48.8452217 America/Toronto / 18:49:48.8452217 UTC
+  VA_RESEARCH\SESSION_LOG.md:32:
+  VA_RESEARCH\SESSION_LOG.md:33:CONFIRMED: current executable verified through a read-only filesystem check:
+  VA_RESEARCH\SESSION_LOG.md:34:
+  VA_RESEARCH\FUNCTIONS.csv:1:Name,Address,Reference,Role,Confidence,Notes
+> VA_RESEARCH\FUNCTIONS.csv:2:Include_Scene::LoadIncludedScene,file:src/live3d.mir.bin+0x0006062a,name@0x00060605,Best upstream model-path selector candidate,LIKELY,423-byte bytecode; initial-outfit and SS-uniform branches assign member slot 0x20; user fresh-level test CONFIRMS level1 configuration control but internal symbol mappings and player predicate still require
+corroboration
+  VA_RESEARCH\FUNCTIONS.csv:3:Include_Scene::LoadIncludedScene2,file:src/live3d.mir.bin+0x00061ab6,name@0x00061a90,Forwards selected scene field to Actor LoadScene candidate,LIKELY,405-byte bytecode; method slot 0x800a; file offset is not native VA
+> VA_RESEARCH\FUNCTIONS.csv:4:LeveldataManager::getOutfit,file:src/live3d.mir.bin+0x0007dc4c,name@0x0007dc2c,Retrieves per-level initial outfit,LIKELY,225-byte bytecode; user fresh-level test CONFIRMS levelstructure.aio level1 Outfit 1=Pilot and 0=Campaign; this specific internal function role remains LIKELY
+> VA_RESEARCH\FUNCTIONS.csv:5:Player_Character::SetOutfit,file:src/live3d.mir.bin+0x0020ef0b,name@0x0020eeeb,Changes outfit state and visible mesh groups,LIKELY,1436-byte bytecode; strongest appearance selector but not initial scene filename selector
+> VA_RESEARCH\FUNCTIONS.csv:6:Player_Character::SetInitialOutfit,file:src/live3d.mir.bin+0x0020f87d,name@0x0020f856,Initial outfit state setter,LIKELY,108-byte bytecode; do not confuse offset with replay.exe address
+  VA_RESEARCH\FUNCTIONS.csv:7:Player_Character::Init,file:src/live3d.mir.bin+0x002099e4,name@0x002099c9,Character root initialization,LIKELY,66-byte bytecode; exact stored name is Init rather than printable extraction artifact InitB
+> VA_RESEARCH\FUNCTIONS.csv:8:Third_Person_Camera::SetInitialOutfit,file:src/live3d.mir.bin+0x00245d60,name@0x00245d36,Forwards initial outfit to character state,LIKELY,143-byte bytecode; runtime path unobserved
+  VA_RESEARCH\FUNCTIONS.csv:9:FUN_00612ab0,0x00612ab0,0x0061419f;0x006141ae;0x006141bd,Creates and registers LoadScene wrapper adapters,CONFIRMED,Wrapper pointer stored at adapter+4; vtable 0x007f3b18
+  VA_RESEARCH\FUNCTIONS.csv:10:FUN_00609f60,0x00609f60,0x007f3b18,LoadScene adapter virtual invocation entry,CONFIRMED,Selects FUN_00606840 for non-static adapter path
+  VA_RESEARCH\FUNCTIONS.csv:11:FUN_00606840,0x00606840,,Invokes registered wrapper with invocation arguments,CONFIRMED,Indirect pointer call at adapter+4; argument-array values begin at +8
+  VA_RESEARCH\FUNCTIONS.csv:12:FUN_006124e0,0x006124e0,,Registers named script adapter,CONFIRMED,Called by FUN_00612ab0 and FUN_00612b30
+  VA_RESEARCH\FUNCTIONS.csv:13:FUN_004295c0,0x004295c0,0x0061007d;0x00611473,Copies supplied value text into wide string,CONFIRMED,Source object's textual storage at incoming ECX+0x14
+  VA_RESEARCH\FUNCTIONS.csv:14:FUN_00411440,0x00411440,0x0060d9b8,Converts wide scene identifier text into narrow string,CONFIRMED,Argument producer for FUN_0061c160; also used on resource/child dispatch paths
+  VA_RESEARCH\FUNCTIONS.csv:15:FUN_00414470,0x00414470,0x0060ff94,Wraps wide string in script value object,CONFIRMED,Value becomes third stack argument of FUN_0060daa0
+> VA_RESEARCH\FUNCTIONS.csv:16:FUN_0061c160,0x0061c160,0x0060d970,Scene identifier consumption and scene instantiation,CONFIRMED,Best current candidate; Violette relevance LIKELY conditional on scene resources; outfit selection upstream SPECULATIVE
+  VA_RESEARCH\FUNCTIONS.csv:17:FUN_006140e0,0x006140e0,0x006145a6,Registers GetMeshLibID accessor,CONFIRMED,String GetMeshLibID at 0x007f437c; implementation FUN_0060f900
+  VA_RESEARCH\FUNCTIONS.csv:18:FUN_00537bf0,0x00537bf0,0x00537c14,SceneResource type construction,CONFIRMED,String SceneResource at 0x007eabec; pointer 0x008c630c
+  VA_RESEARCH\FUNCTIONS.csv:19:FUN_0053c320,0x0053c320,0x0053c343,SceneResource diagnostics,CONFIRMED,String SceneResource at 0x007eabec
+  VA_RESEARCH\FUNCTIONS.csv:20:FUN_004f0310,0x004f0310,0x004f042d,PlayerRoot script/reflection field registration,LIKELY,String PlayerRoot at 0x007e724c
+  VA_RESEARCH\FUNCTIONS.csv:21:FUN_004f12c0,0x004f12c0,0x004f12fd,Character interface registration,LIKELY,String Character at 0x007e766c; caller FUN_00500090
+  VA_RESEARCH\FUNCTIONS.csv:22:FUN_004f12c0,0x004f12c0,0x004f1560,GetCharacterType method registration,LIKELY,String GetCharacterType at 0x007e7604
+  VA_RESEARCH\FUNCTIONS.csv:23:FUN_004f8e40,0x004f8e40,0x004f8e99,Character-reference registration,LIKELY,String m_pCharacter at 0x007e7818
+  VA_RESEARCH\FUNCTIONS.csv:24:FUN_004fa1a0,0x004fa1a0,0x004fa277,Character-reference registration,LIKELY,String m_pCharacter at 0x007e7818
+  VA_RESEARCH\FUNCTIONS.csv:29:FUN_0060fe90,0x0060fe90,0x0060ff50,Dispatches .scene identifiers into scene loading,CONFIRMED,Callers FUN_00610040 and FUN_006113d0
+  VA_RESEARCH\FUNCTIONS.csv:30:FUN_0060daa0,0x0060daa0,0x0061419a,LoadScene script wrapper,CONFIRMED,Registration xref in FUN_006140e0; forwards flags 0 and 0 to FUN_0060d970
+  VA_RESEARCH\FUNCTIONS.csv:31:FUN_0060dad0,0x0060dad0,0x006141a9,LoadSceneNoCheck script wrapper,CONFIRMED,Registration xref in FUN_006140e0; forwards flags 1 and 0
+  VA_RESEARCH\FUNCTIONS.csv:32:FUN_0060db00,0x0060db00,0x006141b8,LoadSceneForceReload script wrapper,CONFIRMED,Registration xref in FUN_006140e0; forwards flags 1 and 1
+> VA_RESEARCH\FUNCTIONS.csv:33:FUN_0060d970,0x0060d970,0x0060dabc;0x0060daec;0x0060db1c,Converts supplied value identifier and invokes scene loader,CONFIRMED,Only three resolved direct callers; text source incoming ECX+0x14; no outfit choice
+  VA_RESEARCH\FUNCTIONS.csv:34:FUN_00610040,0x00610040,0x006141c7,LoadResource script entry,CONFIRMED,Registration xref in FUN_006140e0; calls FUN_0060fe90
+  VA_RESEARCH\FUNCTIONS.csv:35:FUN_006113d0,0x006113d0,0x006141d6,CreateChild generic actor creation and resource dispatch,CONFIRMED,Registration xref in FUN_006140e0; no Violette-specific creation established
+  VA_RESEARCH\FUNCTIONS.csv:36:FUN_00610ea0,0x00610ea0,0x0061414c,Registered CreateChilds implementation,CONFIRMED,Registration observed; implementation not decompiled
+  VA_RESEARCH\FUNCTIONS.csv:37:FUN_0060f900,0x0060f900,0x006145a6,Registered GetMeshLibID implementation,CONFIRMED,Implementation not decompiled
+  VA_RESEARCH\FUNCTIONS.csv:38:FUN_00502020,0x00502020,,Scene resource lookup or construction,CONFIRMED,Called by FUN_0061c160; constructs through FUN_0053bc40
+  VA_RESEARCH\FUNCTIONS.csv:39:FUN_0053bc40,0x0053bc40,,SceneResource construction,CONFIRMED,Calls FUN_00537bf0 and creates loader via FUN_007405c0
+  VA_RESEARCH\FUNCTIONS.csv:40:FUN_0061a750,0x0061a750,,Recursive actor hierarchy construction from scene data,CONFIRMED,Called by FUN_0061c160 and recursively by itself
+  VA_RESEARCH\FUNCTIONS.csv:41:FUN_0061aef0,0x0061aef0,,Recursive scene entity initialization,CONFIRMED,Called by FUN_0061c160; not demonstrated Violette-specific
+
+
+PS C:\Users\Admin\Documents\Velvet Assassin>

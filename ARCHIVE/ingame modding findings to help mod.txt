@@ -1,0 +1,57 @@
+High-value things visible in the screenshots
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+What you seeWhy it matters for moddingNightdress_Body / Pilot_Arm_R / Pilot_Arm_LConfirms the exact mesh/material names used for the different outfits. These are the strings we need to search for in the .aio files or memory.Violette_Biped… hierarchyFull skeletal hierarchy of the player. Useful for animation or body-part swaps.Show Objects Mode (2361 objects)You can cycle through every entity in the level. Great for finding triggers, spawn points, and hidden objects.Camera Position: (10215; -1101.6; 41.6869)Exact coordinates. You can use these to test teleport scripts or find the player position pointer more easily.Invisible + God Mode (0 deaths)Confirms the developer flags are live and working.Build date: 2009-03-06This is a Beta build, so some debug features that were removed from the retail version are still present.
+Most useful hotkeys right now (from the freelook help)
+
+1 or Numpad 1 → Show/Hide Help
+2 or Numpad 2 → Show/Hide HUD
+3 or Numpad 3 → Toggle Y-axis invert
+X → Return to game
+Shift + X → Return & reposition player
+0 → Freeze/Unfreeze action
+
+Recommended next steps for modding
+
+Stay in Show Objects Mode and look for any object that contains:
+Outfit
+Nightdress
+Pilot
+Campaign
+Player
+
+Note the exact object names (especially anything with “Nightdress” or “Pilot”).
+Tell me the most interesting object names you find and we can start hunting their memory addresses or the corresponding entries inside the .aio files.
+
+You’re in a very good position now. What objects are standing out to you?

@@ -1,0 +1,93 @@
+No — not yet for a reliable runtime-callable DLL that invokes outfit changes.
+The investigation closed the selection path (levelstructure.aio → LeveldataManager::getOutfit → Include_Scene::LoadIncludedScene → LoadScene chain) and confirmed the config-driven test works for a fresh level start. That is solid and reversible.
+What is still missing for a usable DLL:
+
+No confirmed native, DLL-callable entry point for SetOutfit / SetInitialOutfit.
+Those are still only known as compiled-script methods inside live3d.mir.bin. The native side only has the generic scene-loader wrappers (FUN_0060daa0 / FUN_0060d970 / FUN_0061c160) and the registration adapters. We never recovered a stable C++-style vtable slot or exported-style function that a foreign DLL can call with a Player_Character pointer.
+No live Player_Character / ActivePlayer / PlayerRoot pointer acquisition path that is safe to call from a loaded DLL.
+The registration strings and a few helper functions exist, but we do not yet have a reliable way to obtain the current player actor object at runtime without racing the game’s own initialization or relying on fragile global addresses.
+No verified call signature or argument layout for the post-load mesh-group switching that Player_Character::SetOutfit appears to perform. The bytecode is known; the native thunk (if any) is not.
+
+What can be built right now
+
+A tiny DLL or external tool that simply rewrites aio\levelstructure.aio (or a per-level override) and forces a level reload / checkpoint restart. That already works and needs no reverse-engineering beyond what was confirmed.
+A DLL that hooks the script-to-native adapter path (the 0x30-byte adapter + vtable 0x007f3b18 route) and rewrites the identifier string before it reaches FUN_0060daa0. That is feasible with the current evidence but is still a string-replacement hack, not a clean “call SetOutfit” API.
+Logging / observational hooks around the known LoadScene wrappers to capture the exact identifier and actor pointer the next time Violette is instantiated.
+
+Recommended next step before any DLL build
+One focused static + observational pass:
+
+Resolve the exact member-slot → global-constant mapping inside Include_Scene::LoadIncludedScene (the 0x05ae/0x05af/… slots and the 0x02fc/0x02fd comparisons).
+Locate any native method that the script VM ultimately dispatches for the 0x800a slot (the one LoadIncludedScene2 appears to call).
+Confirm a stable way to obtain the player actor (via ActivePlayer / PlayerRoot registration or a known global).
+
+Once those two gaps are closed we can write a clean, reversible DLL that either:
+
+forces the desired identifier on the next LoadScene, or
+calls the native equivalent of SetOutfit after the resources are already loaded.
+
+Until then any “SetOutfit DLL” would be speculative and brittle. The config-file route remains the smallest, fully confirmed change.
+
+That’s a very large session.
+Breakdown
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MetricValueCommentTotal650,988High for a single focused investigationInput569,477Dominated by tool results being fed back inCached+24,547,328Extremely high — this is the real storyOutput81,511Normal for an agent loopReasoning18,054Reasonable for the complexity
+What the numbers actually mean
+The 24.5 million cached tokens dwarf everything else. This is typical of long-running REA / Ghidra sessions that:
+
+Keep dumping full procedure_pseudo_code results of large functions
+Re-request binary_session capability lists
+Accumulate long chains of xrefs, assembly, and evidence IDs without aggressive pruning
+Never really clear the context of earlier exploratory branches
+
+Caching is working (otherwise the bill would be catastrophic), but the absolute volume is still expensive. Most of those cached tokens are not high-value reasoning — they’re repeated tool noise and large decompilation blobs that were only partially relevant.
+The productive signal-to-noise ratio was low after the config-file path (levelstructure.aio → Outfit) was already confirmed. A lot of the later native-side digging into registration helpers, thread starters, and config loaders added little incremental value relative to the tokens spent.
+Practical takeaway
+For future REA sessions of this type:
+
+Stop earlier once the smallest reversible change is confirmed (you already had it with the Outfit=0 test).
+Prefer summary / targeted views over full pseudocode dumps when possible.
+Explicitly ask the agent to discard or summarize large previous evidence blocks instead of letting them stay in the live context.
+Treat anything beyond ~150–200k total as a signal to either checkpoint and start a fresh session, or switch to a more surgical query style.
+
+You got solid results (the outfit selection chain is now well understood), but the token cost was higher than necessary for the final confirmed finding.
+
+Fix your workflow immediately:
+
+    Use the "Summary" trick: Every time the REA CLI finishes a task, tell it: "Stop. Summarize your exact findings into a 500-word markdown document. Discard all previous context." Start the next task with only that summary.
+    Disable auto-dump: If the REA CLI has a setting to automatically dump full pseudocode or xrefs, turn it off. Force it to only output the specific 20 lines of code you ask for.
+    Hard Context Limit: If the CLI allows you to set a max context window, cap it at 32k or 64k. Force it to forget old data.
