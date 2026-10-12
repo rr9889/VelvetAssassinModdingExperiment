@@ -1,5 +1,7 @@
 # Level Editor for Velvet Assassin
 
+> **Research status (2026-10-12):** This document is an unvalidated product vision, not a recovered format specification. The sample header, actor fields, scene tree, transforms, and serializer shown below are illustrative guesses with no supporting `.scene` parse. Read [LEVEL_EDITOR_FEASIBILITY.md](LEVEL_EDITOR_FEASIBILITY.md), [LEVEL_EDITOR_EVIDENCE.md](LEVEL_EDITOR_EVIDENCE.md), and [LEVEL_EDITOR_ROADMAP.md](LEVEL_EDITOR_ROADMAP.md) first. Do not implement the pseudocode or write scene files until the evidence gates pass.
+
 ## Vision
 
 A **visual level editor** that allows users to:
