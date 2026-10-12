@@ -1,0 +1,9 @@
+﻿95ab257 (HEAD -> runtime-outfit-swap, origin/runtime-outfit-swap) Checkpoint runtime outfit swap research state
+cd0b32f Add final milestone guide: step-by-step path to complete Ctrl+Q hotkey outfit swap mod
+7b946ae Add compact Investigation Task Template (objective, address, evidence, harness, fail/retry)
+dfe1061 Add Agent Prime Directives: Assembly Authority, Bounded Reconstruction, Structural Skepticism + tooling
+0254e93 Add Reverse Engineering Rules & Verification Framework (15-rule checklist + harnesses)
+9d95008 Add comprehensive level editor specification and development roadmap
+f538a42 Add complete end-to-end implementation roadmap for runtime hotkey outfit swap
+0b3ba1c Add bytecode patching strategy for runtime outfit swap via live3d.mir.bin
+a07afa4 Add files via upload
