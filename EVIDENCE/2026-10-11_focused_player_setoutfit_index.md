@@ -1,0 +1,274 @@
+# Focused player / SetOutfit evidence index
+
+Recorded: 2026-10-12 02:01:37 UTC / 2026-10-11 22:01:37 America/Toronto. Codex.
+
+This index preserves already-produced current-session records. No REA call was made to produce it. Full retained inline data: [session JSON](2026-10-11_focused_player_setoutfit_session.json). Other failed calls without Evidence IDs are logged in SESSION_LOG.md.
+
+Target SHA-256: `9d18ef1a841526c0c91ce8af5b952c46c7ca0a8a6e8d169e99cc78cf34f8c132`; Ghidra 12.1.4. This is a custom checkpoint, not a canonical REA exported bundle.
+
+## Evidence IDs
+
+- `procedure_assembly {"procedure":"0x005059e0"}`: `ev_d26c8c97a8c96b5a18e4327f4a5f63be1d2e25318da8bf861e3451dc4538826d`
+- `procedure_assembly {"procedure":"0x004ff7b0"}`: `ev_94a36f08e99b4a9edf0644740b2e59ea39da8dd3e6db3624c3789fa8bcdb2487`
+- `procedure_assembly {"procedure":"0x004f57b0"}`: `ev_9a36c6ee0309923dfdfbd5f095c43bc07023c1ba8a306d1a614c4e3cafa9eb7d`
+- `procedure_assembly {"procedure":"0x004f30e0"}`: `ev_09c0cb513cd98c45f58b5e80b0fd02567f757bde074f07cb1b84686f91896a0a`
+- `procedure_assembly {"procedure":"0x004f12c0"}`: `ev_7b98b33342817481b3d884cc2358ab3d3c72a990e8252631aac94f5d0aabef20`
+- `read_bytes {"address":"0x007e6c5c","length":12}`: `ev_d1ce1841ba3a07d0828bbd0704f54c90557b8f8c799245e704e380b1be30de44`
+- `read_bytes {"address":"0x00463ce0","length":180}`: `ev_a5597d352d6099b02abbae25af140c9c26669752627919e081c4869f08bb6e10`
+- `inspect_native_instruction {"address":"0x00463ce0"}`: `ev_530a3fe7781db7a58ed36b246e9f6fce3c6c845193b74bff25fec309fce16b66`
+- `inspect_native_instruction {"address":"0x00414230"}`: `ev_14ca2d5241df4824da624bc5cad21c26ffacd5805b40b5a3c1ec31770c665307`
+- `read_bytes {"address":"0x007e04e0","length":16}`: `ev_b364c2b1fc7ad57937089910184665e9785631af98a89ba786a9b98ea941c642`
+- `inspect_native_instruction {"address":"0x4d7160"}`: `ev_6be5c272a729b737f1c21fbe32a4063895dc2b9308d3ca34259ccbc8d804c980`
+- `inspect_native_instruction {"address":"0x4d7164"}`: `ev_93a012eaae23b3520fe27ad9f1c3cbeb714be7e8ba90bc002f7fcd63cb67370e`
+- `inspect_native_instruction {"address":"0x4d7165"}`: `ev_8a632668702a58cabe9fc6646174818b7f5663c307ca3767ec9af5393d782970`
+- `inspect_native_instruction {"address":"0x4d7169"}`: `ev_c6f0677305b9ea7e98a1144ea95d31275ce19e5ad55cf8b46c5705f067c2d5d9`
+- `inspect_native_instruction {"address":"0x4d716a"}`: `ev_54406a294c7c25a7a71d86037ed400c961afb8d6b6f8d62eda9a3b9edf19a8e1`
+- `inspect_native_instruction {"address":"0x4d716b"}`: `ev_5daf07aabf8221c89674844157aed8b8e96a8c83fd34b760411d741e2a0db921`
+- `inspect_native_instruction {"address":"0x4d716f"}`: `ev_38561ffb06b1d5f33192e6ba2fc98af0197a8586bd3c612c0a6759b5515ff99a`
+- `inspect_native_instruction {"address":"0x4d7170"}`: `ev_f59a2949ff9b0b0134ee8a536d06d816ab6a0f570898dc391b2b021327b7ceaf`
+- `inspect_native_instruction {"address":"0x4d7171"}`: `ev_bcad9e9c8e8d0986c4e86433f9398cdaf73e764ead4544add2b6d673bb437692`
+- `inspect_native_instruction {"address":"0x4d7172"}`: `ev_057009df553a94b2a27c1c2f8385027cc4bdd389af9994716308b30a1939f8ab`
+- `inspect_native_instruction {"address":"0x4d7174"}`: `ev_99c8696279d54df81af41162ffc1ff1eaf2425f149eebc9c68fa7b3129a44faa`
+- `inspect_native_instruction {"address":"0x4d7179"}`: `ev_204c9bc7ab78f31d354d2610bf3b7a05c13d59a9b062a14a293b277169a95f70`
+- `inspect_native_instruction {"address":"0x4d717b"}`: `ev_6d26619d74bd27f0219663fd18b6b78f370ce4ebd73a5d24a91f3ec9aafd9325`
+- `inspect_native_instruction {"address":"0x4d717d"}`: `ev_32e4e3e0e4015b9a8d07421768cd0a91385d887dcf95f3e9afffd9e6cba3dd35`
+- `inspect_native_instruction {"address":"0x4d717e"}`: `ev_a41cb4b815645dfbaaa41826a9c07cfdd17c9537bf637726e226c3e7f0ad45b2`
+- `inspect_native_instruction {"address":"0x4d7181"}`: `ev_6c93097d44f10e428df51dcc7e830bcdc08030fd662a9d220148616d059c10d4`
+- `inspect_native_instruction {"address":"0x4d7186"}`: `ev_db65a4f4806e752adc1e0b1c5d3b3c2fba62ae39ba23f20cf7de92681c98e953`
+- `inspect_native_instruction {"address":"0x4d7188"}`: `ev_7403040a4a0994a5c40666907c95bdee865e96fc43b0f25899392cf48efef4b7`
+- `inspect_native_instruction {"address":"0x4d718a"}`: `ev_67ab45c2673f24f35df03af9c431577c8001b0969dc52ec38ba40f01a328ee25`
+- `inspect_native_instruction {"address":"0x4d718b"}`: `ev_235ebcb1364f77d32d8e374412a727a6c93cb906dc810b4ec7575910ce283739`
+- `inspect_native_instruction {"address":"0x4d718e"}`: `ev_b52c4f44d3e1f76d2cf56423d93990ddcbbfef93919da815220e0ba04cb7365c`
+- `inspect_native_instruction {"address":"0x4d7193"}`: `ev_e6f2986a8fb07b7b868e50e7dbee60befa1e0834ef0f64f007a5936c2c4c026b`
+- `inspect_native_instruction {"address":"0x4d7194"}`: `ev_beefb95c52616ae06eb87e02260461e295d9ae0b9a4ca9920df137f2d15bae41`
+- `inspect_native_instruction {"address":"0x4d7195"}`: `ev_43fbad3c9eb11a9146767639561a23472f3335f7163a2e4a011403a848ce50cb`
+- `inspect_native_instruction {"address":"0x4d7196"}`: `ev_959cc827688f02d311744d149f6fd71735591f1a9b38f4a8dbaf7d3265ba63d8`
+- `inspect_native_instruction {"address":"0x4f5b20"}`: `ev_754bd1e89d1335af62e74060374c4d4506017448919783acb69d6e2483e1fd07`
+- `inspect_native_instruction {"address":"0x463ce0"}`: `ev_e5d25f3ea0d0aac6e45edd4e5a8cc83dd4f32d12bc0d4041b104447b5d122e8e`
+- `inspect_native_instruction {"address":"0x463ce1"}`: `ev_b7b9a5af3e055aae2dda50676cda1384b09c79291a27a842f62cca734bc64266`
+- `inspect_native_instruction {"address":"0x463ce2"}`: `ev_d5983cd77ddb64bdbac9e1feca6c788ca56044b22313f9e9b78470b2d580e630`
+- `inspect_native_instruction {"address":"0x463ce6"}`: `ev_2892d47c5a7ab4faf35cc1227d776ca45940e6d6ad2f4feaec29e973c0798870`
+- `inspect_native_instruction {"address":"0x463cea"}`: `ev_3c2c2f1107bc1c732054f4d987b08e5bbcd8e74f4a8404fa8fd7292520614e3e`
+- `inspect_native_instruction {"address":"0x463cec"}`: `ev_04c9afe4e4cb22104506f5e3782f33d585de319d48c838c201f82295af386293`
+- `inspect_native_instruction {"address":"0x463cee"}`: `ev_7aad2f4e1fe88ed227acf47f6699659937836e041fc8e8915552c91d021f59a8`
+- `inspect_native_instruction {"address":"0x463cf1"}`: `ev_4377bc768c74e1b3c298a8f7da61f0679279a1e8fa46658f4e21b6182123da02`
+- `inspect_native_instruction {"address":"0x463cf5"}`: `ev_2bc451ab7daea46fdd1bf738b0626b01ae8afed6502b70d87c31ce7c160d0068`
+- `inspect_native_instruction {"address":"0x463cf6"}`: `ev_06c28d8bf1aa73c42bcf3fd93a9427b70ad4f881e1d5b101290d66c63d6c65b7`
+- `inspect_native_instruction {"address":"0x463cfb"}`: `ev_603d9b550ae2aca85386ba39bafaa779ad3269e25dec19b34b761131c06300bd`
+- `inspect_native_instruction {"address":"0x463cff"}`: `ev_0a819c4e84512ada1e47e3112c6ad8d29315b90cd2530b3ad0e6d112b79456a5`
+- `inspect_native_instruction {"address":"0x463d04"}`: `ev_1bd4079ab23a82fd9626ae9f44facd39e5802069a4bbab47ef555e5eccd7e1d5`
+- `inspect_native_instruction {"address":"0x463d08"}`: `ev_dbea57c400891cffb101993fb6b4ed5c32390639301cc63d7b763bc4de9b8cfb`
+- `inspect_native_instruction {"address":"0x463d09"}`: `ev_3a0bb194a1590fed7aa42127d98ec425146215798da50d4d59c272cf4517e39f`
+- `inspect_native_instruction {"address":"0x463d0e"}`: `ev_77b8a5a633f90892ca9494c9a3567ea8feea64786accdfac023cfc9821638bea`
+- `inspect_native_instruction {"address":"0x463d12"}`: `ev_7e65c29551015c84d00baebcde5c6d35829ade7866b9fa5347633134b909ccbc`
+- `inspect_native_instruction {"address":"0x463d17"}`: `ev_450a7e23abe66d5ae413f7afb2fd080088f19a82da48839aeecb8caf64866ec1`
+- `inspect_native_instruction {"address":"0x463d18"}`: `ev_f3a1e3131770bddcdd331836586da4361f30432bfdb464452c6a118388cd909b`
+- `inspect_native_instruction {"address":"0x463d1b"}`: `ev_aeaf592fe156ef03aa646e3e619894b73605b8c8b66e9cf76cb3fe940078cd78`
+- `inspect_native_instruction {"address":"0x463d1c"}`: `ev_57774c8e35a977f73567216c44ae4bc8cd9ae407aa21c03e389fcc5d281edca7`
+- `inspect_native_instruction {"address":"0x463d1e"}`: `ev_b71faeb08e7e0fb3729d0e769d3cce926990101844347c2c2237633bb0364d85`
+- `inspect_native_instruction {"address":"0x463d23"}`: `ev_081e9f85c3669921ddeb8ce7a00287f5b2764dd7574ba16f1be92d7a860d6a72`
+- `inspect_native_instruction {"address":"0x463d27"}`: `ev_3cbbd08dfd0f655b5cf63ea5fcbd27081a106c8320714a5aa87d5f948c3e9566`
+- `inspect_native_instruction {"address":"0x463d29"}`: `ev_9ca9732b0453ff27b4172cf25cbad18f8136636bb763a942f73db625f6590a74`
+- `inspect_native_instruction {"address":"0x463d2f"}`: `ev_cf67dd910ca8ff327487a2f5dc566d88e87612fbd77f445875336b38e69c783d`
+- `inspect_native_instruction {"address":"0x463d34"}`: `ev_84daacb340729d1f68db5241f55f12c0f59d1bac486f676e824fd2114c6fc60b`
+- `inspect_native_instruction {"address":"0x463d39"}`: `ev_368cf85ba7e891755896e26c1d816a89f495b6608b356eda900ce1f2bf3e525a`
+- `inspect_native_instruction {"address":"0x463d40"}`: `ev_542fa3300105a5e67ad490a8791bb862c7be609d27d4901c761abb74940d5325`
+- `inspect_native_instruction {"address":"0x463d42"}`: `ev_f2da68a802a6d480a8593b4a1294fc0dba7e69c2c970d9d3206f783c307f30d9`
+- `inspect_native_instruction {"address":"0x463d44"}`: `ev_7c267267fb030c950f8cea5864552f5de6c687184415075696688151904d3c71`
+- `inspect_native_instruction {"address":"0x463d46"}`: `ev_b0a2d3eb4cb3dae7c487867c4b3667f5cf62247fa7cef0a4534b42f2f108ec9f`
+- `inspect_native_instruction {"address":"0x463d48"}`: `ev_961ce0f3aead57caa2456d8208dd0ce421ef8c034c9397514bfaa08c7d8054d3`
+- `inspect_native_instruction {"address":"0x463d4b"}`: `ev_1acea634314c61771bdf53800fe1d78209d1231a4733652e7657bc7492709203`
+- `inspect_native_instruction {"address":"0x463d4d"}`: `ev_e7bee71cbf294f06e8088fe08b7548173b66810210321aa04030077c993a3c7a`
+- `inspect_native_instruction {"address":"0x463d50"}`: `ev_30a33b6679b655128eb395df19b39ed87ba0df4eb0bd3ef4185f4aa30f710f80`
+- `inspect_native_instruction {"address":"0x463d53"}`: `ev_b2a6478081a8b03f870039eb29da2b3cc74c7bae585e12b30c1389a3a0fa7444`
+- `inspect_native_instruction {"address":"0x463d55"}`: `ev_939b51865ab9832252b10be9817c04e0d3cb34dc23d554ca146da5256d51dc4a`
+- `inspect_native_instruction {"address":"0x463d5a"}`: `ev_8df6bd3c736476038e3ff88bc95a473552f174e3101b76db6300154677d70b89`
+- `inspect_native_instruction {"address":"0x463d5b"}`: `ev_57f6fb3576a66fdbbaec97a7f54f992181599ec623300a42bc82449c746eddaf`
+- `inspect_native_instruction {"address":"0x463d5c"}`: `ev_80c2470e8edcb604da79770608ef9ba3d0b42732e9c6ba9c16fab52e487f975e`
+- `inspect_native_instruction {"address":"0x414230"}`: `ev_923eb21396c6d84814bf2513c8564caf340474ec9b0b8114fcf970ce1cede3a8`
+- `inspect_native_instruction {"address":"0x414236"}`: `ev_d241986c3c3dd66599695ba6617e21947ba129e987cf236aa1af248589cae872`
+- `inspect_native_instruction {"address":"0x414238"}`: `ev_0085e975e798ea8027a87071fae4dea2fdf4256d787cfa10b5b41fffb571e9f6`
+- `inspect_native_instruction {"address":"0x41423d"}`: `ev_5f4ef218ed04aa32aba7e1f913b340efc475b251c6ac1d6fe56cda236781d031`
+- `inspect_native_instruction {"address":"0x41423e"}`: `ev_c5829c67a21c5ada05b5033ef5c03cb61e51e339f82dd84c4e7c40427afaf99f`
+- `inspect_native_instruction {"address":"0x414245"}`: `ev_73687c1fc68fd94553739e92622aa0841a06cd4d57dd437877cc39407f3ad99d`
+- `inspect_native_instruction {"address":"0x414247"}`: `ev_2362640b681d42cc315d25cfb775f11c4783d46d4e208a971de977a889176b6c`
+- `inspect_native_instruction {"address":"0x41424d"}`: `ev_a02d35b1999479931847b8556195231b297efcd48a6dbad8b960eff1318c6d3d`
+- `inspect_native_instruction {"address":"0x414250"}`: `ev_b4c519d932a0a1d8d55c0113c76dd94cdcb5927f5aa46df7a1d9ddf5d85ae995`
+- `inspect_native_instruction {"address":"0x414251"}`: `ev_e7098e54ceef9bce2555f08eec780409971cfd293bf798b3ab921202efe82a11`
+- `inspect_native_instruction {"address":"0x414255"}`: `ev_ae7cc206d762d0a83c55d4bce9abb3e14c091f1d592126a7eec2516546fc7dcd`
+- `inspect_native_instruction {"address":"0x414256"}`: `ev_b97b217c7bcb6a6ec923e627b7c6abdfece1415cdac7118ac545ad0146713a6e`
+- `inspect_native_instruction {"address":"0x414258"}`: `ev_1c37895e18e2a86e83bb2026a521bb68b622879baa0f50e73d07cc19518c7ca6`
+- `inspect_native_instruction {"address":"0x41425b"}`: `ev_6a60d0757a7dd5918e13a004dd9ff947c27a0bea3d42627f9f2120e3ee3b5896`
+- `inspect_native_instruction {"address":"0x41425d"}`: `ev_4f4589ea1b0cafc33fec597387c4c250b8d55182557d17e9a1cb87ff5c2a89d5`
+- `inspect_native_instruction {"address":"0x41425e"}`: `ev_ae2712bed7fa639d2d73ff6464b520296826e9b48c4678a967df944e06acf927`
+- `inspect_native_instruction {"address":"0x414262"}`: `ev_a8c7dcf742c05ba8bc7ab20e3cc4311cceca47c770d3e0a8243d5b755e3db802`
+- `inspect_native_instruction {"address":"0x414267"}`: `ev_0adbfc4195f90995dbe281cb521dcad871bab9e32bb57c4f2d79441d13ab81b4`
+- `inspect_native_instruction {"address":"0x414268"}`: `ev_6f835df68c1c8b9384683dac9b1a203eb64a0277d4247589aca6aed11eed210d`
+- `inspect_native_instruction {"address":"0x41426d"}`: `ev_d092368987648e3a82ddf10f4c7fb33eda4fdece2c29ab5e7faff2113a063628`
+- `inspect_native_instruction {"address":"0x414272"}`: `ev_799705057824d01832fb64a21fb1efc1184f9b2cd9d0fa0eb9a734bf8c1e6709`
+- `inspect_native_instruction {"address":"0x414273"}`: `ev_da7d7221924ec15282d0806b43bb51d0277e0c23ccc30b5054f2bab248d4b3dc`
+- `inspect_native_instruction {"address":"0x414277"}`: `ev_c5fd5e6ef8595d60cb1f9503488123b8ae631fd5430f2c4ffd2fbada1d06885a`
+- `inspect_native_instruction {"address":"0x414278"}`: `ev_a9153259524ac0aca9df83983f9536afde5258d14e594f4236d8e128070bfb6f`
+- `inspect_native_instruction {"address":"0x414283"}`: `ev_d0749f76570468d20bac7b72f8636f15238f060b71d553b0a788a96d829fd267`
+- `inspect_native_instruction {"address":"0x414288"}`: `ev_cf50b6a80d745e497e4911886b30ca7f92f2d144673725a1ed3f5ff55ecad866`
+- `inspect_native_instruction {"address":"0x41428b"}`: `ev_bad30b852d31e101fae508afc14bf46846493e2839de54222e6271350886f629`
+- `inspect_native_instruction {"address":"0x41428c"}`: `ev_3d4a4a5d8f681cdfbb2210d40d3758eb126a6f2c02f6a0b51f9003df849e4673`
+- `inspect_native_instruction {"address":"0x414290"}`: `ev_02c72fe0c728556fcb7f2fba97b9b9b2598efbc4519faad89f637132c8452cc9`
+- `inspect_native_instruction {"address":"0x414295"}`: `ev_f521d213dc5f9ecf4c53f478f33db448cb603a1c6e3319c72bcccc28fadaedbd`
+- `inspect_native_instruction {"address":"0x41429a"}`: `ev_93209dd866f14fd491cbcbabc33d83241cb4308937c5d2c1b742979ca881074d`
+- `inspect_native_instruction {"address":"0x41429f"}`: `ev_063e624ad6688ff69752e590b9fa79981df90894046862e5377de418e9bd815e`
+- `inspect_native_instruction {"address":"0x4142a3"}`: `ev_84cff7f6df2ea63b2c3e1088667c8be489e41a0ea8d3a78b4dd8a53e91042d0d`
+- `inspect_native_instruction {"address":"0x4142a4"}`: `ev_1fadabf9c9d98e5cd4f2ef75d604178402905789c38e2625d86f42074201ce2f`
+- `inspect_native_instruction {"address":"0x4142a9"}`: `ev_cefdc3ca5073a500dc8ce18e457dfaa9780e8389cb8176645a38adb4a80ace96`
+- `inspect_native_instruction {"address":"0x4142ad"}`: `ev_0a2b4abcafc5754c996572c0ed61d5d29f3f7a1684b8fe3c30c1c8f1215135f2`
+- `inspect_native_instruction {"address":"0x4142ae"}`: `ev_1a0170f81a40e8306049dcb0b771f939f68b84e33849caf44a410342bead5d4a`
+- `inspect_native_instruction {"address":"0x4142b5"}`: `ev_2588fa101adf1894b11148ac5dec79df3714f38e52122207a811cc6e085a6965`
+- `inspect_native_instruction {"address":"0x4142b8"}`: `ev_fd96f47f556b6896113b4e12ad0bb289b4e764c4fcb142b1bef44eaa607d8fd7`
+- `inspect_native_instruction {"address":"0x413730"}`: `ev_dec539271ae6ecebc1d360c4d9f16889c448ed8ca10b8863724f9115021e7ba6`
+- `inspect_native_instruction {"address":"0x413731"}`: `ev_63855c136f3b8df947d75773173b8960a995e3cbfdc925115002232deb03a76f`
+- `inspect_native_instruction {"address":"0x413732"}`: `ev_234c2b58cdc2a8a026756a2d72b1908100fb91b0d59bbb37f8a5ed51be1e71e1`
+- `inspect_native_instruction {"address":"0x413733"}`: `ev_a6121346ac2caf92e588cb10c968ff5c6037ff38097c607a650b567eb1a828fa`
+- `inspect_native_instruction {"address":"0x413735"}`: `ev_489f32af10d45306c8d093884b8a63467fb6d30bbba23ebe6d1c58379298fe3a`
+- `inspect_native_instruction {"address":"0x413737"}`: `ev_febf9d33eb1c7f27ec261b477eca1ecf41bcb38e62713f2febbc20091e348a67`
+- `inspect_native_instruction {"address":"0x41373d"}`: `ev_3d07c77410e945d53711dd49afbdc3b0bcba371ae20560c0f3c4131b6a4dd46a`
+- `inspect_native_instruction {"address":"0x41373e"}`: `ev_3b49f39d33a0e763dfc0af743c3b441c176dbc9ade54a9493ce58f6040232691`
+- `inspect_native_instruction {"address":"0x41373f"}`: `ev_bd17195d34f31ff3bf20a1445b2ddee79f57d90b93708d87dfe91e5d48d907df`
+- `inspect_native_instruction {"address":"0x413747"}`: `ev_4679ad39a12e2128efe9256182303c7ee880a151256e156a53176b29f033220c`
+- `inspect_native_instruction {"address":"0x413749"}`: `ev_0a96ab7643fdf51c31bbe568d9a4c62cca7f0e3aa085785ad51782eb6407f82b`
+- `inspect_native_instruction {"address":"0x41374d"}`: `ev_3056e00d737b9fb490b8d3c1338712408f3888e468defc04cd4e3fb05b308dc6`
+- `inspect_native_instruction {"address":"0x41374f"}`: `ev_39bed7a2acaa4e295f4bc188d2c575112fa02b80924d02b9cc94d89514e2497c`
+- `inspect_native_instruction {"address":"0x413753"}`: `ev_b8223909383cc6eb2fc86dba5d68846544720daaeb10c30c24b34d6554cb4f43`
+- `inspect_native_instruction {"address":"0x413755"}`: `ev_c4ec0a2ff50660ea737f68dba31a857d7fd2a973965abf43b2941834ffb6687b`
+- `inspect_native_instruction {"address":"0x41375b"}`: `ev_ebaed40807417d7ec6e25c7844bfa351b5834b4d392bf35c05bcf6f966e951bf`
+- `inspect_native_instruction {"address":"0x41375f"}`: `ev_72bf41b18e47599dac76e3558ea7b99857bc45d2cf22d6c4b515b79b7a55265a`
+- `inspect_native_instruction {"address":"0x413760"}`: `ev_999ad701f0e2011df46c92ff7fc414e6d38b57ba457df8a74513e21b66055dd3`
+- `inspect_native_instruction {"address":"0x413762"}`: `ev_1663d9c213db02975313b8eeba8050530689a7d7eb948669c48715afb83df4d8`
+- `inspect_native_instruction {"address":"0x413764"}`: `ev_aa2ed71b6387b0017506cc1300d0a8a2345a3d12d46a44b496334af63240d8cb`
+- `inspect_native_instruction {"address":"0x413768"}`: `ev_bc8ba8ef4403d120dbfa003020a19f1abb9546ae577131e25f57b995408b706d`
+- `inspect_native_instruction {"address":"0x41376b"}`: `ev_48befbf3e540870d75d83768f79cd95fa77279a55a2d48768bb077bee466e4e8`
+- `inspect_native_instruction {"address":"0x41376d"}`: `ev_4cbe1538fa367ae437e8c0a87b68c6dd329b7611ad2064b6fe40bc5080a66616`
+- `inspect_native_instruction {"address":"0x413770"}`: `ev_1a8afc96ea7e7c8a26c99bf3767860240d4d4e683009adc1759c61e49e6d01f3`
+- `inspect_native_instruction {"address":"0x413772"}`: `ev_cda80377763b2a5a5f74738671ca70edd9911677a93c0c717b205e7be4e90473`
+- `inspect_native_instruction {"address":"0x413775"}`: `ev_e4b236eaaaeadf705f8bd7087a7fb56cbee9b19fadcca93d526434c81b64cd67`
+- `inspect_native_instruction {"address":"0x413778"}`: `ev_06f35c9cd52ef23fb3990b78699e335934c07f9729a6a4b1e949feae6776411f`
+- `inspect_native_instruction {"address":"0x41377a"}`: `ev_c28795f1d8138272632ea6755bf98ef861b8d95ab6f03a17bba4a5e45dc4f1ad`
+- `inspect_native_instruction {"address":"0x41377c"}`: `ev_b39f9296e70a30af5e830fd2602f6f7497a81adc253c1eb69b31556e7a0e68d4`
+- `inspect_native_instruction {"address":"0x41377f"}`: `ev_f1a9683eeba15506e99e95018b31f86e3ab8b97b37be3ce6e54f49e9db6f84b1`
+- `inspect_native_instruction {"address":"0x413781"}`: `ev_20219865df7e7f86ae057779e793e5b1be8df491a011c0075e5ece23687a96d2`
+- `inspect_native_instruction {"address":"0x413783"}`: `ev_5b4bd52ba5dfe04a4afc44e877aa84d80e560582f25b7ee308e1ba157ce54b7d`
+- `inspect_native_instruction {"address":"0x413785"}`: `ev_38af3a2023434aba993f7792227bbae3fa6143db8360445e904fb19725139595`
+- `inspect_native_instruction {"address":"0x413787"}`: `ev_cb9c7f6eda301406cb797982acb77273ad75d6029cbdd7c9b21551d5b48ce182`
+- `inspect_native_instruction {"address":"0x41378b"}`: `ev_ca97a81bf2b172b38464aed73d96a7d0487e005a3e5fbfc2624e577750438a2c`
+- `inspect_native_instruction {"address":"0x41378d"}`: `ev_c8fdc6b6e0b03dcfa7c7fbf14e6fe244437324302ecc0bba702cc9db27acb95f`
+- `inspect_native_instruction {"address":"0x413790"}`: `ev_4f03a3174f19c04704039172fdbc60cff563fe9f058b6811938085be011c26d0`
+- `inspect_native_instruction {"address":"0x413792"}`: `ev_aabc1ace6204b2e9f929f092e5550f31695732236468b2c65e72450997b747f4`
+- `inspect_native_instruction {"address":"0x413795"}`: `ev_bb7af697ad3fec6689297cd72beb8b0d3d8ec7da2c53da83d73c75fe3e630b3b`
+- `inspect_native_instruction {"address":"0x413796"}`: `ev_9968ed5b072f7643a123bc512fb6e52e2a9e6c56f7dc2f217a2fcd8bc7d552ce`
+- `inspect_native_instruction {"address":"0x413797"}`: `ev_c7bb1cc41148c0e56b17a59cac8d893858afe7ce3b6c8b7da490c1a88d473eb7`
+- `inspect_native_instruction {"address":"0x413798"}`: `ev_a7754c6cd056c29067c2449e7f4df0aef747e515c69985c68e249bd3e473fcc4`
+- `inspect_native_instruction {"address":"0x41379d"}`: `ev_8c3e8d7b0aa94804e8a2c85d1da3fc9834d2fb46458a9216f1e652ae172211bf`
+- `inspect_native_instruction {"address":"0x4137a0"}`: `ev_f8648a78891a132dae7c90ce1af397f5b6befe10d75d1ab04fb4774915c888d4`
+- `inspect_native_instruction {"address":"0x4137a2"}`: `ev_0f2462479cc10210c142b5433a02a779e968f3adc88e8bd0256d508de27c3def`
+- `inspect_native_instruction {"address":"0x4137a4"}`: `ev_ce27bf183161d6c5746c824791b1869f20732ed25c9f5c8e9764ca03256069b4`
+- `inspect_native_instruction {"address":"0x4137a6"}`: `ev_9ca0866415c5c6e95f4c16552b87b4a090c91a6b4688a81c70734aacfb36084c`
+- `inspect_native_instruction {"address":"0x4137a8"}`: `ev_1fba5efb4f6d54263b0e0d886d664e266c8aebdfb3c4a4f7de450d76627ae4eb`
+- `inspect_native_instruction {"address":"0x4137aa"}`: `ev_abb39ab08e1937be2819147888fa5eeff0d2317871ee9b852481b17e16778d49`
+- `inspect_native_instruction {"address":"0x4137ad"}`: `ev_9b8197f4a34abb010594def9b542a83a63999bf0263a901aa277de7d34a21499`
+- `inspect_native_instruction {"address":"0x4137af"}`: `ev_8ca214aae9fa998f9c94ac89c03821947dd11a9d16bf188f29e423ad632aadcb`
+- `inspect_native_instruction {"address":"0x4137b1"}`: `ev_a6426099626565d1d8d97529261d8190e5bed3a2482a94e848428a5acb8349b8`
+- `inspect_native_instruction {"address":"0x4137b3"}`: `ev_552e7796905033f7942cf896733a0d8b436080458cb5914de89193914587ccdb`
+- `inspect_native_instruction {"address":"0x4137b9"}`: `ev_7595b3472a4112bc640fb0b12ab8875746fe88b182fa383216e086ab1e9bcf8c`
+- `inspect_native_instruction {"address":"0x4137be"}`: `ev_0ed32d411a1d24af65f9a1cba62a7f4b8f157aa965d397c7b5d4c814983142fa`
+- `inspect_native_instruction {"address":"0x4137c0"}`: `ev_9ec35006bafef94ac43a428eb26c464a1807129dabcfc235a4dd994ad2348aa3`
+- `inspect_native_instruction {"address":"0x4137c2"}`: `ev_a8e31430f1626d5416fd8ca6801d4d45cd2e4c6f6d9cbec928cf3a551f7c1e26`
+- `inspect_native_instruction {"address":"0x4137c6"}`: `ev_6604ba4c6848642eed985c5a9c0769899c6df69301ebea08759b50df4e20df21`
+- `inspect_native_instruction {"address":"0x4137c8"}`: `ev_47ec92d75839d5cebbd03e2343458ae8691a0325191ae9c5c4a992679f8d5b42`
+- `inspect_native_instruction {"address":"0x4137c9"}`: `ev_7684804d2b5c969a797824e7112fe76a461e3cdde246efc544f2d17e36e6f337`
+- `inspect_native_instruction {"address":"0x4137ca"}`: `ev_aa8420b1ed12f8a4e935c5ed04436a08dbfe0b9bb4e542e755f6897e8452242e`
+- `inspect_native_instruction {"address":"0x4137cb"}`: `ev_9d2f1a6df1d7723c67d5d13af565b9cb1b3884299d1ed1b91d022a84c00cd763`
+- `inspect_native_instruction {"address":"0x4137ce"}`: `ev_d6b507bdc9bfa90b84f32da40cbf1c65854c8e7d3c6a18ed3ab333f2adebb523`
+- `inspect_native_instruction {"address":"0x4137cf"}`: `ev_29019754bb477d18a5cb2c53b5ae21fba74617a90f4cbbea318fddfa90c3da7f`
+- `inspect_native_instruction {"address":"0x4137d0"}`: `ev_76592e8a97fcc5a296b6da21cacb6a3705c294f16e911ffe9e69be70350cf387`
+- `procedure_assembly {"procedure":"0x004c4010"}`: `ev_b2f8b920db962c5334f56e270ccb0f56e468d0f78e899bfd8e86f37169a88c90`
+- `procedure_pseudo_code {"procedure":"0x004f12c0"}`: `ev_6f9af598d05e7fcaf403011568958e995b2267386c59bd92831163eff5233bbb`
+- `procedure_assembly {"procedure":"0x004aaf80"}`: `ev_aee6fdcc9d9e17fd616981cb6528e84451c70484c85f780a8d6d0b8d8c027351`
+- `procedure_assembly {"procedure":"0x004ca440"}`: `ev_5a5862f74c3894efef3a35829fb23cf61fa3159fc124d9fc11debe67128e349b`
+- `procedure_pseudo_code {"procedure":"0x004f89e0"}`: `ev_ba7d89c7096b80038942cb369e732cf22d685641ac8a3f37cd2105aeafb17f3b`
+- `procedure_pseudo_code {"procedure":"0x004f3820"}`: `ev_877f1f93fee0722c66aabcca4a0983e0ff2e8358c97102fdbf8d4a634466ff4f`
+- `procedure_pseudo_code {"procedure":"0x00500090"}`: `ev_2ce7a8d4549a4e28e59e6cd454c7acf2db439e87517585df21d6e9d42cc01a41`
+- `procedure_pseudo_code {"procedure":"0x004d6620"}`: `ev_b4dfdf681823c9e25257baa69674e2425db9b64028bdfaf9f7c8e7292248043b`
+- `procedure_assembly {"procedure":"0x004d6620"}`: `ev_a325ccafae4034498d7eeffc35d12269c0894472ad533db331c7c02317d23591`
+- `read_bytes {"address":"0x007f4024","length":40}`: `ev_9e720e2c75da5813fef55997c32b73cc250dea1491947250fcf5f681f3a5eaa8`
+- `procedure_pseudo_code {"procedure":"0x00610730"}`: `ev_fe1017d7866e6f1424a1034c7fc8352554b8333bab8c6fdbfbc954050b5c0776`
+- `procedure_assembly {"procedure":"0x004f4a00"}`: `ev_d39df4453e7e4d9aef1df7e8e0143a6d3058bdb82d9a6da7117ad4d3ca529d0d`
+- `read_bytes {"address":"0x004f5b20","length":180}`: `ev_41675e92d04e32346b3a845b0ff743cc1f24e54fe00f3b1f2ecbc627899a2142`
+- `procedure_pseudo_code {"procedure":"0x004b8518"}`: `ev_0ae25f5d86dbe35248ac954de272b434a98db66fe95d84ed2007f6b6d1ecb0ce`
+- `read_bytes {"address":"0x007e7750","length":44}`: `ev_38133676c12449cdde053690b4b4207e2c387de35ea679483d545ba0ec9ef7a3`
+- `procedure_pseudo_code {"procedure":"0x004f10c0"}`: `ev_8ea7471e81a6e9daeeb443a3e69fd63864200130923eeb80b4d34882032fbad5`
+- `procedure_pseudo_code {"procedure":"0x004ed7a0"}`: `ev_78c76f0ef22bed75306d59c41e3489a948ab3442024a036bf642d809e3e70c25`
+- `read_bytes {"address":"0x007e66b0","length":80}`: `ev_e3c5c615a374365fd046877cecf5b9bb5790232e7d28cafb4593c64e8730070a`
+- `procedure_pseudo_code {"procedure":"0x004b8d25"}`: `ev_3d9ac7a5738a126aa02aab2dfba73c47ee752bc977e97c8eb2898dd515882587`
+- `search_strings {"pattern":"SetOutfit","mode":"literal","case_sensitive":true}`: `ev_1bf6513aa51dd32a196d5008d463fddaaefc42ab6450cb1339fbacae3a539413`
+- `procedure_assembly {"procedure":"0x004aafb0"}`: `ev_320646b7eed27831e6ae670c00481cfec7645415abf836ea068901739c677633`
+- `procedure_assembly {"procedure":"0x004c4030"}`: `ev_bafd882e8920b81a13d116f63d32faa49c61007ed84719e20521ee184d423e1a`
+- `procedure_pseudo_code {"procedure":"0x004c60a0"}`: `ev_9bccfd4a139996c73d9727beb9b9377a9240f8e52b67398f85b225ad5a2bc287`
+- `procedure_assembly {"procedure":"0x004bb8d2"}`: `ev_72af2405ccfea84c082dc19a9f1636eb6a1fde4f4c13266174ae0c32fb5e5c17`
+- `procedure_assembly {"procedure":"0x004bc1b2"}`: `ev_0964a21c71df9060ae1b905d4aa1ec9b0d191a3e25c13ae33239b97892f693f5`
+- `procedure_assembly {"procedure":"0x004bc832"}`: `ev_4d1d53457839bc07fdd5fd91bad3993f3154371639e1482870fb0255196d2a46`
+- `procedure_pseudo_code {"procedure":"0x004c8fe0"}`: `ev_45f574135131edd28a0130b21111e4be09989ee00ebd60f9b868e4122d054ff7`
+- `procedure_pseudo_code {"procedure":"0x004c7b50"}`: `ev_f1048275fae198265bb639c4fe0e5958af447940d8f07d7eda8bc1bae131f036`
+- `procedure_assembly {"procedure":"0x004c7b50"}`: `ev_83284750ad752c79b3be02945811902742ae738a8d5f2d33712a0cd7ed64c142`
+- `procedure_pseudo_code {"procedure":"0x006fed80"}`: `ev_e535ff5a33d053584c593b58db18296678dd1c32991542ec163f17f9c9372a57`
+- `procedure_pseudo_code {"procedure":"0x00438710"}`: `ev_ca87ff2e24ec7b82c410c962a7dc44761d60ca9df8f6ad04f29882a6519af7d1`
+- `procedure_pseudo_code {"procedure":"0x0043fa00"}`: `ev_f7f86458becf492265401d3df9d3697d7eaf2c06c733311c4a94c2da30d74f17`
+- `read_bytes {"address":"0x0081fc9c","length":40}`: `ev_fe3acb26653777c489b4075fce75ea3fc4c53921290126ca3cbb1542c4895387`
+- `read_bytes {"address":"0x0081fc04","length":12}`: `ev_6426cfaa51241163db933e21c6ecfeb5b5a37c7494f8b7e24b808962c95a5735`
+- `procedure_pseudo_code {"procedure":"0x004c7650"}`: `ev_5175ca99013445410d63a3b27e1e3fb315f93d28d7ddec29e37cd1b1707967d9`
+- `procedure_pseudo_code {"procedure":"0x00459940"}`: `ev_ecd780849417c19e756ae48c3f7f3e900916e225843d579b5ef578baf175d6e5`
+- `procedure_pseudo_code {"procedure":"0x004142c0"}`: `ev_e156835230aaff935c16e33e4902bf9b1b63caa0faea35cae1d778d2fde66747`
+- `read_bytes {"address":"0x007e04e8","length":4}`: `ev_cf1790d3209bdb40681f764086560dafc3d501e49b6d5a9279d3521f8ab8ad9c`
+- `procedure_assembly {"procedure":"0x00461d40"}`: `ev_784062c529976230a5a80893f19110a7b9c8455f120166f5ade005cb5749ce80`
+- `procedure_pseudo_code {"procedure":"0x00461d40"}`: `ev_2161fa8f71b4936edcc372fc993ed4359cb1b76eaa82a99b5fe9b9a9681dd011`
+- `procedure_pseudo_code {"procedure":"0x0045ab50"}`: `ev_b1aa45fdcae66885331abe879c470cde778119fefaa1718a825fb80661b4fae6`
+- `procedure_pseudo_code {"procedure":"0x0045a730"}`: `ev_d50de35a185572f259baf88e086e553e7a5ce3308105180ab0a2fa705bb09cf1`
+- `xrefs {"address":"0x007e0434"}`: `ev_8adf8e061b40d2229e8c7258e1b689057743076da61c1700c3a444caabaa7e7d`
+- `procedure_pseudo_code {"procedure":"0x004645c1"}`: `ev_8632e7e8e72fc9bbaad3d3404ee659e57ca6b6e22c14ae959659ffaca5825322`
+- `procedure_pseudo_code {"procedure":"0x00465bfc"}`: `ev_3406e58248f65e5bb6f435c752458492bbdc905cbf52c4d8a435561ce7653630`
+- `procedure_pseudo_code {"procedure":"0x00460540"}`: `ev_48e538fb6ed77d0f10b7d3167c3605cb180cc62f6a53c7b61825e6dcc53e7af6`
+- `procedure_pseudo_code {"procedure":"0x0045c990"}`: `ev_cf9e2217d71046077eed57275d8777fef6f1c4d2987eb67ca446df4d5196c15d`
+- `read_bytes {"address":"0x007de964","length":32}`: `ev_f0cd2168a73e2cba5ee0553ae638ab2365427458e64390677e48bec46dbbf918`
+- `read_bytes {"address":"0x007e01e4","length":20}`: `ev_c5489a38d229e1bf0330c8d4c1c41af93085741594dd1826b77dbff91c63594b`
+- `procedure_assembly {"procedure":"0x00459940"}`: `ev_4f1f3c80f5bf9536de1330ebc4455f6fc6749844a600909f8ce20869c4e9f4dd`
+- `inspect_native_instruction {"address":"0x004d7160"}`: `ev_f0b2ce9e687f6eba7f9df2013850b64eb0783a0fe3790068ebe014aef375f05e`
+
+## Non-REA observations
+
+- Retained shell result `saved_player_and_vtables`, chunk `d706bd`, exit `0`. See session JSON for exact output.
+- Retained shell result `focused_script_headers`, chunk `36a3cd`, exit `0`. See session JSON for exact output.
+- Retained shell result `focused_class_map`, chunk `694d05`, exit `0`. See session JSON for exact output.
+- Retained shell result `focused_class_tail`, chunk `563a13`, exit `0`. See session JSON for exact output.
+- Retained shell result `focused_vm_rtti`, chunk `7947c1`, exit `0`. See session JSON for exact output.
+- Retained shell result `passive_vm_context`, chunk `dbbd5b`, exit `1`. See session JSON for exact output.
+
+Material script bytes not kept in a persistent tool binding are transcribed with their offsets in FINDINGS.md. They are filesystem observations, not invented REA Evidence IDs.
+
+## Camera route follow-up
+
+- `search_strings {"pattern":"Third_Person_Camera","mode":"literal","case_sensitive":false}`: `ev_273852dc08c180796914d45065f44ece82c839e9833ff94b6fc7410050883e7f`.
+- `search_strings {"pattern":"SetInitialOutfit","mode":"literal","case_sensitive":false}`: `ev_8ddcdade2ea459383dc91ef815a05ef821246ca922844f950d9ffe3714c3154a`.
+- `search_strings {"pattern":"GetPlayer","mode":"literal","case_sensitive":false}`: `ev_6ba6fd6138aea71fcf1c8f097159d979cc1217fd67fd43cbafbdff619cc3ac84`.
+- `search_strings {"pattern":"SetOutfit","mode":"literal","case_sensitive":true}`: `ev_1bf6513aa51dd32a196d5008d463fddaaefc42ab6450cb1339fbacae3a539413`.
+- `read_bytes {"address":"0x007de90c","length":8}`: `ev_8e9e185a95c1b7e50c2f03251d553ab0fd493c95dbc0bef4ec7ee137edf729e0`.
+- `procedure_assembly {"procedure":"0x004ff7b0"}`: `ev_94a36f08e99b4a9edf0644740b2e59ea39da8dd3e6db3624c3789fa8bcdb2487`.
+- `procedure_assembly {"procedure":"0x004cdc00"}`: `ev_1121e79a4b3afc02238ea150293c75b6128f1008b55bb8f8ceec3744b9badb72`.
+- `procedure_assembly {"procedure":"0x004cdc30"}`: `ev_5949134b207be9c66ce947254397bb865abe745ceeea4d3d64f3c4e3eb4e76a9`.
+
+- Shell record `camera_wrapper_records`, chunk `f2a0b8`, exit `0`; exact output retained in the session JSON's camera_followup.
+- Shell record `camera_existing_symbol_records`, chunk `426bbf`, exit `0`; exact output retained in the session JSON's camera_followup.
+- Shell record `camera_acquisition_names`, chunk `e66de8`, exit `0`; exact output retained in the session JSON's camera_followup.
+- Shell record `camera_scoped_member_inventory`, chunk `d65545`, exit `0`; exact output retained in the session JSON's camera_followup.
+- Shell record `camera_stock_callers`, chunk `7a8354`, exit `0`; exact output retained in the session JSON's camera_followup.
+- Shell record `camera_actor_interface_candidate`, chunk `3fed0a`, exit `0`; exact output retained in the session JSON's camera_followup.
+- Shell record `camera_handle_switches_corrected`, chunk `0c159d`, exit `0`; exact output retained in the session JSON's camera_followup.
+
+All evidence above was already produced before writing the documentation. No additional REA calls were made to generate this index.

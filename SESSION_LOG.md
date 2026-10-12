@@ -1,5 +1,31 @@
 # Session Log
 
+## 2026-10-12 02:15:38 UTC / 2026-10-11 22:15:38 America/Toronto — focused camera checkpoint, Codex
+
+AUTHORIZED: user requested focused active-player/SetOutfit work, then STOP/documentation only, then explicitly resumed a narrower Third_Person_Camera wrapper/acquisition pass with checkpoint and STOP. No game modifications, source/DLL/build creation, broad VM continuation, privilege escalation, or security changes.
+
+- Used the matching open REA/Ghidra session (replay.exe SHA-256 9d18ef1a841526c0c91ce8af5b952c46c7ca0a8a6e8d169e99cc78cf34f8c132; PE/x86; Ghidra 12.1.4). Filesystem executable/script hashes matched at the beginning of the focused session. No fresh final hash read is claimed for the documentation-only checkpoint.
+- Preserved the camera ah member, SetInitialOutfit/GetInitialOutfit/GetOutfit wrapper records, stock ChangeInitialOutfit/StartChangeUniform candidates, declared typed global player and corrected HandlePlayerSwitches body. No repeated runtime call or safety test was performed.
+- DISPROVED FUN_005059e0 as outfit setter/getter; resolved it as generic inspection. Preserved earlier CODE call boundary 0x00463ce0 -> 0x00461d40 and shared global VM stack mutation; thread safety unresolved. Narrow follow-up reused existing interpreter evidence only to interpret the camera inline wrapper; it did not expand generic VM machinery.
+- Read-only external process attempt: Get-Process observed replay PID 33896 (Path unavailable). OpenProcess(0x1010) returned error 5; no process-memory read or path-validation succeeded. No retry with different privileges, security changes, injection, or debugger action.
+- Documentation-only STOP interval made no REA calls and preserved 232 retained unique inline records in EVIDENCE/2026-10-11_focused_player_setoutfit_session.json and all their IDs in the companion index. The subsequent camera resumption added eight retained follow-up records (some duplicate IDs) and seven scoped shell outputs. This is custom retained-record preservation, not a canonical REA export.
+- Current-user exact resume point: typed global player -> checked native host/name lookup/reference unwrap -> camera namespace/current-control validation -> existing one-number wrapper or stock ChangeInitialOutfit completion -> safe scheduling. No native outfit helper verified; no complete GetCurrentPlayer implementation supplied.
+
+### FAILED calls / rejected hypotheses preserved
+
+- procedure_pseudo_code: 0x004a64a0; 0x004f5b20; 0x004f5b40; 0x00463ce0; 0x00463d60; 0x00414230; 0x00413730; 0x00415410 returned "No procedure exists". procedure_assembly: 0x004d7160; 0x00463ce0; 0x00413730 likewise failed. Listing instruction/raw-byte reads were used only where supported; no function creation or database mutation. Duplicate unsuccessful 0x00414230 query did not change the conclusion.
+- 0x004f5b20 instruction inspection returned unavailable (ev_754bd1e89d1335af62e74060374c4d4506017448919783acb69d6e2483e1fd07); an initial instruction-walk loop repeated the same unavailable result because it failed to advance. Deduplicated record retained; later walks checked decoded status/positive length. This repetition is diagnostic failure, not corroboration.
+- procedure_assembly at 0x004f4a00 resolved containing function 0x004f48b0 (diagnostic output), not an outfit boundary; abandoned. procedure_pseudo_code at 0x004b8518 resolved destructor 0x004b84e0, not a VM constructor/player accessor. One 0x004bc832 assembly excerpt had no matching host reference in its selected slice; no acquisition claim is based on it. 0x007f4024 decoded "Hidden", not a script getter; 0x00610730 was collection support, not outfit dispatch. These bounded false leads were not continued into their unrelated systems.
+- Native defined-string searches for named camera/outfit/getter helpers were empty; script exact getter-name searches were empty. Treat as bounded absence, never proof of no indirect helper.
+- First Player_Character field decoder stopped at CurrentWeapon type 0x31; corrected handling reached required fields through slot 0x36. No whole-class/native-layout claim from the initial partial result.
+- First HandlePlayerSwitches extraction selected its declaration at 0x33a94c as if it were the code-body record, yielding invalid length 1,310,753 and an oversized/truncated dump. Rejected. Corrected second record name 0x33a9cf -> body 0x33a9e7, size 429; only the corrected record is analysis evidence. Broad RTTI substring output was also truncated; only the subsequent exact CODE/BOOL/NUMERIC type matches and pointer corroboration informed conclusions.
+- Literal class Player prefix search initially matched PlayerStatistics; no Player class/acquisition claim was made from it. class Globals exact-name search was absent. Uppercase TRUE/FALSE lookup was absent; lowercase serialized true/false records corrected the Boolean mapping.
+- Before this session, documentation patch using delete/add on the same path was rejected and then corrected. In this session the STOP preservation phase was interrupted before the six main documents were updated; this final checkpoint now completes that preservation. Earlier automatic/user-created ARCHIVE/CODEX_CHECKPOINT_2026-10-11_215924 and root transcript files were observed untracked and left untouched.
+
+### Final scope
+
+Updated the six required documentation files and the two repository evidence-preservation files. No commit/push, game execution initiated by the agent, source code, build product, game edit, privilege change, or runtime outfit invocation. Investigation stops after documentation; no REA close or further binary read was performed solely to finish this checkpoint. Historical session entries follow.
+
 ## 2026-10-12 01:34 UTC / 2026-10-11 21:34 America/Toronto — runtime milestone reconciliation, Codex
 
 AUTHORIZED: user requested document reconciliation, branch/worktree checks, REA binary_session and matching replay.exe identity, a milestone summary and immediate DLL blocker. No game edits, broad RE, or code before reconciliation.

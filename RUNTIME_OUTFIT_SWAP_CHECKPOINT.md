@@ -1,5 +1,90 @@
 # Runtime outfit swap checkpoint
 
+## Current checkpoint — 2026-10-12 02:15:38 UTC / 2026-10-11 22:15:38 America/Toronto
+
+Author: Codex. User authorized a focused camera-wrapper pass, documentation, and then STOP. No game edits, source files, builds, outfit invocation, privilege escalation, or security changes. The earlier generic VM pass is preserved below as background; do not broaden it on resumption.
+
+### A. Simplest established script route
+
+CONFIRMED static records: `Third_Person_Camera::SetInitialOutfit(number iNewInitialOutfit)`, name file offset `0x00245d36`, bytecode file offset `0x00245d60`, 143 bytes. It accesses the camera's `ah` object, stores the supplied normal-outfit choice, and calls the Player_Character SetOutfit method with `OUTFIT_NORMAL`, `false`, `true`. The wrapper argument is a normal-outfit selector; it does not forward that number as the runtime SetOutfit mode.
+
+LIKELY reconstructed semantics, supported by the wrapper, the 108-byte Player_Character SetInitialOutfit body at `0x0020f87d`, and the SetOutfit body:
+
+```text
+camera.SetInitialOutfit(choice):
+    camera.ah.m_iNormalModeOutfit = choice
+    camera.ah.SetOutfit(OUTFIT_NORMAL, hideequipment=false, bForce=true)
+```
+
+The wrapper uses an inline expansion referencing `ah.SetInitialOutfit` (operand `0x8048`), then explicitly invokes `ah.SetOutfit` (operand `0x8046`, underlying member index `0x46`). The high bit is an encoded VM reference/call flag, not an x86 vtable slot or byte offset.
+
+Repeated calls: no initialization-only guard appears in the 143-byte wrapper; `bForce=true` supports forced reapplication. LIKELY usable after initialization if the referenced meshes and script instance remain valid. Runtime safety, repeated-call behavior, animation interaction, and safe scheduling are NOT verified. It does not load missing outfit scenes.
+
+### B. Camera acquisition candidate
+
+CONFIRMED serialized declaration: global `player`, record `0x002e46ec`, type `0x31`, referenced class ID `0x0516` (Third_Person_Camera), default `0xffffffff`. This is more specific than the Actor-valued `ActivePlayer` and `PlayerRoot` declarations.
+
+CONFIRMED bytecode: `HandlePlayerSwitches`, body `0x0033a9e7`, 429 bytes, reads global operand `0x000a`, obtains an object through member operand `0x0087`, checks a Character method operand `0x803d` against global `0x0266`, and assigns it to global `0x055f` on the matching branch. LIKELY: this publishes the controlled player as the typed global `player`. Complete global-index and symbolic type-predicate mapping remains unverified; the assignment is conditional and is not proof that this reference is always current or cleared in menus.
+
+Static native candidate, NOT an approved/live-verified GetCurrentCamera/GetCurrentPlayer implementation:
+
+1. `0x004aafb0`: no-argument helper returns VM host address `0x008ec408` in EAX; caller-style no-argument ABI. It returns a host, not a camera.
+2. Read the host's context pointer at `host+4` (`0x008ec40c`); check for NULL before lookup. The host/context relation is assembly-supported.
+3. `0x004c4030`: `VMValue* __thiscall Lookup(VMHost* ECX, MirString* name)`; uses the context's name-to-key slot `+0xa8` and value slot `+0x98`. Candidate name: `player`. Name lookup uses the game's narrow string object, not a raw char pointer. Missing-name handling can throw; use the already identified non-throwing key lookup/validation if needed.
+4. Only after verifying that the returned value has the expected namespace-reference type, unwrap it through virtual slot `+0x40`. For the checked REF<NAMESPACE> vtable `0x007de8cc`, this slot is `0x004cdc00`: `Namespace* __thiscall Unwrap(RefNamespace* ECX)`, returning `[ECX+0x18]` in EAX. This offset is assembly-derived for this reference type, not a camera field offset.
+5. Validate the resulting namespace's concrete camera type, `ah`, wrapper binding, and relationship to the currently controlled actor. No exact validated native routine for those complete checks was established.
+
+This candidate ends in a script namespace, not a recovered native C++ Third_Person_Camera layout. Live validation, NULL/menu behavior, replacement on level load, and ownership/lifetime remain unresolved. Do not cache it across level transitions based on static evidence.
+
+### C. ah access
+
+CONFIRMED: camera member name `ah` at script file offset `0x0023c5fa`, declared class ID `0x04ef` (Player_Character). Camera SetInitialOutfit/GetInitialOutfit/GetOutfit records consistently access member operand `0x00af` before Player_Character fields/methods. LIKELY mapping: camera namespace member index `0xaf` (175) is `ah`; a full camera member-table ordinal decoder was not completed.
+
+Use an existing namespace member accessor/name lookup for `ah`; no fixed native `camera+offset` has been recovered. `0xaf` must never be used as a native byte displacement. GetInitialOutfit body `0x00245ed2` (23 bytes) reads `ah` then member `0x33`; GetOutfit body `0x0028d0dd` (46 bytes) reads `ah` and its runtime mode member `0x35` through the existing inline getter.
+
+### D. Existing wrappers and simpler boundaries
+
+CONFIRMED script-facing wrapper: SetInitialOutfit above, one number. No direct DLL-callable native function for it has been verified. Bounded native defined-string searches for `Third_Person_Camera`, `SetInitialOutfit`, `SetOutfit`, and `GetPlayer` returned no matches; this is not proof that indirect native callers do not exist. The already-read native Character interface binding does not expose a named outfit setter.
+
+CONFIRMED additional stock script entry points:
+
+- `Third_Person_Camera::ChangeInitialOutfit`: name `0x00245fca`, body `0x00245ff7`, 172 bytes, one number. It writes `ah.m_iNewNormalModeOutfit` (member `0x32`) and `ah.m_iLastNormalModeOrSSOutfit` (`0x34`), then uses a player-global guard and requests an animation/state transition. LIKELY: intended runtime outfit-change workflow. It is not a confirmed direct immediate caller of SetInitialOutfit; completion/apply edge remains unresolved.
+- `Third_Person_Camera::StartChangeUniform`: name `0x0024619a`, body `0x002461c6`, 235 bytes, no arguments. It uses guards and requests an animation/state transition. It is not a verified explicit "set SS" operation.
+- Exact qualified `Third_Person_Camera::SetOutfit` and `::ToggleUniform` records were not found in the bounded script-name search. Player_Character::ToggleUniform does exist, body `0x0020f9d5`, 289 bytes; it is a toggle with mode/normal-outfit restrictions, not an unconditional SS setter.
+
+### E. Outfit mapping
+
+| Requested look | Camera wrapper choice | Runtime SetOutfit mode | Evidence / confidence |
+|---|---|---|---|
+| Campaign | 0 | NORMAL=0 | CONFIRMED named float constants; LIKELY wrapper/mesh behavior |
+| Pilot | 1 | NORMAL=0 | CONFIRMED named float constants; LIKELY wrapper/mesh behavior |
+| Nightdress | 2 | NORMAL=0 with nightdress/vision mesh groups selected as the normal groups | CONFIRMED constants and configuration mesh names; LIKELY reconstructed branch behavior |
+| SS | Not a verified SetInitialOutfit choice | SS_UNIFORM=3 | CONFIRMED runtime constant; exact stock camera transition/apply contract unresolved |
+
+Runtime modes 1 and 2 are VISION and MORPHINE, not Pilot and a plain Nightdress appearance selector. Do not pass 3 to the camera's initial-outfit setter expecting SS. F5 needs both normal choice and runtime mode plus relevant equipment/camouflage/transition state; no complete restoration contract is verified.
+
+### F. Generic invocation status
+
+The camera wrapper reduces the desired outfit operation to one existing script method. A native-to-script call boundary is still needed from a DLL; no simpler typed native outfit helper was established. Do not extend generic VM analysis yet. Prefer resolving how stock code obtains/binds/calls this camera method.
+
+Preserved background: CODE@mtl vtable `0x007e0434`, call slot `+0xb4` (`0x007e04e8`) = `0x00463ce0`. CONFIRMED assembly: ECX is CODE*, one invocation-context stack argument, RET 4; it passes `CODE+0x24` and that context to `0x00461d40` (ECX remains CODE*, RET 8). The meaning of CODE+0x24 as embedded execution scope is LIKELY; do not mislabel it as the script file offset or assume it is a bytecode address.
+
+The wrapper pushes `[CODE+0x3c]` and CODE* onto global VM state at `0x008e9b90`, including stack begin/end `0x008e9b94/0x008e9b98`, and removes them on return when context+4 is zero. The executor also writes global `0x008e9b88`. Thread safety and required Windows thread ID are unresolved; an arbitrary hotkey worker thread is not validated. Previously inspected context fields: arg pointers begin +8; argument count +0x28; return VM-value pointer +0x2c for value-return paths. These facts do not make the complete invocation context/lifetime contract safe.
+
+### G. Remaining blocker and exact resume point
+
+No first outfit-changing DLL test is ready: validate the live `player` namespace/camera relationship, bind its existing one-number wrapper or stock ChangeInitialOutfit entry, and establish a safe execution thread/lifetime and loaded mesh prerequisites. Native scalar-value construction and complete F5 restoration are still unverified if no typed helper removes those needs.
+
+On explicit resumption, start with the saved global `player` declaration and corrected HandlePlayerSwitches record, then the already identified host/name-lookup/reference-unwrapper candidate. Resolve only the missing concrete type/current-control checks and existing camera wrapper caller/completion edge. Do not revisit FUN_005059e0 as an outfit path, generic loaders, input discovery, or whole-VM dispatch.
+
+FAILED external observation: replay process PID 33896 was already present; read-only OpenProcess(0x1010) returned Windows error 5 (access denied). No process memory was read, no target invocation performed, and no privilege/security change attempted. No live Player_Character or camera pointer was validated.
+
+### Preservation and stop status
+
+All material earlier-session findings, failed calls, and evidence IDs are indexed in FINDINGS.md, SESSION_LOG.md, and [the evidence index](EVIDENCE/2026-10-11_focused_player_setoutfit_index.md); [retained inline records](EVIDENCE/2026-10-11_focused_player_setoutfit_session.json) preserve their actual responses and scoped shell output. No fresh evidence query was used to create those files. The old recommended FUN_005059e0 investigation is DISPROVED/superseded. Investigation stops after this documentation checkpoint; the session was not closed or queried again for documentation.
+
+## Historical reconciliation — 21:34 local (superseded by the checkpoint above)
+
 Recorded: 2026-10-12 01:34 UTC / 2026-10-11 21:34 America/Toronto. Author: Codex.
 
 User authorized: reconcile existing milestone documentation, confirm Git/session/binary identity, and identify the immediate blocker. No game modifications, broad reverse engineering, or implementation code in this pass.

@@ -1,5 +1,18 @@
 # Current State
 
+## Latest checkpoint — 2026-10-11 22:15:38 America/Toronto / 2026-10-12 02:15:38 UTC
+
+1. CONFIRMED: matching replay.exe session/hash; branch runtime-outfit-swap; no game edits, code, build, or outfit test.
+2. CONFIRMED static: Third_Person_Camera contains Player_Character member `ah`; wrapper name/body offsets 0x245d36/0x245d60.
+3. LIKELY semantics: SetInitialOutfit(choice) writes ah normal choice and calls SetOutfit(NORMAL,false,true); runtime repeated-call safety untested.
+4. CONFIRMED declaration: global `player` references camera class 0x516; corrected HandlePlayerSwitches body 0x33a9e7 conditionally assigns global 0x055f.
+5. LIKELY native acquisition candidate: host 0x8ec408 -> context+4 -> existing global-name lookup for player -> checked namespace-reference unwrapper 0x004cdc00.
+6. FAILED / DISPROVED: FUN_005059e0 is a generic inspection path; it is not an outfit setter or current-player getter.
+7. CONFIRMED generic CODE call boundary 0x00463ce0 -> 0x00461d40 mutates global VM state; thread safety remains unresolved.
+8. FAILED live read: OpenProcess error 5; current camera/Player_Character pointer, safe native wrapper call, and full F1-F5 contract remain unresolved.
+
+See [RUNTIME_OUTFIT_SWAP_CHECKPOINT.md](RUNTIME_OUTFIT_SWAP_CHECKPOINT.md) sections A-G for the preferred camera route, limitations, and exact resume boundary. ChangeInitialOutfit/StartChangeUniform are stock script candidates; no direct native outfit helper was verified. Investigation is STOPPED after documentation. Earlier checkpoints below are historical.
+
 ## Reconciled runtime DLL milestone — 2026-10-11 21:34 America/Toronto
 
 See [RUNTIME_OUTFIT_SWAP_CHECKPOINT.md](RUNTIME_OUTFIT_SWAP_CHECKPOINT.md) for the authoritative eight-line milestone, identity checks, archived focused work, and next bounded task. Target: VelvetSwap.dll, x86/Win32, F1=Campaign, F2=Pilot, F3=Nightdress, F4=SS, F5=restore previous/original.

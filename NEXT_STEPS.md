@@ -1,5 +1,17 @@
 # Next Steps
 
+## STOPPED checkpoint — preferred camera route
+
+Read [RUNTIME_OUTFIT_SWAP_CHECKPOINT.md](RUNTIME_OUTFIT_SWAP_CHECKPOINT.md) sections A-G and the current-session [evidence index](EVIDENCE/2026-10-11_focused_player_setoutfit_index.md). This supersedes the earlier FUN_005059e0 investigation recommendation below; that path is DISPROVED as an outfit method/getter.
+
+Do not continue investigation until explicitly resumed. No game edits, DLL/source/build creation, privilege escalation, or security changes.
+
+Exact resume point if authorized: use the global player declaration at 0x2e46ec (camera class 0x516), corrected HandlePlayerSwitches body at 0x33a9e7, and existing native host 0x004aafb0 / lookup 0x004c4030 / checked reference-unwrapper 0x004cdc00 evidence. Verify the concrete live camera/current-control/lifetime checks; follow its existing SetInitialOutfit(choice) wrapper at script 0x245d60 or stock ChangeInitialOutfit body 0x245ff7 to its apply/completion edge. Resolve a safe existing callable boundary/thread before any outfit-changing DLL test.
+
+Campaign/Pilot/Nightdress camera choices are 0/1/2 while the immediate wrapper calls runtime NORMAL=0. SS is runtime 3 and has a separate guarded stock workflow. F5 restoration is not verified. ah operand 0xaf is a VM member index, not a native byte offset. OpenProcess error 5 is recorded; do not retry through escalation. Generic CODE dispatch evidence is background; do not broaden the VM.
+
+Historical next steps below are superseded context.
+
 ## Current instructions — runtime DLL resumption
 
 The current user request supersedes the historical documentation-only pause below. Read [RUNTIME_OUTFIT_SWAP_CHECKPOINT.md](RUNTIME_OUTFIT_SWAP_CHECKPOINT.md) first. Target VelvetSwap.dll, x86/Win32, with the requested F1-F5 controls. This pass reconciles documentation and identity; no game edits or implementation code.
