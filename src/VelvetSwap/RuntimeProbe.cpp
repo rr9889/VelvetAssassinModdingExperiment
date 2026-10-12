@@ -195,8 +195,22 @@ RuntimeProbe::Snapshot RuntimeProbe::Capture(const Image& image) noexcept {
         if (Rebase(image, 0x007e0434, 4, codeVtable))
             snapshot.bindingMatchesCodeVtable = snapshot.bindingVtable.readable &&
                 snapshot.bindingVtable.raw == codeVtable;
-        if (snapshot.bindingMatchesCodeVtable)
+        if (snapshot.bindingMatchesCodeVtable && snapshot.ownerBinding.raw &&
+            snapshot.ownerBinding.raw <= (std::numeric_limits<std::uintptr_t>::max)() - 0x24) {
+            // CODE+0x24 is the reference object itself, not a pointer to it.
+            snapshot.embeddedReference.raw = snapshot.ownerBinding.raw + 0x24;
+            snapshot.embeddedReference.readable = true; // Computed address, not dereferenced.
             snapshot.bindingScopeWord = ReadMember(snapshot.ownerBinding, 0x24);
+            snapshot.bindingScopeMatchesReferenceVtable = expectedReferenceVtable &&
+                snapshot.bindingScopeWord.readable &&
+                snapshot.bindingScopeWord.raw == expectedReferenceVtable;
+            if (snapshot.bindingScopeMatchesReferenceVtable) {
+                // ev_1121e... validates +0x18 only for this exact REF_NAMESPACE type.
+                snapshot.boundNamespacePayloadCandidate = ReadMember(snapshot.embeddedReference, 0x18);
+                // Raw pointed-to metadata only; this does not identify a namespace or camera.
+                snapshot.boundNamespacePayloadFirstWord = ReadMember(snapshot.boundNamespacePayloadCandidate, 0);
+            }
+        }
     }
     return snapshot;
 }

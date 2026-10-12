@@ -45,9 +45,11 @@ int main() {
     // Synthetic layout in test-owned allocations only; this is not live-game evidence.
     auto* fixture = static_cast<unsigned char*>(VirtualAlloc(nullptr, RuntimeProbe::ExpectedImageSize,
         MEM_RESERVE | MEM_COMMIT, PAGE_READWRITE));
-    auto* objects = static_cast<unsigned char*>(VirtualAlloc(nullptr, page,
+    auto* objects = static_cast<unsigned char*>(VirtualAlloc(nullptr, 2 * page,
         MEM_RESERVE | MEM_COMMIT, PAGE_READWRITE));
     if (!fixture || !objects) return 1;
+    check(VirtualProtect(objects + page, page, PAGE_NOACCESS, &old) != 0,
+        "protect synthetic object boundary page");
     RuntimeProbe::Image controlled;
     controlled.base = reinterpret_cast<std::uintptr_t>(fixture);
     controlled.size = RuntimeProbe::ExpectedImageSize;
@@ -73,11 +75,56 @@ int main() {
         "namespace payload gated by exact known vtable");
     check(controlledSample.bindingMatchesCodeVtable && controlledSample.bindingScopeWord.raw == 0xabcdef01,
         "candidate owner/binding and CODE metadata read");
+    check(controlledSample.embeddedReference.raw == pointer(binding + 0x24) &&
+        !controlledSample.bindingScopeMatchesReferenceVtable &&
+        !controlledSample.boundNamespacePayloadCandidate.readable,
+        "embedded object address distinguished from wrong reference vtable; payload gated");
+    auto* payload = objects + 512;
+    put(payload, 0x87654321);
+    put(binding + 0x24, pointer(fixture + rva(0x007de8cc)));
+    put(binding + 0x24 + 0x18, pointer(payload));
+    const auto boundScope = RuntimeProbe::Capture(controlled);
+    check(boundScope.bindingScopeMatchesReferenceVtable &&
+        boundScope.embeddedReference.raw == pointer(binding + 0x24) &&
+        boundScope.boundNamespacePayloadCandidate.readable &&
+        boundScope.boundNamespacePayloadCandidate.raw == pointer(payload) &&
+        boundScope.boundNamespacePayloadFirstWord.readable &&
+        boundScope.boundNamespacePayloadFirstWord.raw == 0x87654321,
+        "exact rebased embedded REF_NAMESPACE gates its +0x18 payload read");
+    put(binding + 0x24, 0x007de8cc);
+    const auto unrebasedScope = RuntimeProbe::Capture(controlled);
+    check(!unrebasedScope.bindingScopeMatchesReferenceVtable &&
+        !unrebasedScope.boundNamespacePayloadCandidate.readable,
+        "preferred vtable literal rejected when fixture image is rebased");
+    put(binding + 0x24, pointer(fixture + rva(0x007de8cc)));
+    put(binding + 0x3c, 0);
+    const auto nullPayload = RuntimeProbe::Capture(controlled);
+    check(nullPayload.boundNamespacePayloadCandidate.readable &&
+        nullPayload.boundNamespacePayloadCandidate.raw == 0 &&
+        !nullPayload.boundNamespacePayloadFirstWord.readable,
+        "null bound payload recorded without following it");
+    put(binding + 0x3c, 1);
+    const auto badPayload = RuntimeProbe::Capture(controlled);
+    check(badPayload.boundNamespacePayloadCandidate.readable &&
+        !badPayload.boundNamespacePayloadFirstWord.readable,
+        "unreadable bound payload rejected");
+    auto* edgeBinding = objects + page - 0x3c;
+    put(edgeBinding, pointer(fixture + rva(0x007e0434)));
+    put(edgeBinding + 0x24, pointer(fixture + rva(0x007de8cc)));
+    put(owner + 0x34, pointer(edgeBinding));
+    const auto inaccessiblePayload = RuntimeProbe::Capture(controlled);
+    check(inaccessiblePayload.bindingScopeMatchesReferenceVtable &&
+        !inaccessiblePayload.boundNamespacePayloadCandidate.readable,
+        "readable reference vtable cannot bypass inaccessible +0x18 payload");
+    put(owner + 0x34, pointer(binding));
     put(context, 0);
     put(binding, 0);
     const auto wrongTypes = RuntimeProbe::Capture(controlled);
     check(!wrongTypes.contextNamespacePayload.readable && !wrongTypes.bindingScopeWord.readable,
         "unknown vtables never enable typed payload reads");
+    check(!wrongTypes.embeddedReference.readable &&
+        !wrongTypes.boundNamespacePayloadCandidate.readable,
+        "wrong CODE vtable disables embedded reference observation");
     put(fixture + rva(0x008ec40c), 1);
     const auto invalidObject = RuntimeProbe::Capture(controlled);
     check(!invalidObject.contextVtable.readable, "unreadable candidate object rejected");

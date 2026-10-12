@@ -1,0 +1,67 @@
+Internal ctest changing into directory: C:/Users/Admin/Documents/VelvetAssassinModdingExperiment/build/VelvetSwap-bound-scope
+UpdateCTestConfiguration  from :C:/Users/Admin/Documents/VelvetAssassinModdingExperiment/build/VelvetSwap-bound-scope/DartConfiguration.tcl
+Parse Config file:C:/Users/Admin/Documents/VelvetAssassinModdingExperiment/build/VelvetSwap-bound-scope/DartConfiguration.tcl
+UpdateCTestConfiguration  from :C:/Users/Admin/Documents/VelvetAssassinModdingExperiment/build/VelvetSwap-bound-scope/DartConfiguration.tcl
+Parse Config file:C:/Users/Admin/Documents/VelvetAssassinModdingExperiment/build/VelvetSwap-bound-scope/DartConfiguration.tcl
+Test project C:/Users/Admin/Documents/VelvetAssassinModdingExperiment/build/VelvetSwap-bound-scope
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+    Start 1: GuardedReadsAndIdentity
+
+1: Test command: C:\Users\Admin\Documents\VelvetAssassinModdingExperiment\build\VelvetSwap-bound-scope\Release\RuntimeProbeTests.exe
+1: Test timeout computed to be: 1500
+1: PASS committed readable page
+1: PASS null rejection
+1: PASS overflow rejection
+1: PASS protect test-owned page
+1: PASS cross-page inaccessible read rejected
+1: PASS noaccess rejection
+1: PASS guard test-owned page
+1: PASS guard page rejected without consuming guard
+1: PASS guard preserved
+1: PASS release test-owned pages
+1: PASS freed memory rejection
+1: PASS preferred-image rebasing
+1: PASS below preferred base rejected
+1: PASS module boundary rejection
+1: PASS unverified image performs no game probe
+1: PASS protect synthetic object boundary page
+1: PASS synthetic host/context pointer read
+1: PASS namespace payload gated by exact known vtable
+1: PASS candidate owner/binding and CODE metadata read
+1: PASS embedded object address distinguished from wrong reference vtable; payload gated
+1: PASS exact rebased embedded REF_NAMESPACE gates its +0x18 payload read
+1: PASS preferred vtable literal rejected when fixture image is rebased
+1: PASS null bound payload recorded without following it
+1: PASS unreadable bound payload rejected
+1: PASS readable reference vtable cannot bypass inaccessible +0x18 payload
+1: PASS unknown vtables never enable typed payload reads
+1: PASS wrong CODE vtable disables embedded reference observation
+1: PASS unreadable candidate object rejected
+1: PASS wrong process fails closed
+1: PASS wrong-host SHA-256 retained
+1: PASS SHA-256 standard vector
+1/3 Test #1: GuardedReadsAndIdentity ..........   Passed    1.02 sec
+test 2
+    Start 2: WrongHostFailsClosed
+
+2: Test command: C:\Users\Admin\Documents\VelvetAssassinModdingExperiment\build\VelvetSwap-bound-scope\Release\DllSmokeTest.exe "C:/Users/Admin/Documents/VelvetAssassinModdingExperiment/build/VelvetSwap-bound-scope/Release/VelvetSwap.dll" "C:/Users/Admin/Documents/VelvetAssassinModdingExperiment/build/VelvetSwap-bound-scope/logs/VelvetSwap.log" "host is not replay.exe"
+2: Test timeout computed to be: 1500
+2: DLL wrong-host status=2 (expected 2); no game process used
+2/3 Test #2: WrongHostFailsClosed .............   Passed    0.07 sec
+test 3
+    Start 3: WrongReplayHashFailsClosed
+
+3: Test command: C:\Users\Admin\Documents\VelvetAssassinModdingExperiment\build\VelvetSwap-bound-scope\identity-fixture\replay.exe "C:/Users/Admin/Documents/VelvetAssassinModdingExperiment/build/VelvetSwap-bound-scope/Release/VelvetSwap.dll" "C:/Users/Admin/Documents/VelvetAssassinModdingExperiment/build/VelvetSwap-bound-scope/logs/VelvetSwap.log" "executable SHA-256 mismatch"
+3: Test timeout computed to be: 1500
+3: DLL wrong-host status=2 (expected 2); no game process used
+3/3 Test #3: WrongReplayHashFailsClosed .......   Passed    0.06 sec
+
+100% tests passed, 0 tests failed out of 3
+
+Total Test time (real) =   1.15 sec

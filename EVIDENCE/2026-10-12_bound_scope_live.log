@@ -1,0 +1,957 @@
+[2026-10-12T13:54:43.884Z] [observer_tid=18272] [START] VelvetSwap v0.0 x86 observation_only=1 pid=31512 dll_base=0x60CB0000 load_utc=2026-10-12T13:54:43.879Z
+[2026-10-12T13:54:43.888Z] [observer_tid=18272] [IDENTITY] path=C:\Users\Admin\Documents\Velvet Assassin\replay.exe main_base=0x00400000 module_size=0x00585E84 pe_timestamp=0x49EF137B sha256=9d18ef1a841526c0c91ce8af5b952c46c7ca0a8a6e8d169e99cc78cf34f8c132 result=VERIFIED
+[2026-10-12T13:54:43.891Z] [observer_tid=18272] [POLICY] game_state_writes=0 game_function_calls=0 hooks=0 polling_ms=50 passive_sample_ms=1000 focus_gate=game_process module_pinned_until_process_exit=1
+[2026-10-12T13:54:43.894Z] [observer_tid=18272] [PROBE_CONTRACT] revision=bound_namespace_payload_v1 embedded_ref_offset=0x24 exact_REF_NAMESPACE_vtable_gate=1 payload_offset=0x18 passive_scope_samples=1
+[2026-10-12T13:54:43.898Z] [observer_tid=18272] [SNAPSHOT] reason=startup main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:54:43.900Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:54:43.904Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x27698BB8 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:54:43.904Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x2769E77C vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:54:43.911Z] [observer_tid=18272] [BINDING_SCOPE] reason=startup code=0x2769E77C ref_object=0x2769E7A0 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:54:43.914Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:54:43.917Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:54:43.921Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:54:43.922Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:54:44.970Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x2769E77C ref_object=0x2769E7A0 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:54:45.976Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x2769E77C ref_object=0x2769E7A0 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:54:45.980Z] [observer_tid=18272] [PASSIVE_CHANGE] sample=3 changes=1 correlation=UNRESOLVED not_OnLoad_or_HandlePlayerSwitches_event
+[2026-10-12T13:54:45.980Z] [observer_tid=18272] [SNAPSHOT] reason=passive_change main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:54:45.980Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:54:45.990Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:54:45.992Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x2769E77C vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:54:45.992Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_change code=0x2769E77C ref_object=0x2769E7A0 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:54:45.997Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:54:46.000Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:54:46.000Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:54:46.008Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:54:47.750Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x2769E77C ref_object=0x2769E7A0 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:54:48.801Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x2769E77C ref_object=0x2769E7A0 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:54:49.805Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x2769E77C ref_object=0x2769E7A0 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:54:50.822Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x2769E77C ref_object=0x2769E7A0 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:54:51.852Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x2769E77C ref_object=0x2769E7A0 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:54:52.893Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x2769E77C ref_object=0x2769E7A0 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:54:53.898Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x2769E77C ref_object=0x2769E7A0 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:54:53.900Z] [observer_tid=18272] [PASSIVE_CHANGE] sample=10 changes=2 correlation=UNRESOLVED not_OnLoad_or_HandlePlayerSwitches_event
+[2026-10-12T13:54:53.905Z] [observer_tid=18272] [SNAPSHOT] reason=passive_change main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:54:53.908Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:54:53.912Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000008 current_code=0x27694E44 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:54:53.915Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x2769E77C vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:54:53.917Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_change code=0x2769E77C ref_object=0x2769E7A0 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:54:53.921Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:54:53.921Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:54:53.926Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:54:53.930Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:54:54.932Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x00000000 ref_object=UNRESOLVED ref_vtable=UNRESOLVED ref_vtable_match=0 namespace_payload_candidate=UNRESOLVED payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:54:54.934Z] [observer_tid=18272] [PASSIVE_CHANGE] sample=11 changes=3 correlation=UNRESOLVED not_OnLoad_or_HandlePlayerSwitches_event
+[2026-10-12T13:54:54.934Z] [observer_tid=18272] [SNAPSHOT] reason=passive_change main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:54:54.940Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000000 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:54:54.948Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000002 current_code=0x27AF4178 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:54:54.951Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x00000000 vtable=UNRESOLVED matches_CODE=0 scope_word=UNRESOLVED scope_semantics=UNRESOLVED
+[2026-10-12T13:54:54.951Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_change code=0x00000000 ref_object=UNRESOLVED ref_vtable=UNRESOLVED ref_vtable_match=0 namespace_payload_candidate=UNRESOLVED payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:54:54.961Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:54:54.968Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:54:54.972Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:54:54.975Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:54:55.945Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x00000000 ref_object=UNRESOLVED ref_vtable=UNRESOLVED ref_vtable_match=0 namespace_payload_candidate=UNRESOLVED payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:54:55.949Z] [observer_tid=18272] [PASSIVE_CHANGE] sample=12 changes=4 correlation=UNRESOLVED not_OnLoad_or_HandlePlayerSwitches_event
+[2026-10-12T13:54:55.953Z] [observer_tid=18272] [SNAPSHOT] reason=passive_change main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:54:55.956Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000000 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:54:55.959Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000007 current_code=0x276A11F8 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:54:55.963Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x00000000 vtable=UNRESOLVED matches_CODE=0 scope_word=UNRESOLVED scope_semantics=UNRESOLVED
+[2026-10-12T13:54:55.963Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_change code=0x00000000 ref_object=UNRESOLVED ref_vtable=UNRESOLVED ref_vtable_match=0 namespace_payload_candidate=UNRESOLVED payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:54:55.970Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:54:55.973Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:54:55.976Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:54:55.979Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:54:56.977Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x00000000 ref_object=UNRESOLVED ref_vtable=UNRESOLVED ref_vtable_match=0 namespace_payload_candidate=UNRESOLVED payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:54:56.977Z] [observer_tid=18272] [PASSIVE_CHANGE] sample=13 changes=5 correlation=UNRESOLVED not_OnLoad_or_HandlePlayerSwitches_event
+[2026-10-12T13:54:56.981Z] [observer_tid=18272] [SNAPSHOT] reason=passive_change main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:54:56.981Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000000 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:54:56.990Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000007 current_code=0x276A3C74 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:54:56.992Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x00000000 vtable=UNRESOLVED matches_CODE=0 scope_word=UNRESOLVED scope_semantics=UNRESOLVED
+[2026-10-12T13:54:56.992Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_change code=0x00000000 ref_object=UNRESOLVED ref_vtable=UNRESOLVED ref_vtable_match=0 namespace_payload_candidate=UNRESOLVED payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:54:56.992Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:54:57.001Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:54:57.001Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:54:57.008Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:54:57.995Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x27AEEE04 ref_object=0x27AEEE28 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:54:57.995Z] [observer_tid=18272] [PASSIVE_CHANGE] sample=14 changes=6 correlation=UNRESOLVED not_OnLoad_or_HandlePlayerSwitches_event
+[2026-10-12T13:54:58.001Z] [observer_tid=18272] [SNAPSHOT] reason=passive_change main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:54:58.001Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:54:58.001Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:54:58.010Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x27AEEE04 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:54:58.010Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_change code=0x27AEEE04 ref_object=0x27AEEE28 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:54:58.010Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:54:58.021Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:54:58.021Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:54:58.029Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:54:59.014Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x27AEEE04 ref_object=0x27AEEE28 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:00.072Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x27AEEE04 ref_object=0x27AEEE28 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:01.070Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x27AEEE04 ref_object=0x27AEEE28 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:02.071Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x27AEEE04 ref_object=0x27AEEE28 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:03.111Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x27AEEE04 ref_object=0x27AEEE28 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:04.111Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x27AEEE04 ref_object=0x27AEEE28 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:05.148Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x27AEEE04 ref_object=0x27AEEE28 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:06.150Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x27AEEE04 ref_object=0x27AEEE28 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:07.141Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x27AEEE04 ref_object=0x27AEEE28 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:08.166Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:08.170Z] [observer_tid=18272] [PASSIVE_CHANGE] sample=24 changes=7 correlation=UNRESOLVED not_OnLoad_or_HandlePlayerSwitches_event
+[2026-10-12T13:55:08.172Z] [observer_tid=18272] [SNAPSHOT] reason=passive_change main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:08.176Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:08.179Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:08.182Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:08.186Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_change code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:08.189Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:08.192Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:08.195Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:08.195Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:09.196Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:10.226Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:11.215Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:12.258Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:13.257Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:14.253Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:14.383Z] [observer_tid=18272] [F1] Campaign requested - observation only
+[2026-10-12T13:55:14.385Z] [observer_tid=18272] [SNAPSHOT] reason=F1 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:14.385Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:14.391Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:14.391Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:14.400Z] [observer_tid=18272] [BINDING_SCOPE] reason=F1 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:14.403Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:14.407Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:14.411Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:14.414Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:14.790Z] [observer_tid=18272] [F1] Campaign requested - observation only
+[2026-10-12T13:55:14.791Z] [observer_tid=18272] [SNAPSHOT] reason=F1 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:14.791Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:14.791Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:14.804Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:14.805Z] [observer_tid=18272] [BINDING_SCOPE] reason=F1 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:14.805Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:14.811Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:14.811Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:14.811Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:15.009Z] [observer_tid=18272] [F1] Campaign requested - observation only
+[2026-10-12T13:55:15.011Z] [observer_tid=18272] [SNAPSHOT] reason=F1 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:15.015Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:15.015Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:15.021Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:15.025Z] [observer_tid=18272] [BINDING_SCOPE] reason=F1 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:15.029Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:15.031Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:15.031Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:15.031Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:15.161Z] [observer_tid=18272] [F1] Campaign requested - observation only
+[2026-10-12T13:55:15.161Z] [observer_tid=18272] [SNAPSHOT] reason=F1 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:15.161Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:15.171Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000003 current_code=0x369622F8 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:15.171Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:15.177Z] [observer_tid=18272] [BINDING_SCOPE] reason=F1 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:15.181Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:15.181Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:15.181Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:15.191Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:15.257Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:15.320Z] [observer_tid=18272] [F1] Campaign requested - observation only
+[2026-10-12T13:55:15.321Z] [observer_tid=18272] [SNAPSHOT] reason=F1 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:15.321Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:15.330Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:15.332Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:15.336Z] [observer_tid=18272] [BINDING_SCOPE] reason=F1 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:15.336Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:15.341Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:15.341Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:15.341Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:15.538Z] [observer_tid=18272] [F1] Campaign requested - observation only
+[2026-10-12T13:55:15.542Z] [observer_tid=18272] [SNAPSHOT] reason=F1 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:15.545Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:15.549Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:15.552Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:15.554Z] [observer_tid=18272] [BINDING_SCOPE] reason=F1 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:15.558Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:15.561Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:15.561Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:15.568Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:15.695Z] [observer_tid=18272] [F1] Campaign requested - observation only
+[2026-10-12T13:55:15.699Z] [observer_tid=18272] [SNAPSHOT] reason=F1 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:15.702Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:15.705Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000003 current_code=0x27ADAF74 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:15.707Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:15.711Z] [observer_tid=18272] [BINDING_SCOPE] reason=F1 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:15.715Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:15.718Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:15.722Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:15.725Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:15.899Z] [observer_tid=18272] [F1] Campaign requested - observation only
+[2026-10-12T13:55:15.901Z] [observer_tid=18272] [SNAPSHOT] reason=F1 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:15.901Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:15.907Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:15.911Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:15.915Z] [observer_tid=18272] [BINDING_SCOPE] reason=F1 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:15.915Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:15.923Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:15.927Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:15.930Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:16.061Z] [observer_tid=18272] [F1] Campaign requested - observation only
+[2026-10-12T13:55:16.061Z] [observer_tid=18272] [SNAPSHOT] reason=F1 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:16.061Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:16.071Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:16.071Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:16.071Z] [observer_tid=18272] [BINDING_SCOPE] reason=F1 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:16.081Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:16.083Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:16.086Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:16.091Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:16.274Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:16.336Z] [observer_tid=18272] [F1] Campaign requested - observation only
+[2026-10-12T13:55:16.337Z] [observer_tid=18272] [SNAPSHOT] reason=F1 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:16.341Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:16.341Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:16.341Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:16.351Z] [observer_tid=18272] [BINDING_SCOPE] reason=F1 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:16.355Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:16.359Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:16.362Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:16.365Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:16.556Z] [observer_tid=18272] [F1] Campaign requested - observation only
+[2026-10-12T13:55:16.556Z] [observer_tid=18272] [SNAPSHOT] reason=F1 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:16.561Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:16.561Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:16.561Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:16.571Z] [observer_tid=18272] [BINDING_SCOPE] reason=F1 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:16.575Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:16.579Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:16.581Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:16.585Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:16.898Z] [observer_tid=18272] [F2] Pilot requested - observation only
+[2026-10-12T13:55:16.901Z] [observer_tid=18272] [SNAPSHOT] reason=F2 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:16.903Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:16.907Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:16.911Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:16.913Z] [observer_tid=18272] [BINDING_SCOPE] reason=F2 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:16.917Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:16.919Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:16.923Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:16.925Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:17.054Z] [observer_tid=18272] [F2] Pilot requested - observation only
+[2026-10-12T13:55:17.057Z] [observer_tid=18272] [SNAPSHOT] reason=F2 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:17.061Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:17.063Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:17.063Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:17.070Z] [observer_tid=18272] [BINDING_SCOPE] reason=F2 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:17.071Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:17.071Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:17.071Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:17.081Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:17.213Z] [observer_tid=18272] [F2] Pilot requested - observation only
+[2026-10-12T13:55:17.213Z] [observer_tid=18272] [SNAPSHOT] reason=F2 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:17.213Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:17.221Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:17.221Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:17.230Z] [observer_tid=18272] [BINDING_SCOPE] reason=F2 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:17.233Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:17.236Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:17.239Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:17.243Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:17.307Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:17.431Z] [observer_tid=18272] [F2] Pilot requested - observation only
+[2026-10-12T13:55:17.432Z] [observer_tid=18272] [SNAPSHOT] reason=F2 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:17.438Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:17.441Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000003 current_code=0x36612F24 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:17.441Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:17.450Z] [observer_tid=18272] [BINDING_SCOPE] reason=F2 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:17.453Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:17.456Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:17.460Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:17.463Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:17.648Z] [observer_tid=18272] [F2] Pilot requested - observation only
+[2026-10-12T13:55:17.651Z] [observer_tid=18272] [SNAPSHOT] reason=F2 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:17.651Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:17.651Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000002 current_code=0x36960B74 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:17.661Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:17.664Z] [observer_tid=18272] [BINDING_SCOPE] reason=F2 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:17.664Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:17.671Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:17.671Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:17.671Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:17.869Z] [observer_tid=18272] [F2] Pilot requested - observation only
+[2026-10-12T13:55:17.871Z] [observer_tid=18272] [SNAPSHOT] reason=F2 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:17.871Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:17.871Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:17.881Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:17.885Z] [observer_tid=18272] [BINDING_SCOPE] reason=F2 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:17.885Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:17.891Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:17.895Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:17.899Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:18.027Z] [observer_tid=18272] [F2] Pilot requested - observation only
+[2026-10-12T13:55:18.027Z] [observer_tid=18272] [SNAPSHOT] reason=F2 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:18.032Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:18.032Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:18.040Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:18.041Z] [observer_tid=18272] [BINDING_SCOPE] reason=F2 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:18.041Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:18.041Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:18.051Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:18.055Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:18.305Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:18.617Z] [observer_tid=18272] [F3] Nightdress requested - observation only
+[2026-10-12T13:55:18.617Z] [observer_tid=18272] [SNAPSHOT] reason=F3 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:18.621Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:18.621Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000002 current_code=0x36621800 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:18.621Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:18.633Z] [observer_tid=18272] [BINDING_SCOPE] reason=F3 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:18.633Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:18.633Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:18.643Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:18.643Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:18.836Z] [observer_tid=18272] [F3] Nightdress requested - observation only
+[2026-10-12T13:55:18.836Z] [observer_tid=18272] [SNAPSHOT] reason=F3 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:18.841Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:18.843Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:18.843Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:18.852Z] [observer_tid=18272] [BINDING_SCOPE] reason=F3 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:18.852Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:18.857Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:18.861Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:18.861Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:19.056Z] [observer_tid=18272] [F3] Nightdress requested - observation only
+[2026-10-12T13:55:19.056Z] [observer_tid=18272] [SNAPSHOT] reason=F3 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:19.061Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:19.061Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:19.061Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:19.072Z] [observer_tid=18272] [BINDING_SCOPE] reason=F3 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:19.072Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:19.072Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:19.081Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:19.081Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:19.274Z] [observer_tid=18272] [F3] Nightdress requested - observation only
+[2026-10-12T13:55:19.274Z] [observer_tid=18272] [SNAPSHOT] reason=F3 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:19.274Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:19.281Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:19.281Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:19.291Z] [observer_tid=18272] [BINDING_SCOPE] reason=F3 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:19.294Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:19.297Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:19.300Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:19.304Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:19.307Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:20.335Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:21.024Z] [observer_tid=18272] [F4] SS uniform requested - observation only
+[2026-10-12T13:55:21.024Z] [observer_tid=18272] [SNAPSHOT] reason=F4 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:21.031Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:21.031Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:21.031Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:21.041Z] [observer_tid=18272] [BINDING_SCOPE] reason=F4 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:21.041Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:21.041Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:21.041Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:21.053Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:21.227Z] [observer_tid=18272] [F4] SS uniform requested - observation only
+[2026-10-12T13:55:21.232Z] [observer_tid=18272] [SNAPSHOT] reason=F4 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:21.232Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:21.232Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:21.241Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:21.243Z] [observer_tid=18272] [BINDING_SCOPE] reason=F4 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:21.243Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:21.251Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:21.254Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:21.254Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:21.325Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:21.325Z] [observer_tid=18272] [PASSIVE_CHANGE] sample=37 changes=8 correlation=UNRESOLVED not_OnLoad_or_HandlePlayerSwitches_event
+[2026-10-12T13:55:21.331Z] [observer_tid=18272] [SNAPSHOT] reason=passive_change main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:21.331Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:21.331Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000003 current_code=0x369622F8 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:21.341Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:21.341Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_change code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:21.341Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:21.351Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:21.354Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:21.357Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:21.477Z] [observer_tid=18272] [F4] SS uniform requested - observation only
+[2026-10-12T13:55:21.477Z] [observer_tid=18272] [SNAPSHOT] reason=F4 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:21.481Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:21.481Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:21.481Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:21.493Z] [observer_tid=18272] [BINDING_SCOPE] reason=F4 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:21.497Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:21.500Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:21.503Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:21.507Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:22.341Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:22.343Z] [observer_tid=18272] [PASSIVE_CHANGE] sample=38 changes=9 correlation=UNRESOLVED not_OnLoad_or_HandlePlayerSwitches_event
+[2026-10-12T13:55:22.343Z] [observer_tid=18272] [SNAPSHOT] reason=passive_change main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:22.351Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:22.351Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:22.359Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:22.361Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_change code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:22.361Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:22.367Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:22.371Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:22.371Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:23.399Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:23.523Z] [observer_tid=18272] [F5] Restore requested - observation only
+[2026-10-12T13:55:23.523Z] [observer_tid=18272] [SNAPSHOT] reason=F5 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:23.523Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:23.534Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000002 current_code=0x2EF0E2E0 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:23.537Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:23.541Z] [observer_tid=18272] [BINDING_SCOPE] reason=F5 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:23.542Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:23.547Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:23.550Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:23.554Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:23.867Z] [observer_tid=18272] [F5] Restore requested - observation only
+[2026-10-12T13:55:23.871Z] [observer_tid=18272] [SNAPSHOT] reason=F5 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:23.873Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:23.877Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:23.880Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:23.884Z] [observer_tid=18272] [BINDING_SCOPE] reason=F5 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:23.887Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:23.891Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:23.894Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:23.897Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:24.087Z] [observer_tid=18272] [F5] Restore requested - observation only
+[2026-10-12T13:55:24.087Z] [observer_tid=18272] [SNAPSHOT] reason=F5 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:24.093Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:24.095Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:24.095Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:24.104Z] [observer_tid=18272] [BINDING_SCOPE] reason=F5 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:24.108Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:24.110Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:24.113Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:24.117Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:24.415Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:25.462Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:25.898Z] [observer_tid=18272] [F1] Campaign requested - observation only
+[2026-10-12T13:55:25.901Z] [observer_tid=18272] [SNAPSHOT] reason=F1 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:25.904Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:25.908Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:25.911Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:25.914Z] [observer_tid=18272] [BINDING_SCOPE] reason=F1 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:25.918Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:25.921Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:25.924Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:25.928Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:26.116Z] [observer_tid=18272] [F1] Campaign requested - observation only
+[2026-10-12T13:55:26.120Z] [observer_tid=18272] [SNAPSHOT] reason=F1 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:26.123Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:26.127Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:26.130Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:26.133Z] [observer_tid=18272] [BINDING_SCOPE] reason=F1 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:26.136Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:26.139Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:26.143Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:26.146Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:26.271Z] [observer_tid=18272] [F1] Campaign requested - observation only
+[2026-10-12T13:55:26.272Z] [observer_tid=18272] [SNAPSHOT] reason=F1 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:26.277Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:26.277Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:26.281Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:26.286Z] [observer_tid=18272] [BINDING_SCOPE] reason=F1 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:26.286Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:26.292Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:26.292Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:26.292Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:26.494Z] [observer_tid=18272] [F1] Campaign requested - observation only
+[2026-10-12T13:55:26.494Z] [observer_tid=18272] [SNAPSHOT] reason=F1 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:26.494Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:26.502Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:26.502Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:26.510Z] [observer_tid=18272] [BINDING_SCOPE] reason=F1 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:26.512Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:26.512Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:26.512Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:26.521Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:26.526Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:26.642Z] [observer_tid=18272] [F1] Campaign requested - observation only
+[2026-10-12T13:55:26.644Z] [observer_tid=18272] [SNAPSHOT] reason=F1 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:26.646Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:26.651Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:26.651Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:26.651Z] [observer_tid=18272] [BINDING_SCOPE] reason=F1 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:26.661Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:26.665Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:26.665Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:26.671Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:26.855Z] [observer_tid=18272] [F1] Campaign requested - observation only
+[2026-10-12T13:55:26.855Z] [observer_tid=18272] [SNAPSHOT] reason=F1 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:26.861Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:26.861Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:26.867Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:26.872Z] [observer_tid=18272] [BINDING_SCOPE] reason=F1 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:26.872Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:26.872Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:26.882Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:26.884Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:27.195Z] [observer_tid=18272] [F2] Pilot requested - observation only
+[2026-10-12T13:55:27.200Z] [observer_tid=18272] [SNAPSHOT] reason=F2 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:27.204Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:27.206Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000002 current_code=0x36960B74 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:27.209Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:27.211Z] [observer_tid=18272] [BINDING_SCOPE] reason=F2 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:27.214Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:27.214Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:27.222Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:27.227Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:27.351Z] [observer_tid=18272] [F2] Pilot requested - observation only
+[2026-10-12T13:55:27.352Z] [observer_tid=18272] [SNAPSHOT] reason=F2 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:27.352Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:27.362Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:27.365Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:27.367Z] [observer_tid=18272] [BINDING_SCOPE] reason=F2 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:27.372Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:27.374Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:27.378Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:27.381Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:27.512Z] [observer_tid=18272] [F2] Pilot requested - observation only
+[2026-10-12T13:55:27.512Z] [observer_tid=18272] [SNAPSHOT] reason=F2 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:27.517Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:27.521Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000003 current_code=0x27ACE1E0 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:27.523Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:27.523Z] [observer_tid=18272] [BINDING_SCOPE] reason=F2 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:27.531Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:27.531Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:27.539Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:27.542Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:27.546Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:28.590Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:29.633Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:30.680Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:31.712Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:32.713Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:33.712Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:34.717Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:35.742Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:36.744Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:37.789Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:38.789Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:39.791Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:40.789Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:41.832Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:42.837Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:43.837Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:44.827Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:44.831Z] [observer_tid=18272] [PASSIVE_CHANGE] sample=60 changes=10 correlation=UNRESOLVED not_OnLoad_or_HandlePlayerSwitches_event
+[2026-10-12T13:55:44.834Z] [observer_tid=18272] [SNAPSHOT] reason=passive_change main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:44.835Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:44.835Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000005 current_code=0x3661C9E0 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:44.842Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:44.842Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_change code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:44.852Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:44.852Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:44.852Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:44.862Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:44.867Z] [observer_tid=18272] [PASSIVE_HEARTBEAT] samples=60 changed_samples=10 sampled_stability_only=1 camera_identity=UNRESOLVED
+[2026-10-12T13:55:45.887Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:45.892Z] [observer_tid=18272] [PASSIVE_CHANGE] sample=61 changes=11 correlation=UNRESOLVED not_OnLoad_or_HandlePlayerSwitches_event
+[2026-10-12T13:55:45.892Z] [observer_tid=18272] [SNAPSHOT] reason=passive_change main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:45.897Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:45.902Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:45.906Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:45.910Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_change code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:45.913Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:45.916Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:45.919Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:45.923Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:46.886Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:47.946Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:48.946Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:49.946Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:50.977Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:51.992Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:52.992Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:53.885Z] [observer_tid=18272] [F1] Campaign requested - observation only
+[2026-10-12T13:55:53.886Z] [observer_tid=18272] [SNAPSHOT] reason=F1 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:53.892Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:53.892Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000003 current_code=0x36616A4C callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:53.892Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:53.902Z] [observer_tid=18272] [BINDING_SCOPE] reason=F1 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:53.905Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:53.909Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:53.913Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:53.914Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:54.032Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:54.522Z] [observer_tid=18272] [F1] Campaign requested - observation only
+[2026-10-12T13:55:54.522Z] [observer_tid=18272] [SNAPSHOT] reason=F1 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:54.522Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:54.532Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:54.532Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:54.538Z] [observer_tid=18272] [BINDING_SCOPE] reason=F1 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:54.543Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:54.547Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:54.550Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:54.553Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:54.680Z] [observer_tid=18272] [F1] Campaign requested - observation only
+[2026-10-12T13:55:54.682Z] [observer_tid=18272] [SNAPSHOT] reason=F1 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:54.687Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:54.687Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:54.692Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:54.697Z] [observer_tid=18272] [BINDING_SCOPE] reason=F1 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:54.697Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:54.702Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:54.702Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:54.702Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:54.836Z] [observer_tid=18272] [F1] Campaign requested - observation only
+[2026-10-12T13:55:54.836Z] [observer_tid=18272] [SNAPSHOT] reason=F1 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:54.842Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:54.847Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:54.847Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:54.852Z] [observer_tid=18272] [BINDING_SCOPE] reason=F1 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:54.852Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:54.852Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:54.862Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:54.862Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:55.055Z] [observer_tid=18272] [F1] Campaign requested - observation only
+[2026-10-12T13:55:55.055Z] [observer_tid=18272] [SNAPSHOT] reason=F1 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:55.062Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:55.062Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000003 current_code=0x369622F8 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:55.062Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:55.073Z] [observer_tid=18272] [BINDING_SCOPE] reason=F1 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:55.075Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:55.079Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:55.083Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:55.086Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:55.089Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:55.384Z] [observer_tid=18272] [F2] Pilot requested - observation only
+[2026-10-12T13:55:55.388Z] [observer_tid=18272] [SNAPSHOT] reason=F2 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:55.388Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:55.392Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:55.392Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:55.402Z] [observer_tid=18272] [BINDING_SCOPE] reason=F2 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:55.405Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:55.409Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:55.412Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:55.415Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:55.539Z] [observer_tid=18272] [F2] Pilot requested - observation only
+[2026-10-12T13:55:55.542Z] [observer_tid=18272] [SNAPSHOT] reason=F2 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:55.546Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:55.549Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000002 current_code=0x36621800 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:55.552Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:55.556Z] [observer_tid=18272] [BINDING_SCOPE] reason=F2 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:55.556Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:55.562Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:55.566Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:55.570Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:55:56.133Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:57.134Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:58.133Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:59.180Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:59.183Z] [observer_tid=18272] [PASSIVE_CHANGE] sample=74 changes=12 correlation=UNRESOLVED not_OnLoad_or_HandlePlayerSwitches_event
+[2026-10-12T13:55:59.187Z] [observer_tid=18272] [SNAPSHOT] reason=passive_change main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:55:59.190Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:55:59.194Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000001 current_code=0x36960B74 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:55:59.197Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:55:59.200Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_change code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:55:59.204Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:55:59.207Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:55:59.210Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:55:59.214Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:56:00.195Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:00.199Z] [observer_tid=18272] [PASSIVE_CHANGE] sample=75 changes=13 correlation=UNRESOLVED not_OnLoad_or_HandlePlayerSwitches_event
+[2026-10-12T13:56:00.202Z] [observer_tid=18272] [SNAPSHOT] reason=passive_change main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:56:00.206Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:56:00.210Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:56:00.213Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:56:00.216Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_change code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:00.220Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:56:00.222Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:56:00.226Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:56:00.229Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:56:01.196Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:02.228Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:03.218Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:04.266Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:05.303Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:06.300Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:07.337Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:08.383Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:09.415Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:10.414Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:10.414Z] [observer_tid=18272] [PASSIVE_CHANGE] sample=85 changes=14 correlation=UNRESOLVED not_OnLoad_or_HandlePlayerSwitches_event
+[2026-10-12T13:56:10.414Z] [observer_tid=18272] [SNAPSHOT] reason=passive_change main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:56:10.423Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:56:10.428Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000002 current_code=0x36617364 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:56:10.430Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:56:10.435Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_change code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:10.438Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:56:10.439Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:56:10.443Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:56:10.449Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:56:11.431Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:11.435Z] [observer_tid=18272] [PASSIVE_CHANGE] sample=86 changes=15 correlation=UNRESOLVED not_OnLoad_or_HandlePlayerSwitches_event
+[2026-10-12T13:56:11.438Z] [observer_tid=18272] [SNAPSHOT] reason=passive_change main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:56:11.441Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:56:11.445Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:56:11.448Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:56:11.452Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_change code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:11.455Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:56:11.459Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:56:11.461Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:56:11.463Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:56:12.476Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:13.509Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:14.554Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:14.554Z] [observer_tid=18272] [PASSIVE_CHANGE] sample=89 changes=16 correlation=UNRESOLVED not_OnLoad_or_HandlePlayerSwitches_event
+[2026-10-12T13:56:14.554Z] [observer_tid=18272] [SNAPSHOT] reason=passive_change main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:56:14.563Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:56:14.563Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000002 current_code=0x36621800 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:56:14.570Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:56:14.573Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_change code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:14.573Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:56:14.573Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:56:14.583Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:56:14.586Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:56:15.570Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:15.574Z] [observer_tid=18272] [PASSIVE_CHANGE] sample=90 changes=17 correlation=UNRESOLVED not_OnLoad_or_HandlePlayerSwitches_event
+[2026-10-12T13:56:15.578Z] [observer_tid=18272] [SNAPSHOT] reason=passive_change main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:56:15.581Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:56:15.584Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:56:15.585Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:56:15.590Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_change code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:15.593Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:56:15.593Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:56:15.601Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:56:15.603Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:56:16.573Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:16.573Z] [observer_tid=18272] [PASSIVE_CHANGE] sample=91 changes=18 correlation=UNRESOLVED not_OnLoad_or_HandlePlayerSwitches_event
+[2026-10-12T13:56:16.573Z] [observer_tid=18272] [SNAPSHOT] reason=passive_change main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:56:16.583Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:56:16.586Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000006 current_code=0x3694A800 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:56:16.586Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:56:16.593Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_change code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:16.593Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:56:16.593Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:56:16.603Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:56:16.603Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:56:17.602Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:17.606Z] [observer_tid=18272] [PASSIVE_CHANGE] sample=92 changes=19 correlation=UNRESOLVED not_OnLoad_or_HandlePlayerSwitches_event
+[2026-10-12T13:56:17.609Z] [observer_tid=18272] [SNAPSHOT] reason=passive_change main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:56:17.612Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:56:17.616Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:56:17.618Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:56:17.623Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_change code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:17.626Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:56:17.626Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:56:17.633Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:56:17.633Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:56:18.618Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:19.633Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:20.623Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:21.681Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:21.683Z] [observer_tid=18272] [PASSIVE_CHANGE] sample=96 changes=20 correlation=UNRESOLVED not_OnLoad_or_HandlePlayerSwitches_event
+[2026-10-12T13:56:21.683Z] [observer_tid=18272] [SNAPSHOT] reason=passive_change main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:56:21.683Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:56:21.693Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000003 current_code=0x36616A4C callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:56:21.698Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:56:21.702Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_change code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:21.704Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:56:21.708Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:56:21.711Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:56:21.713Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:56:22.711Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:22.716Z] [observer_tid=18272] [PASSIVE_CHANGE] sample=97 changes=21 correlation=UNRESOLVED not_OnLoad_or_HandlePlayerSwitches_event
+[2026-10-12T13:56:22.718Z] [observer_tid=18272] [SNAPSHOT] reason=passive_change main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:56:22.722Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:56:22.724Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:56:22.728Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:56:22.731Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_change code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:22.735Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:56:22.737Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:56:22.741Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:56:22.744Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:56:23.727Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:24.727Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:25.738Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:25.742Z] [observer_tid=18272] [PASSIVE_CHANGE] sample=100 changes=22 correlation=UNRESOLVED not_OnLoad_or_HandlePlayerSwitches_event
+[2026-10-12T13:56:25.745Z] [observer_tid=18272] [SNAPSHOT] reason=passive_change main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:56:25.748Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:56:25.752Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000001 current_code=0x36960B74 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:56:25.755Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:56:25.758Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_change code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:25.762Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:56:25.765Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:56:25.768Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:56:25.771Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:56:26.754Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:26.758Z] [observer_tid=18272] [PASSIVE_CHANGE] sample=101 changes=23 correlation=UNRESOLVED not_OnLoad_or_HandlePlayerSwitches_event
+[2026-10-12T13:56:26.761Z] [observer_tid=18272] [SNAPSHOT] reason=passive_change main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:56:26.764Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:56:26.767Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:56:26.771Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:56:26.775Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_change code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:26.778Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:56:26.781Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:56:26.785Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:56:26.788Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:56:27.758Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:27.762Z] [observer_tid=18272] [PASSIVE_CHANGE] sample=102 changes=24 correlation=UNRESOLVED not_OnLoad_or_HandlePlayerSwitches_event
+[2026-10-12T13:56:27.765Z] [observer_tid=18272] [SNAPSHOT] reason=passive_change main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:56:27.769Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:56:27.772Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000003 current_code=0x369622F8 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:56:27.776Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:56:27.776Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_change code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:27.783Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:56:27.784Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:56:27.789Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:56:27.793Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:56:28.788Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:28.788Z] [observer_tid=18272] [PASSIVE_CHANGE] sample=103 changes=25 correlation=UNRESOLVED not_OnLoad_or_HandlePlayerSwitches_event
+[2026-10-12T13:56:28.793Z] [observer_tid=18272] [SNAPSHOT] reason=passive_change main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:56:28.793Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:56:28.802Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:56:28.804Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:56:28.809Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_change code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:28.809Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:56:28.813Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:56:28.819Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:56:28.822Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:56:29.810Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:29.813Z] [observer_tid=18272] [PASSIVE_CHANGE] sample=104 changes=26 correlation=UNRESOLVED not_OnLoad_or_HandlePlayerSwitches_event
+[2026-10-12T13:56:29.815Z] [observer_tid=18272] [SNAPSHOT] reason=passive_change main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:56:29.819Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:56:29.823Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000003 current_code=0x3694709C callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:56:29.827Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:56:29.830Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_change code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:29.834Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:56:29.838Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:56:29.841Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:56:29.844Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:56:30.821Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:30.826Z] [observer_tid=18272] [PASSIVE_CHANGE] sample=105 changes=27 correlation=UNRESOLVED not_OnLoad_or_HandlePlayerSwitches_event
+[2026-10-12T13:56:30.829Z] [observer_tid=18272] [SNAPSHOT] reason=passive_change main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:56:30.832Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:56:30.836Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:56:30.836Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:56:30.836Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_change code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:30.843Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:56:30.843Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:56:30.852Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:56:30.853Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:56:31.809Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:32.842Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:33.883Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:33.887Z] [observer_tid=18272] [PASSIVE_CHANGE] sample=108 changes=28 correlation=UNRESOLVED not_OnLoad_or_HandlePlayerSwitches_event
+[2026-10-12T13:56:33.890Z] [observer_tid=18272] [SNAPSHOT] reason=passive_change main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:56:33.894Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:56:33.898Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000004 current_code=0x3661C9E0 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:56:33.899Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:56:33.904Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_change code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:33.908Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:56:33.910Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:56:33.915Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:56:33.915Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:56:34.899Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:34.899Z] [observer_tid=18272] [PASSIVE_CHANGE] sample=109 changes=29 correlation=UNRESOLVED not_OnLoad_or_HandlePlayerSwitches_event
+[2026-10-12T13:56:34.904Z] [observer_tid=18272] [SNAPSHOT] reason=passive_change main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:56:34.904Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:56:34.904Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:56:34.917Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:56:34.920Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_change code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:34.923Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:56:34.924Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:56:34.924Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:56:34.934Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:56:35.932Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:36.931Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:37.977Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:38.949Z] [observer_tid=18272] [F1] Campaign requested - observation only
+[2026-10-12T13:56:38.954Z] [observer_tid=18272] [SNAPSHOT] reason=F1 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:56:38.956Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:56:38.960Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:56:38.964Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:56:38.965Z] [observer_tid=18272] [BINDING_SCOPE] reason=F1 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:38.970Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:56:38.974Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:56:38.974Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:56:38.981Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:56:38.984Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:39.109Z] [observer_tid=18272] [F1] Campaign requested - observation only
+[2026-10-12T13:56:39.113Z] [observer_tid=18272] [SNAPSHOT] reason=F1 main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:56:39.116Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:56:39.117Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:56:39.117Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:56:39.124Z] [observer_tid=18272] [BINDING_SCOPE] reason=F1 code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:39.124Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:56:39.134Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:56:39.134Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:56:39.138Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:56:40.007Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:41.008Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:42.292Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:43.306Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:44.320Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:45.314Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:45.318Z] [observer_tid=18272] [PASSIVE_HEARTBEAT] samples=119 changed_samples=29 sampled_stability_only=1 camera_identity=UNRESOLVED
+[2026-10-12T13:56:46.351Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:47.398Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:48.416Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:49.462Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:50.508Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:51.508Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:52.544Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:53.572Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:54.617Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:55.667Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:56.654Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:57.687Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:58.739Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:56:59.788Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:57:00.790Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:57:01.789Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:57:02.789Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:57:03.836Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:57:04.868Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:57:05.862Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:57:06.856Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:57:07.885Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:57:08.930Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:57:09.978Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:57:11.023Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:57:12.060Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:57:13.060Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:57:14.120Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:57:15.165Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:57:16.164Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:57:17.179Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:57:18.196Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:57:19.195Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:57:20.227Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:57:21.259Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:57:22.260Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:57:23.306Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:57:24.305Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:57:25.305Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:57:26.325Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:57:27.351Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:57:28.399Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:57:29.398Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:57:30.451Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:57:31.477Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:57:32.493Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:57:33.523Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:57:34.524Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:57:35.523Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:57:37.201Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:57:38.227Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:57:39.276Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:57:39.276Z] [observer_tid=18272] [PASSIVE_CHANGE] sample=171 changes=30 correlation=UNRESOLVED not_OnLoad_or_HandlePlayerSwitches_event
+[2026-10-12T13:57:39.276Z] [observer_tid=18272] [SNAPSHOT] reason=passive_change main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:57:39.285Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:57:39.285Z] [observer_tid=18272] [VM_SAMPLE] depth=0x0000000C current_code=0x27AC93C0 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:57:39.292Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:57:39.296Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_change code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:57:39.299Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:57:39.302Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:57:39.306Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:57:39.306Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:57:40.304Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:57:40.306Z] [observer_tid=18272] [PASSIVE_CHANGE] sample=172 changes=31 correlation=UNRESOLVED not_OnLoad_or_HandlePlayerSwitches_event
+[2026-10-12T13:57:40.306Z] [observer_tid=18272] [SNAPSHOT] reason=passive_change main_base=0x00400000 module_size=0x00585E84 identity=VERIFIED observer_thread_only=1
+[2026-10-12T13:57:40.306Z] [observer_tid=18272] [HOST] address=0x008EC408 context=0x0354BD00 enabled=0x00000001 context_vtable=0x0081FC04 get_value_entry=0x00459940
+[2026-10-12T13:57:40.317Z] [observer_tid=18272] [VM_SAMPLE] depth=0x00000000 current_code=0x00000000 callback_head=0x26EFEE5C candidate_owner=0x26EFEE48
+[2026-10-12T13:57:40.320Z] [observer_tid=18272] [BINDING_CANDIDATE] confidence=LIKELY binding=0x36960B74 vtable=0x007E0434 matches_CODE=1 scope_word=0x007DE8CC scope_semantics=UNRESOLVED
+[2026-10-12T13:57:40.325Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_change code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED
+[2026-10-12T13:57:40.327Z] [observer_tid=18272] [REF_METADATA] context_matches_REF_NAMESPACE=0 payload=UNRESOLVED camera_identity=UNRESOLVED
+[2026-10-12T13:57:40.327Z] [observer_tid=18272] [CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified
+[2026-10-12T13:57:40.334Z] [observer_tid=18272] [OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets
+[2026-10-12T13:57:40.336Z] [observer_tid=18272] [CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution
+[2026-10-12T13:57:42.061Z] [observer_tid=18272] [BINDING_SCOPE] reason=passive_sample code=0x36960B74 ref_object=0x36960B98 ref_vtable=0x007DE8CC ref_vtable_match=1 namespace_payload_candidate=0x00000000 payload_nonnull=0 payload_readable=0 payload_first_word=UNRESOLVED payload_identity=UNRESOLVED

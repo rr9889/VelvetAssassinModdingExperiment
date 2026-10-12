@@ -1,0 +1,12 @@
+2026-10-12 bound namespace live observation attempt
+This is an attempt record, NOT a live runtime capture.
+Disk replay.exe SHA-256 verified: 9d18ef1a841526c0c91ce8af5b952c46c7ca0a8a6e8d169e99cc78cf34f8c132
+No replay process observed during shell checks.
+Computer Use initialized and listed apps.
+Requested sky.launch_app for C:\Users\Admin\Documents\Velvet Assassin\replay.exe
+Tool response: Computer Use was not approved to use replay
+No alternate launch or process-access route attempted.
+Manual gameplay capture requested; no reply/capture received at checkpoint.
+New observation log contains two REJECTED isolated test sessions only.
+Task 1 complete; Task 2 pending; Tasks 3-4 not started because no concrete live payload exists.
+Stop conditions A/B/C are not established.

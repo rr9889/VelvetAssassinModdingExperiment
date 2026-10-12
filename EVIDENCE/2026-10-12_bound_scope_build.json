@@ -1,0 +1,23 @@
+{
+  "recorded_utc": "2026-10-12T13:49:52.008174+00:00",
+  "head": "973c385",
+  "branch": "runtime-outfit-swap",
+  "phase": "guarded bound-namespace payload read; build and isolated tests",
+  "dll_path": "C:\\Users\\Admin\\Documents\\VelvetAssassinModdingExperiment\\build\\VelvetSwap-bound-scope\\Release\\VelvetSwap.dll",
+  "dll_sha256": "dd85754f1c2692c5684e17a9f0a0940e263aaeaef58a46fd541b62505c20cf3f",
+  "dll_machine": "0x14c",
+  "dll_optional_magic": "0x10b",
+  "test_result": "3/3 CTest passed; 31 guarded-read/identity assertions passed",
+  "test_authority": "isolated fixtures; not live evidence",
+  "live_capture_status": "PENDING manual gameplay capture at this build checkpoint",
+  "probe": "exact identity -> CODE vtable -> embedded CODE+0x24 REF_NAMESPACE vtable -> guarded +0x18 payload",
+  "game_state_writes": 0,
+  "game_function_calls": 0,
+  "hooks": 0,
+  "evidence_hashes": {
+    "2026-10-12_bound_scope_configure.log": "384056e00508f923448fd20b48a584a9275b2c2e1719e96a5e0632d219c141b7",
+    "2026-10-12_bound_scope_build.log": "865ead990437efc61324dfa6a96f1297ae94aab3ca486a5d831342c235048976",
+    "2026-10-12_bound_scope_tests.log": "10e8d332d81ca08614538db401c6f3affa51433dfb81d78826cff3d753bf7583",
+    "2026-10-12_v0.0_first_live.log": "c35e5516534355e868aff4e3f20cd9911f00f7c844076fb1e624db17e8c0ce48"
+  }
+}

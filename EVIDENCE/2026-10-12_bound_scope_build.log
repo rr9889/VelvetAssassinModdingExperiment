@@ -1,0 +1,20 @@
+Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Checking Build System
+  Building Custom Rule C:/Users/Admin/Documents/VelvetAssassinModdingExperiment/src/VelvetSwap/CMakeLists.txt
+  DllSmokeTest.cpp
+  DllSmokeTest.vcxproj -> C:\Users\Admin\Documents\VelvetAssassinModdingExperiment\build\VelvetSwap-bound-scope\Release\DllSmokeTest.exe
+  Building Custom Rule C:/Users/Admin/Documents/VelvetAssassinModdingExperiment/src/VelvetSwap/CMakeLists.txt
+  RuntimeProbeTests.cpp
+  RuntimeProbe.cpp
+  Generating Code...
+  RuntimeProbeTests.vcxproj -> C:\Users\Admin\Documents\VelvetAssassinModdingExperiment\build\VelvetSwap-bound-scope\Release\RuntimeProbeTests.exe
+  Building Custom Rule C:/Users/Admin/Documents/VelvetAssassinModdingExperiment/src/VelvetSwap/CMakeLists.txt
+  VelvetSwap.cpp
+  Logger.cpp
+  RuntimeProbe.cpp
+  Generating Code...
+     Creating library C:/Users/Admin/Documents/VelvetAssassinModdingExperiment/build/VelvetSwap-bound-scope/Release/VelvetSwap.lib and object C:/Users/Admin/Documents/VelvetAssassinModdingExperiment/build/VelvetSwap-bound-scope/Release/VelvetSwap.exp
+  VelvetSwap.vcxproj -> C:\Users\Admin\Documents\VelvetAssassinModdingExperiment\build\VelvetSwap-bound-scope\Release\VelvetSwap.dll
+  Building Custom Rule C:/Users/Admin/Documents/VelvetAssassinModdingExperiment/src/VelvetSwap/CMakeLists.txt

@@ -1,0 +1,105 @@
+{
+  "captured_utc": "2026-10-12T13:57:52.541643+00:00",
+  "authority": "real in-process observation-only DLL log; non-atomic worker samples",
+  "source_log": "C:\\Users\\Admin\\Documents\\VelvetAssassinModdingExperiment\\build\\VelvetSwap-bound-scope\\logs\\VelvetSwap.log",
+  "identity_line": "[2026-10-12T13:54:43.888Z] [observer_tid=18272] [IDENTITY] path=C:\\Users\\Admin\\Documents\\Velvet Assassin\\replay.exe main_base=0x00400000 module_size=0x00585E84 pe_timestamp=0x49EF137B sha256=9d18ef1a841526c0c91ce8af5b952c46c7ca0a8a6e8d169e99cc78cf34f8c132 result=VERIFIED",
+  "start_line": "[2026-10-12T13:54:43.884Z] [observer_tid=18272] [START] VelvetSwap v0.0 x86 observation_only=1 pid=31512 dll_base=0x60CB0000 load_utc=2026-10-12T13:54:43.879Z",
+  "snapshot_reasons": {
+    "startup": 1,
+    "passive_change": 31,
+    "F1": 24,
+    "F2": 12,
+    "F3": 4,
+    "F4": 3,
+    "F5": 3
+  },
+  "scope_records": 250,
+  "passive_scope_records": 172,
+  "passive_span_seconds": 177.091,
+  "values": {
+    "code": [
+      "0x00000000",
+      "0x2769E77C",
+      "0x27AEEE04",
+      "0x36960B74"
+    ],
+    "ref_object": [
+      "0x2769E7A0",
+      "0x27AEEE28",
+      "0x36960B98",
+      "UNRESOLVED"
+    ],
+    "ref_vtable": [
+      "0x007DE8CC",
+      "UNRESOLVED"
+    ],
+    "ref_vtable_match": [
+      "0",
+      "1"
+    ],
+    "namespace_payload_candidate": [
+      "0x00000000",
+      "UNRESOLVED"
+    ],
+    "payload_nonnull": [
+      "0"
+    ],
+    "payload_readable": [
+      "0"
+    ],
+    "payload_first_word": [
+      "UNRESOLVED"
+    ]
+  },
+  "unique_exact_type_gated_payload_candidates": [
+    "0x00000000"
+  ],
+  "payload_candidate_changes_between_valid_records": 0,
+  "sampled_payload_stable": true,
+  "all_valid_payloads_nonnull": false,
+  "all_valid_payload_first_words_readable": false,
+  "vm_depth_values": [
+    "0x00000000",
+    "0x00000001",
+    "0x00000002",
+    "0x00000003",
+    "0x00000004",
+    "0x00000005",
+    "0x00000006",
+    "0x00000007",
+    "0x00000008",
+    "0x0000000C"
+  ],
+  "vm_current_code_values": [
+    "0x00000000",
+    "0x27694E44",
+    "0x27698BB8",
+    "0x276A11F8",
+    "0x276A3C74",
+    "0x27AC93C0",
+    "0x27ACE1E0",
+    "0x27ADAF74",
+    "0x27AF4178",
+    "0x2EF0E2E0",
+    "0x36612F24",
+    "0x36616A4C",
+    "0x36617364",
+    "0x3661C9E0",
+    "0x36621800",
+    "0x3694709C",
+    "0x3694A800",
+    "0x36960B74",
+    "0x369622F8"
+  ],
+  "payload_identity": "UNRESOLVED; stability and a readable first word do not identify a namespace or camera",
+  "slot_055f_read_status": "UNRESOLVED; not probed",
+  "slot_055f_live_value": null,
+  "camera_current_control_identity": "UNRESOLVED",
+  "execution_thread": "UNRESOLVED; observer thread is not update-thread evidence",
+  "game_state_writes": 0,
+  "game_function_calls": 0,
+  "hooks": 0,
+  "capture_path": "C:\\Users\\Admin\\Documents\\VelvetAssassinModdingExperiment\\EVIDENCE\\2026-10-12_bound_scope_live.log",
+  "capture_sha256": "3056ff7a58bf982e7445e7842f475f55c194a97cf7290083da8b0a6cff71687e",
+  "capture_bytes": 189995
+}

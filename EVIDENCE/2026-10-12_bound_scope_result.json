@@ -1,0 +1,59 @@
+{
+  "recorded_utc": "2026-10-12T13:59:27.808776+00:00",
+  "live_evidence": "EVIDENCE/2026-10-12_bound_scope_live.log",
+  "live_evidence_sha256": "3056ff7a58bf982e7445e7842f475f55c194a97cf7290083da8b0a6cff71687e",
+  "exact_type_gated_scope_records": 244,
+  "scope_records_without_exact_type_match": 6,
+  "binding_scope_groups": [
+    {
+      "code": "0x2769E77C",
+      "ref_object": "0x2769E7A0",
+      "ref_vtable": "0x007DE8CC",
+      "payload": "0x00000000",
+      "scope_records": 12
+    },
+    {
+      "code": "0x27AEEE04",
+      "ref_object": "0x27AEEE28",
+      "ref_vtable": "0x007DE8CC",
+      "payload": "0x00000000",
+      "scope_records": 11
+    },
+    {
+      "code": "0x36960B74",
+      "ref_object": "0x36960B98",
+      "ref_vtable": "0x007DE8CC",
+      "payload": "0x00000000",
+      "scope_records": 221
+    }
+  ],
+  "CONFIRMED": [
+    "Exact real replay.exe identity; startup and F1/F2/F3 snapshots; passive capture exceeds requested minimum",
+    "Known CODE and embedded REF_NAMESPACE vtable checks succeeded for the listed bindings",
+    "Every exact-type-gated embedded reference +0x18 payload read returned zero",
+    "Payload remains zero across the successful samples despite CODE/VM activity changes"
+  ],
+  "DISPROVED": [
+    "These sampled callback bindings expose a non-null bound namespace through embedded REF_NAMESPACE+0x18"
+  ],
+  "UNRESOLVED": [
+    "Why these references have null payloads",
+    "Namespace/state owning global slot 0x055f",
+    "Slot live VM value and camera/current-control identity",
+    "Safe game/update-thread handoff"
+  ],
+  "stop_boundary": "Null bound payload; Task 3 requires a concrete namespace, which was not captured. No slot investigation started.",
+  "v0_1": "NO-GO",
+  "single_acquisition_blocker": "Verified passive mapping from the observed null CODE scope reference to the namespace/state owning global slot 0x055f",
+  "execution_thread": "UNRESOLVED; remains a separate GO requirement after acquisition",
+  "exact_next_step": "Before further runtime implementation, recover the existing FUN_00459940 scope-mode/global-storage mapping for the actual namespace/state receiver; only implement passive slot_055f reads if that mapping is validated. Do not call the accessor or infer offsets from null scope.",
+  "game_state_writes": 0,
+  "game_function_calls": 0,
+  "hooks": 0,
+  "limitations": [
+    "Non-atomic observer samples; no continuous/null-between-samples claim",
+    "REF_NAMESPACE marker interpretation is supported; null value is not a namespace object or camera",
+    "No OnLoad, HandlePlayerSwitches, or control-transition correlation claimed",
+    "A single complete v0.1 blocker cannot yet be reduced to thread handoff; acquisition is blocked first"
+  ]
+}

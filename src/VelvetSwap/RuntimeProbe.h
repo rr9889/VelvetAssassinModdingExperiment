@@ -33,9 +33,13 @@ struct Snapshot {
     Value callbackHead;
     Value ownerBinding;
     Value bindingVtable;
-    Value bindingScopeWord;
+    Value bindingScopeWord; // First word/vtable at CODE+0x24; never the payload.
+    Value embeddedReference; // Computed address CODE+0x24; readable marks address availability.
+    Value boundNamespacePayloadCandidate;
+    Value boundNamespacePayloadFirstWord;
     std::uintptr_t candidateOwner = 0;
     bool bindingMatchesCodeVtable = false;
+    bool bindingScopeMatchesReferenceVtable = false;
     bool contextMatchesReferenceVtable = false;
     // Deliberately no slot/camera/outfit fields: no verified native layout exists.
 };

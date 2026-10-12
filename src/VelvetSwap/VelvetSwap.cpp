@@ -16,6 +16,16 @@ const char* Describe(RuntimeProbe::Value value, char (&text)[32]) noexcept {
     else strcpy_s(text, "UNRESOLVED");
     return text;
 }
+void LogBindingScope(const RuntimeProbe::Snapshot& s, const char* reason) noexcept {
+    char a[32]{}, b[32]{}, c[32]{}, d[32]{}, e[32]{};
+    Logger::Line("[BINDING_SCOPE] reason=%s code=%s ref_object=%s ref_vtable=%s ref_vtable_match=%u namespace_payload_candidate=%s payload_nonnull=%u payload_readable=%u payload_first_word=%s payload_identity=UNRESOLVED",
+        reason, Describe(s.ownerBinding, a), Describe(s.embeddedReference, b),
+        Describe(s.bindingScopeWord, c), s.bindingScopeMatchesReferenceVtable ? 1u : 0u,
+        Describe(s.boundNamespacePayloadCandidate, d),
+        s.boundNamespacePayloadCandidate.readable && s.boundNamespacePayloadCandidate.raw ? 1u : 0u,
+        s.boundNamespacePayloadFirstWord.readable ? 1u : 0u,
+        Describe(s.boundNamespacePayloadFirstWord, e));
+}
 void LogSnapshot(const RuntimeProbe::Image& image, const RuntimeProbe::Snapshot& s,
                  const char* reason) noexcept {
     char a[32]{}, b[32]{}, c[32]{}, d[32]{}, e[32]{}, f[32]{}, g[32]{}, h[32]{};
@@ -30,6 +40,7 @@ void LogSnapshot(const RuntimeProbe::Image& image, const RuntimeProbe::Snapshot&
     Logger::Line("[BINDING_CANDIDATE] confidence=LIKELY binding=%s vtable=%s matches_CODE=%u scope_word=%s scope_semantics=UNRESOLVED",
         Describe(s.ownerBinding, e), Describe(s.bindingVtable, f), s.bindingMatchesCodeVtable ? 1u : 0u,
         Describe(s.bindingScopeWord, g));
+    LogBindingScope(s, reason);
     Logger::Line("[REF_METADATA] context_matches_REF_NAMESPACE=%u payload=%s camera_identity=UNRESOLVED",
         s.contextMatchesReferenceVtable ? 1u : 0u, Describe(s.contextNamespacePayload, h));
     Logger::Line("[CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified");
@@ -45,7 +56,10 @@ bool Changed(const RuntimeProbe::Snapshot& a, const RuntimeProbe::Snapshot& b) n
         differs(a.contextNamespacePayload, b.contextNamespacePayload) ||
         differs(a.invocationDepth, b.invocationDepth) || differs(a.currentCode, b.currentCode) ||
         differs(a.callbackHead, b.callbackHead) || differs(a.ownerBinding, b.ownerBinding) ||
-        differs(a.bindingVtable, b.bindingVtable) || differs(a.bindingScopeWord, b.bindingScopeWord);
+        differs(a.bindingVtable, b.bindingVtable) || differs(a.bindingScopeWord, b.bindingScopeWord) ||
+        differs(a.embeddedReference, b.embeddedReference) ||
+        differs(a.boundNamespacePayloadCandidate, b.boundNamespacePayloadCandidate) ||
+        differs(a.boundNamespacePayloadFirstWord, b.boundNamespacePayloadFirstWord);
 }
 DWORD WINAPI Observe(void*) noexcept {
     // Pin after loader lock is released. This v0.0 supports stop, not dynamic unmapping.
@@ -73,6 +87,7 @@ DWORD WINAPI Observe(void*) noexcept {
         Logger::Close(); InterlockedExchange(&status, 2); return 0;
     }
     Logger::Line("[POLICY] game_state_writes=0 game_function_calls=0 hooks=0 polling_ms=50 passive_sample_ms=1000 focus_gate=game_process module_pinned_until_process_exit=1");
+    Logger::Line("[PROBE_CONTRACT] revision=bound_namespace_payload_v1 embedded_ref_offset=0x24 exact_REF_NAMESPACE_vtable_gate=1 payload_offset=0x18 passive_scope_samples=1");
     auto previous = RuntimeProbe::Capture(image);
     LogSnapshot(image, previous, "startup");
     InterlockedExchange(&status, 1);
@@ -100,6 +115,7 @@ DWORD WINAPI Observe(void*) noexcept {
         if (now - lastSample >= 1000) {
             const auto sample = RuntimeProbe::Capture(image);
             ++samples;
+            LogBindingScope(sample, "passive_sample");
             if (Changed(previous, sample)) {
                 ++changes;
                 Logger::Line("[PASSIVE_CHANGE] sample=%llu changes=%llu correlation=UNRESOLVED not_OnLoad_or_HandlePlayerSwitches_event", samples, changes);
