@@ -4,7 +4,7 @@ Order is dependency-driven; priority reflects impact on deciding whether an edit
 
 | Rank | Work item | Impact / feasibility | Depends on | Deliverable and stop gate |
 |---:|---|---|---|---|
-| 1 | Acquire and fingerprint representative `.scene` inputs from the owned game installation (Lost1 plus a small character scene and one other level). | Very high / high | Read-only access to installed assets | Record path, size, SHA-256, build/source, and byte-preserving copies. Stop if inputs are missing; do not infer format from strings alone. |
+| 1 | Fingerprint and compare representative `.scene` inputs from the owned game installation. | Very high / high | Read-only access to installed assets | Lost1 is now fingerprinted locally (13,736,037 bytes; SHA-256 in `LEVEL_EDITOR_EVIDENCE.md`). Record source/build and acquire one character scene plus one structurally different level. Do not infer format from strings alone. |
 | 2 | Verify loading/hierarchy evidence against the exact target image. | High / high | Existing `FINDINGS.md`, `FUNCTIONS.csv`, target hash | Recheck `FUN_0061c160` (VA `0x0061c160`), `FUN_0061a750` (`0x0061a750`), `FUN_0061aef0` (`0x0061aef0`), and `.scene` xrefs listed in feasibility doc. Export assembly/decompilation evidence with target hash and call-site addresses. Identify precise node/transform structures only where directly supported. |
 | 3 | Determine container framing and compression/versioning. | Very high / medium | Rank 1 samples | Hex/entropy/offset analysis plus loader path confirmation. Produce a grammar for header and resource/record boundaries with all unknown bytes marked. No parser code yet. |
 | 4 | Correlate serialized records to runtime construction. | Very high / medium-low | Ranks 2–3 | Trace one minimal object through `FUN_0061a750` and metadata through `FUN_0061aef0`; document exact transforms, parent edges, IDs, and property types with evidence. Stop if file-to-runtime relationship remains ambiguous. |
@@ -24,4 +24,4 @@ Order is dependency-driven; priority reflects impact on deciding whether an edit
 
 ## Immediate next session
 
-Start at ranks 1 and 2. The repository currently records Lost1 offset `0x000084ac` but lacks the scene file and its identity metadata. Obtain read-only samples and attach exact hashes. Then verify the three loader/hierarchy functions against the matching `replay.exe` and capture exact transform-copy instructions. Do not choose Godot/Unity/Qt yet; do not code a writer.
+Start by preserving the metadata/byte excerpt for the locally fingerprinted Lost1 sample and acquiring two comparison scenes. Then verify the loader/hierarchy functions against the matching `replay.exe` and capture exact transform-copy instructions. The supplied brief’s FOV names are confirmed in a config file but their native consumers are not: trace those only if camera/config behavior remains relevant. Do not choose Godot/Unity/Qt yet; do not code a writer.
