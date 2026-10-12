@@ -1,0 +1,174 @@
+{
+  "recorded_utc": "2026-10-12T14:19:20.313020+00:00",
+  "authority": "Read-only static file bytes and analysis of frozen historical live log",
+  "target_path": "C:\\Users\\Admin\\Documents\\Velvet Assassin\\replay.exe",
+  "target_sha256": "9d18ef1a841526c0c91ce8af5b952c46c7ca0a8a6e8d169e99cc78cf34f8c132",
+  "preferred_image_base": "0x400000",
+  "receiver_vtable_header": {
+    "va": "0x81fc00",
+    "file_offset": "0x41e600",
+    "bytes_hex": "ccad8400"
+  },
+  "receiver_getter_entry": {
+    "va": "0x81fc9c",
+    "file_offset": "0x41e69c",
+    "bytes_hex": "40994500"
+  },
+  "receiver_locator": {
+    "va": "0x84adcc",
+    "file_offset": "0x4497cc",
+    "bytes_hex": "000000000000000000000000b8378e00e0ad8400"
+  },
+  "receiver_hierarchy": {
+    "va": "0x84ade0",
+    "file_offset": "0x4497e0",
+    "bytes_hex": "000000000100000008000000f0ad8400"
+  },
+  "receiver_base_types": [
+    {
+      "base_descriptor": {
+        "va": "0x84ae14",
+        "file_offset": "0x449814",
+        "bytes_hex": "b8378e000700000000000000ffffffff0000000040000000"
+      },
+      "type_descriptor": {
+        "va": "0x8e37b8",
+        "file_offset": "0x4e13b8",
+        "bytes_hex": "48647f00000000002e3f4156564d414348494e45406d746c404000",
+        "name": ".?AVVMACHINE@mtl@@"
+      }
+    },
+    {
+      "base_descriptor": {
+        "va": "0x830b9c",
+        "file_offset": "0x42f59c",
+        "bytes_hex": "00798b000600000000000000ffffffff0000000040000000"
+      },
+      "type_descriptor": {
+        "va": "0x8b7900",
+        "file_offset": "0x4b5500",
+        "bytes_hex": "48647f00000000002e3f41564e414d455350414345406d746c404000",
+        "name": ".?AVNAMESPACE@mtl@@"
+      }
+    },
+    {
+      "base_descriptor": {
+        "va": "0x8309b4",
+        "file_offset": "0x42f3b4",
+        "bytes_hex": "c08b8b000500000000000000ffffffff0000000040000000"
+      },
+      "type_descriptor": {
+        "va": "0x8b8bc0",
+        "file_offset": "0x4b67c0",
+        "bytes_hex": "48647f00000000002e3f41563f24434f4e435245544540564e414d455350414345406d746c4040406d746c404000",
+        "name": ".?AV?$CONCRETE@VNAMESPACE@mtl@@@mtl@@"
+      }
+    },
+    {
+      "base_descriptor": {
+        "va": "0x830918",
+        "file_offset": "0x42f318",
+        "bytes_hex": "208b8b000300000000000000ffffffff0000000040000000"
+      },
+      "type_descriptor": {
+        "va": "0x8b8b20",
+        "file_offset": "0x4b6720",
+        "bytes_hex": "48647f00000000002e3f41563f24464143544f525940564e414d455350414345406d746c4040564d4952524f52434c415353403240407873746c404000",
+        "name": ".?AV?$FACTORY@VNAMESPACE@mtl@@VMIRRORCLASS@2@@xstl@@"
+      }
+    },
+    {
+      "base_descriptor": {
+        "va": "0x82bc48",
+        "file_offset": "0x42a648",
+        "bytes_hex": "bc008b000200000000000000ffffffff0000000040000000"
+      },
+      "type_descriptor": {
+        "va": "0x8b00bc",
+        "file_offset": "0x4adcbc",
+        "bytes_hex": "48647f00000000002e3f41564d4952524f52434c415353406d746c404000",
+        "name": ".?AVMIRRORCLASS@mtl@@"
+      }
+    },
+    {
+      "base_descriptor": {
+        "va": "0x82bc84",
+        "file_offset": "0x42a684",
+        "bytes_hex": "dc008b000000000000000000ffffffff0000000040000000"
+      },
+      "type_descriptor": {
+        "va": "0x8b00dc",
+        "file_offset": "0x4adcdc",
+        "bytes_hex": "48647f00000000002e3f41563f24464143544f52594445504f5440564d4952524f52434c415353406d746c4040407873746c404000",
+        "name": ".?AV?$FACTORYDEPOT@VMIRRORCLASS@mtl@@@xstl@@"
+      }
+    },
+    {
+      "base_descriptor": {
+        "va": "0x82bcb8",
+        "file_offset": "0x42a6b8",
+        "bytes_hex": "14018b000000000008000000ffffffff0000000040000000"
+      },
+      "type_descriptor": {
+        "va": "0x8b0114",
+        "file_offset": "0x4add14",
+        "bytes_hex": "48647f00000000002e3f41565245465f544152474554406d746c404000",
+        "name": ".?AVREF_TARGET@mtl@@"
+      }
+    },
+    {
+      "base_descriptor": {
+        "va": "0x8309d0",
+        "file_offset": "0x42f3d0",
+        "bytes_hex": "f08b8b000000000014000000ffffffff0000000040000000"
+      },
+      "type_descriptor": {
+        "va": "0x8b8bf0",
+        "file_offset": "0x4b67f0",
+        "bytes_hex": "48647f00000000002e3f41563f24515549434b4e455740564e414d455350414345406d746c4040407873746c404000",
+        "name": ".?AV?$QUICKNEW@VNAMESPACE@mtl@@@xstl@@"
+      }
+    }
+  ],
+  "cast_descriptors": [
+    {
+      "va": "0x8b00bc",
+      "file_offset": "0x4adcbc",
+      "bytes_hex": "48647f00000000002e3f41564d4952524f52434c415353406d746c404000",
+      "name": ".?AVMIRRORCLASS@mtl@@"
+    },
+    {
+      "va": "0x8b8c20",
+      "file_offset": "0x4b6820",
+      "bytes_hex": "48647f00000000002e3f41563f2452454640564d4952524f52434c415353406d746c4040564e4f5f434845434b403240406d746c404000",
+      "name": ".?AV?$REF@VMIRRORCLASS@mtl@@VNO_CHECK@2@@mtl@@"
+    }
+  ],
+  "opcode40_switch_byte": {
+    "va": "0x463cad",
+    "file_offset": "0x630ad",
+    "bytes_hex": "18"
+  },
+  "opcode40_handler_pointer": {
+    "va": "0x463c00",
+    "file_offset": "0x63000",
+    "bytes_hex": "3b224600"
+  },
+  "script_path": "C:\\Users\\Admin\\Documents\\Velvet Assassin\\src\\live3d.mir.bin",
+  "script_sha256": "404f2905e3eb693745d40a4868d6068b784c46661487dbb6cf7cde27cf4ff099",
+  "DoWeaponSelection_prefix": {
+    "file_offset": "0x002e48ba",
+    "length": 22,
+    "bytes_hex": "4201000000ffffffff40000000005f050000ffffffff"
+  },
+  "frozen_live_log_sha256": "3056ff7a58bf982e7445e7842f475f55c194a97cf7290083da8b0a6cff71687e",
+  "historical_host_context_records": [
+    {
+      "context": "0x0354BD00",
+      "vtable": "0x0081FC04",
+      "getter": "0x00459940",
+      "count": 78
+    }
+  ],
+  "new_runtime_capture": false
+}

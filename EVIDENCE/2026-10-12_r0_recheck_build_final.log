@@ -1,0 +1,9 @@
+Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  CodeR0Tests.vcxproj -> C:\Users\Admin\Documents\VelvetAssassinModdingExperiment\build\VelvetSwap-r0-recheck\Release\CodeR0Tests.exe
+  DllSmokeTest.vcxproj -> C:\Users\Admin\Documents\VelvetAssassinModdingExperiment\build\VelvetSwap-r0-recheck\Release\DllSmokeTest.exe
+  RuntimeProbeTests.vcxproj -> C:\Users\Admin\Documents\VelvetAssassinModdingExperiment\build\VelvetSwap-r0-recheck\Release\RuntimeProbeTests.exe
+  VelvetSwap.cpp
+     Creating library C:/Users/Admin/Documents/VelvetAssassinModdingExperiment/build/VelvetSwap-r0-recheck/Release/VelvetSwap-R0Recheck.lib and object C:/Users/Admin/Documents/VelvetAssassinModdingExperiment/build/VelvetSwap-r0-recheck/Release/VelvetSwap-R0Recheck.exp
+  VelvetSwap.vcxproj -> C:\Users\Admin\Documents\VelvetAssassinModdingExperiment\build\VelvetSwap-r0-recheck\Release\VelvetSwap-R0Recheck.dll

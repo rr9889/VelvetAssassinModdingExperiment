@@ -1,0 +1,64 @@
+{
+  "recorded_utc": "2026-10-12T14:19:20.313020+00:00",
+  "head": "0ade08b",
+  "branch": "runtime-outfit-swap",
+  "authority": "Static native assembly/decompiler, executable/script file bytes, and historical capture comparison",
+  "FUN_00459940": {
+    "confidence": "CONFIRMED",
+    "abi": "x86 thiscall; ECX receiver; uint32 stack index; EAX result; RET4",
+    "compatible_receiver_family": "NAMESPACE; observed host table RTTI VMACHINE derives from NAMESPACE",
+    "index_transform_in_accessor": "none",
+    "mode_offset": "0xcc",
+    "own_storage_begin_offset": "0xc0",
+    "own_storage_end_offset": "0xc4",
+    "entry_stride": "0x10",
+    "entry_value_pointer_offset": "0x0c",
+    "entry_flags_offset": "0x04",
+    "count_native_expression": "uint32(SAR32(end-begin,4)); unsigned index<count",
+    "mode_7": "Q=D(receiver+0x90); use Q+0xc0/+0xc4; return D(begin+index*0x10+0x0c)",
+    "modes_4_6": "If own stored pointer is zero, return virtual+0x98(index) on D(receiver+0x2c); else common path",
+    "common": "P=D(receiver+0x9c); if D(P+0x14)!=0 and !(entry_flags&2), checked MIRRORCLASS-to-REF<MIRRORCLASS,NO_CHECK> conversion can select virtual+0x40 unwrap; otherwise stored pointer",
+    "null_failure": "No null receiver guard or uniform null failure return; bounds call 0x0064f6b5 and proceed if it returns"
+  },
+  "operand_055f": {
+    "confidence": "CONFIRMED at resolver edge",
+    "expression_opcode": "0x40",
+    "initial_CODE_reference_index": 0,
+    "member_operand": "0x055f",
+    "transformation": "operand & 0x7fff = 0x055f = 1375; namespace-relative member index",
+    "terminator": "0xffffffff tested before masking"
+  },
+  "actual_receiver": {
+    "static_path": "C=executing CODE; T=D(C+0x18); R0=D(T+0*0x20+0x18)",
+    "reference_bounds": "D(C+0x1c)-T; record stride 0x20; index 0 in range required",
+    "dispatch": "R0 in ECX; call D(D(R0)+0x98) with key 0x055f",
+    "live_R0_identity": "UNRESOLVED",
+    "R0_equals_host_context": "UNRESOLVED",
+    "host_context_historical": "0x0354bd00; vtable 0x0081fc04; getter 0x00459940; VMACHINE RTTI",
+    "null_embedded_scope_reused": false
+  },
+  "conditional_direct_value_formula": "D(D(validated_receiver+0xc0)+0x55fc), after bounds and branch validation; mode7 changes storage receiver",
+  "complete_global_passive_formula": "UNRESOLVED",
+  "slot_055f_safe_read_ready": false,
+  "probe_extended": false,
+  "build_tests": "NOT APPLICABLE; RuntimeProbe source unchanged",
+  "next_live_capture": "NO-GO",
+  "stop_condition": "B",
+  "exact_single_blocker": "Relevant CODE reference record 0 +0x18 binding to the concrete namespace/state owning global 0x055f and its accessor identity",
+  "exact_next_step": "Inspect only the population/binding operation that assigns that reference-record pointer; establish the owning receiver before implementing guarded passive slot reads",
+  "game_state_writes": 0,
+  "game_function_calls": 0,
+  "hooks": 0,
+  "new_runtime_capture": false,
+  "REA_session_closed": true,
+  "evidence_files": [
+    "2026-10-12_slot_055f_storage_native.json",
+    "2026-10-12_slot_055f_storage_retained.json",
+    "2026-10-12_slot_055f_storage_local.json"
+  ],
+  "evidence_sha256": {
+    "2026-10-12_slot_055f_storage_native.json": "e000ea6b16d3eca8d06e9f6f50cacff4dfc12a0e3298340cfcca29225c004ab4",
+    "2026-10-12_slot_055f_storage_retained.json": "983758ef787703261290da1c1d73d2413f006df6d359f2aa6ed9ad5e66ede1c9",
+    "2026-10-12_slot_055f_storage_local.json": "bbd3349231481d9a6ae0346f35c39f728c2e61f93119fd8aebc8d5a8290d776f"
+  }
+}

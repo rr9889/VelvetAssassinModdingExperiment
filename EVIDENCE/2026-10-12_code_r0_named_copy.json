@@ -1,0 +1,12 @@
+{
+  "recorded_utc": "2026-10-12T14:48:57.304621+00:00",
+  "source": "C:\\Users\\Admin\\Documents\\VelvetAssassinModdingExperiment\\build\\VelvetSwap-code-r0\\Release\\VelvetSwap.dll",
+  "distinct_load_path": "C:\\Users\\Admin\\Documents\\VelvetAssassinModdingExperiment\\build\\VelvetSwap-code-r0\\Release\\VelvetSwap-CodeR0.dll",
+  "sha256": "bb7ba09144353843678008aebd57595276334256bea1827540eb92926aa9df28",
+  "byte_identical_to_tested_DLL": true,
+  "new_contract_marker_present": true,
+  "legacy_contract_marker_absent": true,
+  "BINDING_SCOPE_log_marker_absent": true,
+  "authority": "Local deployment artifact verification, not live evidence",
+  "reason": "Two manual fresh-process attempts logged the earlier bound-scope probe; distinct filename eliminates same-name selection ambiguity"
+}

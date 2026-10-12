@@ -1,0 +1,14 @@
+{
+  "recorded_utc": "2026-10-12T14:46:38.658766+00:00",
+  "authority": "Deployment diagnostic only; NOT a new R0 runtime capture",
+  "new_R0_log_path": "C:\\Users\\Admin\\Documents\\VelvetAssassinModdingExperiment\\build\\VelvetSwap-code-r0\\logs\\VelvetSwap.log",
+  "new_R0_log_bytes": 1214,
+  "new_R0_log_sha256": "c18b2e12e4a8857de7dd7c7ebd3e3a5195de6463f4e583ede85cab70d9eebd0b",
+  "new_R0_verified_session_present": false,
+  "old_probe_log_last_start": "[2026-10-12T14:43:58.802Z] [observer_tid=32076] [START] VelvetSwap v0.0 x86 observation_only=1 pid=32760 dll_base=0x61370000 load_utc=2026-10-12T14:43:58.797Z",
+  "old_probe_log_last_contract": "[2026-10-12T14:43:58.813Z] [observer_tid=32076] [PROBE_CONTRACT] revision=bound_namespace_payload_v1 embedded_ref_offset=0x24 exact_REF_NAMESPACE_vtable_gate=1 payload_offset=0x18 passive_scope_samples=1",
+  "interpretation": "Earlier bound-scope probe is active; no verified R0 session exists",
+  "R0_values": "UNRESOLVED; not observed",
+  "corrective_step": "Fresh game process; load build/VelvetSwap-code-r0/Release/VelvetSwap.dll via the proven procedure",
+  "old_null_payload_experiment_analysis": "NOT REPEATED; old memory observations were not analyzed"
+}

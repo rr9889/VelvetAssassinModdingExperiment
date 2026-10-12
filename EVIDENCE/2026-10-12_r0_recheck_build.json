@@ -1,0 +1,72 @@
+{
+  "recorded_utc": "2026-10-12T15:19:17.361429+00:00",
+  "head": "0ade08b2409efbe999e7e563535f6d7e28622d2d",
+  "repository_branch": "runtime-outfit-swap",
+  "worktree": "DIRTY on entry; preserved earlier work",
+  "dll_path": "C:\\Users\\Admin\\Documents\\VelvetAssassinModdingExperiment\\build\\VelvetSwap-r0-recheck\\Release\\VelvetSwap-R0Recheck.dll",
+  "dll_sha256": "ce20030d388be94eba554f4f823269072ffcc2dc4c32f1cde7163aac01f5bf60",
+  "machine": "0x014c",
+  "optional_magic": "0x010b",
+  "build": "Win32/x86 Release; MSVC 19.29 / v142 / Windows SDK 10.0.19041.0",
+  "tests": "4/4 CTest; 31 original and 48 R0/storage assertions passed",
+  "test_authority": "Owned isolated allocations only; fixture mutation callback is not compiled into the DLL",
+  "final_build_log": "EVIDENCE/2026-10-12_r0_recheck_build_final.log",
+  "final_test_log": "EVIDENCE/2026-10-12_r0_recheck_tests_final.log",
+  "earlier_build_attempts": "Preserved initial link-name warning and corrected missing array-capacity macro compilation attempt; only final build/test logs are authoritative",
+  "snapshot_rule": "Initial exact CODE/bounds; unchanged re-read record0 R0, host context, receiver vtable and getter. Turnover requires captured R0 raw-equals-host, exact rebased VMACHINE vtable and accessor, readable receiver and valid after-table bounds. Captured CODE vtable must remain exact. Final receiver/storage selection rechecks independently gate direct slot read.",
+  "snapshot_limits": "Guarded non-atomic observations; no ownership, lock, lifetime guarantee or ABA exclusion; current CODE turnover does not retroactively invalidate independently revalidated host receiver.",
+  "recheck_sources": "Current code_after is the VM global; table/record after reads use captured CODE; vtable/getter after reads use captured R0. No cached R0 across Capture calls.",
+  "acquisition_recheck_fields": [
+    "code",
+    "code_vtable",
+    "ref_table",
+    "ref_end",
+    "ref_count",
+    "record0",
+    "r0",
+    "host",
+    "r0_vtable",
+    "virtual98"
+  ],
+  "classifications": [
+    "FULL_CHAIN_STABLE",
+    "RECEIVER_STABLE_CODE_TURNOVER",
+    "RECEIVER_INVALIDATED"
+  ],
+  "slot_contract": "Index1375, stride16, full record readability, flags dword+4 bit2, pointer+12, signed-safe count/bounds. Mode7 redirected array; mode4/6 local NULL predicate is recorded separately and fallback result remains unresolved. Common mirror branch never enables value metadata reads.",
+  "legacy_CODE_scope_probe": "DISABLED in production default; historical owned fixture opt-in retained",
+  "capture_status": "PENDING; exactly one fresh-process manual session required",
+  "predeployment": {
+    "recorded_utc": "2026-10-12T15:19:16.9458925Z",
+    "replay_processes": [],
+    "authority": "Read-only Win32_Process inventory before manual deployment"
+  },
+  "game_state_writes": 0,
+  "game_function_calls": 0,
+  "hooks": 0,
+  "historical_hashes": {
+    "2026-10-12_code_r0_final_report.json": "4a5fbf305a4b16211ce26b5a0e8cf418aec891d16e1131d2f555a5285fdecead",
+    "2026-10-12_code_r0_live.log": "66575df2a36c42ab023b0d9125b4356b18192dcaf54d6d9f36c7558f1900aa9b",
+    "2026-10-12_code_r0_live_samples.json": "0e2d5bec3f90b0484503e67d11a11070f2dbf00ad08f2a348dee3aee0d9c70c8",
+    "2026-10-12_code_r0_build.json": "e59116f97e8e36df87c3c89ba1baa87783aa812fc8c6ad09c8b5bb6e27cba596",
+    "2026-10-12_slot_055f_storage_result.json": "b4a242dee73b7788a7ae56285aed596fc59ed0451fa383cf120f9e922fce8c53"
+  },
+  "source_hashes": {
+    "src\\VelvetSwap\\BuildConfig.h.in": "c0c2fd61f1afa4bb5832f68d01a1ca7afdca1f8d4a4b614217e178d46493ab40",
+    "src\\VelvetSwap\\CMakeLists.txt": "6f4e2abaecdd09ebcbfec097ea15ce362bf0080bc98ee2c766cb29fc14cc2641",
+    "src\\VelvetSwap\\Logger.cpp": "81e6e57d531a741aad640f13b68aa75fb0a7240e7609009a55256dbd2dceb87a",
+    "src\\VelvetSwap\\Logger.h": "32791517663217c65f3c066b43d51fda95e589c32040262b0c41e8723264984d",
+    "src\\VelvetSwap\\RuntimeProbe.cpp": "e3bded0fd7a05b89e55554b4e1e6d4e827d444c9caf227191e197d7f48e37924",
+    "src\\VelvetSwap\\RuntimeProbe.h": "edb2b3377f9336bc1dcfb7cc764341392df71a170caca2df270173990781b4d0",
+    "src\\VelvetSwap\\VelvetSwap.cpp": "0a14f68dc352488019a2fa8f4014d7688f3e755d3f6ad19f269f3da19827bba2",
+    "src\\VelvetSwap\\VelvetSwap.def": "c4c0ff00a437477c7d1f1c2c6afcd5acc17a14720ef7fc485073d91213a2d240",
+    "src\\VelvetSwap\\tests\\CodeR0Tests.cpp": "a6171623eab0fef727ece070b6001c9b0cd9af6fe378bbf6ba295850a96b9af4",
+    "src\\VelvetSwap\\tests\\DllSmokeTest.cpp": "d3681e49e20250a4509fb5386288308c5593cd6b2aaffb304a034c93bb40eb65",
+    "src\\VelvetSwap\\tests\\RuntimeProbeTests.cpp": "638498ad178103ad73d39e9a5a347ec1ac20ef1e06fefa498a695eb9905f7c26"
+  },
+  "build_log_hashes": {
+    "2026-10-12_r0_recheck_configure.log": "dbde447bc3134036e36316ab09a58ab65732cc57e6e1172af26b14d6910db279",
+    "2026-10-12_r0_recheck_build_final.log": "24254b2b8f93ba270d1786a9fa0d152e5a771be33c9bfd7f8438a9055df32e6d",
+    "2026-10-12_r0_recheck_tests_final.log": "4f80dcd30360313ca5250bf402862e4aeb3325dfe476cc8a819a500fd568ff6a"
+  }
+}

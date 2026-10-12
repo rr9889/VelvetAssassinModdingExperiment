@@ -1,4 +1,4 @@
-LIBRARY VelvetSwap
+LIBRARY VelvetSwap-R0Recheck
 EXPORTS
     VelvetSwapStop=_VelvetSwapStop@4
     VelvetSwapStatus=_VelvetSwapStatus@4

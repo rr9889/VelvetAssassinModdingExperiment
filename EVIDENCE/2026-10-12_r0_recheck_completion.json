@@ -1,0 +1,41 @@
+{
+  "recorded_utc": "2026-10-12T15:24:48.982924+00:00",
+  "authority": "Final evidence/document integrity record; investigation STOPPED",
+  "evidence_hashes": {
+    "EVIDENCE\\2026-10-12_r0_recheck_build.json": "2727412db8fb9d291a07867b5c4c0263e208285c9b038035f84e29e7c8e75433",
+    "EVIDENCE\\2026-10-12_r0_recheck_build.log": "e0e108e43d53dd8d27d3cf49fe8ec101aadab19c09d18fbe7548deeed691546e",
+    "EVIDENCE\\2026-10-12_r0_recheck_build_final.log": "24254b2b8f93ba270d1786a9fa0d152e5a771be33c9bfd7f8438a9055df32e6d",
+    "EVIDENCE\\2026-10-12_r0_recheck_build_verified.log": "df326ee8228ca15a12a6e540279c6e7a37d0a56a0b50dbb10c0eae6217adc684",
+    "EVIDENCE\\2026-10-12_r0_recheck_configure.log": "dbde447bc3134036e36316ab09a58ab65732cc57e6e1172af26b14d6910db279",
+    "EVIDENCE\\2026-10-12_r0_recheck_deployment.json": "2e5959de07b3838d593e54bee68675a8b7c2dda8fd8200e2a79b3fcaec85b106",
+    "EVIDENCE\\2026-10-12_r0_recheck_final_report.json": "a9704808f03564bc5018bd87c436d62665d930992f291827dc4c344602b70a8e",
+    "EVIDENCE\\2026-10-12_r0_recheck_live.json": "4bbf691f39e3476d88273178c793468c09e124ea1f304f2d88ad9966b4ae63f2",
+    "EVIDENCE\\2026-10-12_r0_recheck_live.log": "2acd83a60fb8cae197a442a23fe296d32e90bd87898c9a4a8f770671bff24d42",
+    "EVIDENCE\\2026-10-12_r0_recheck_live_samples.json": "b22cc0b4e7f9225ceb34dae089673cc6adddfa4591247f003f32e0fee13210d4",
+    "EVIDENCE\\2026-10-12_r0_recheck_tests.log": "ad7b7632f1ffd6f84ac43b90df50252f2d6aa1c8371183b9ae406b274fafa4c2",
+    "EVIDENCE\\2026-10-12_r0_recheck_tests_final.log": "4f80dcd30360313ca5250bf402862e4aeb3325dfe476cc8a819a500fd568ff6a",
+    "EVIDENCE\\2026-10-12_r0_recheck_tests_verified.log": "1820ad65c3cc9efa011552a975db3e8d24af4737cd9ab7b5a4944b171833296e"
+  },
+  "document_hashes": {
+    "CURRENT_STATE.md": "211af23af3e3ac934adcba0470622d938ea2d06c06bc8f5d24317659970e3505",
+    "RUNTIME_SLOT_055F_STORAGE_CONTRACT.md": "d0827b9433d89ead9d981470a178704b7427625350fc8d60e3f4278ebd968aad",
+    "RUNTIME_CAMERA_ROUTE_PROOF.md": "19ce0c71a2be4845d39712bae681674d5f0f65fa85b75385976da3d194075f69",
+    "RUNTIME_OUTFIT_SWAP_CHECKPOINT.md": "872d25a4844239d03f22fa08d9497dce3a4ab4f9b264effa37451004b51012f3",
+    "FINDINGS.md": "ea54fdd07b18c67a4900c778b2e2474f6a5925488d6b6a9a872a1b854995fb5d",
+    "FUNCTIONS.csv": "be31e15f17999561dada0e126ce2730100f3a1f2622032937c25a0aea1723db3",
+    "NEXT_STEPS.md": "eb7761972b17700e6cfa62ad63e06ecf4ec10b733cb0b0509b0aa6ab29d39497",
+    "SESSION_LOG.md": "b5ea05ad7aceed57c7ae5858407404c18105ade00add324c0c1f0bd04541200c"
+  },
+  "historical_hashes_verified_unchanged": {
+    "2026-10-12_code_r0_final_report.json": "4a5fbf305a4b16211ce26b5a0e8cf418aec891d16e1131d2f555a5285fdecead",
+    "2026-10-12_code_r0_live.log": "66575df2a36c42ab023b0d9125b4356b18192dcaf54d6d9f36c7558f1900aa9b",
+    "2026-10-12_code_r0_live_samples.json": "0e2d5bec3f90b0484503e67d11a11070f2dbf00ad08f2a348dee3aee0d9c70c8",
+    "2026-10-12_code_r0_build.json": "e59116f97e8e36df87c3c89ba1baa87783aa812fc8c6ad09c8b5bb6e27cba596",
+    "2026-10-12_slot_055f_storage_result.json": "b4a242dee73b7788a7ae56285aed596fc59ed0451fa383cf120f9e922fce8c53"
+  },
+  "stop_condition": "A",
+  "v0_1": "NO-GO",
+  "game_state_writes": 0,
+  "game_function_calls": 0,
+  "hooks": 0
+}

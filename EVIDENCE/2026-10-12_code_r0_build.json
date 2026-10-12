@@ -1,0 +1,22 @@
+{
+  "recorded_utc": "2026-10-12T14:34:50.979762+00:00",
+  "head": "0ade08b",
+  "branch": "runtime-outfit-swap",
+  "dll_path": "C:\\Users\\Admin\\Documents\\VelvetAssassinModdingExperiment\\build\\VelvetSwap-code-r0\\Release\\VelvetSwap.dll",
+  "dll_sha256": "bb7ba09144353843678008aebd57595276334256bea1827540eb92926aa9df28",
+  "machine": "0x14c",
+  "optional_magic": "0x10b",
+  "toolchain": "MSVC 19.29.30159 / v142 / SDK 10.0.19041.0 / Win32 Release",
+  "tests": "4/4 CTest passed; original tests retained; 31 original and 34 R0 fixture assertions",
+  "test_authority": "Owned isolated fixtures, not live evidence",
+  "legacy_CODE_scope_probe": "DISABLED in live default",
+  "capture_status": "PENDING at build checkpoint; manual fresh-process capture requested",
+  "game_state_writes": 0,
+  "game_function_calls": 0,
+  "hooks": 0,
+  "evidence_hashes": {
+    "2026-10-12_code_r0_configure.log": "87eb26eab035d9412d3806df20b550e747a5da60094d648d90caf1619a9601f2",
+    "2026-10-12_code_r0_build.log": "9ddbca942fcb2ca60c386304f55c989c471e5de952f8aba4c96f76df797b0f13",
+    "2026-10-12_code_r0_tests.log": "4882b20ffc50090024209b8b0f0a31e1f701c7fd4f2b1e92b9da40396e0231bd"
+  }
+}

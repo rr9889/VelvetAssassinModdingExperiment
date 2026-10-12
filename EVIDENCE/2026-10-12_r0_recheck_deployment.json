@@ -1,0 +1,30 @@
+{
+  "recorded_utc": "2026-10-12T15:24:48.975406+00:00",
+  "zero_process_baseline": {
+    "recorded_utc": "2026-10-12T15:19:16.9458925Z",
+    "replay_processes": [],
+    "authority": "Read-only Win32_Process inventory before manual deployment"
+  },
+  "fresh_process_inventory": {
+    "recorded_utc": "2026-10-12T15:20:27.8978014Z",
+    "replay_processes": [
+      {
+        "ProcessId": 11040,
+        "CreationDate": "2026-10-12T11:19:55.263764-04:00",
+        "ExecutablePath": "C:\\Users\\Admin\\Documents\\Velvet Assassin\\replay.exe"
+      }
+    ],
+    "authority": "Read-only process inventory during requested clean-process manual deployment"
+  },
+  "start_line": "[2026-10-12T15:20:48.907Z] [observer_tid=34488] [START] VelvetSwap v0.0 x86 observation_only=1 pid=11040 dll_base=0x60D50000 load_utc=2026-10-12T15:20:48.899Z",
+  "dll_identity_line": "[2026-10-12T15:20:48.915Z] [observer_tid=34488] [DLL_IDENTITY] path=C:\\Users\\Admin\\Documents\\VelvetAssassinModdingExperiment\\build\\VelvetSwap-r0-recheck\\Release\\VelvetSwap-R0Recheck.dll sha256=ce20030d388be94eba554f4f823269072ffcc2dc4c32f1cde7163aac01f5bf60 hash_source=loaded_module_file",
+  "identity_line": "[2026-10-12T15:20:48.907Z] [observer_tid=34488] [IDENTITY] path=C:\\Users\\Admin\\Documents\\Velvet Assassin\\replay.exe main_base=0x00400000 module_size=0x00585E84 pe_timestamp=0x49EF137B sha256=9d18ef1a841526c0c91ce8af5b952c46c7ca0a8a6e8d169e99cc78cf34f8c132 result=VERIFIED",
+  "user_confirmation": "done \u2014 fresh process, only R0Recheck loaded",
+  "user_F1_completion": "F1 done",
+  "process_freshness": "RUNTIME-VERIFIED by empty inventory then sole process creation before correct DLL load",
+  "only_new_observer": "User-confirmed; no module inventory is claimed. Earlier process/observers could not survive the recorded zero-process baseline.",
+  "loading_sessions": 1,
+  "game_state_writes": 0,
+  "game_function_calls": 0,
+  "hooks": 0
+}

@@ -1,0 +1,11 @@
+Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  CodeR0Tests.vcxproj -> C:\Users\Admin\Documents\VelvetAssassinModdingExperiment\build\VelvetSwap-r0-recheck\Release\CodeR0Tests.exe
+  DllSmokeTest.vcxproj -> C:\Users\Admin\Documents\VelvetAssassinModdingExperiment\build\VelvetSwap-r0-recheck\Release\DllSmokeTest.exe
+  RuntimeProbeTests.vcxproj -> C:\Users\Admin\Documents\VelvetAssassinModdingExperiment\build\VelvetSwap-r0-recheck\Release\RuntimeProbeTests.exe
+  VelvetSwap.cpp
+C:\Users\Admin\Documents\VelvetAssassinModdingExperiment\src\VelvetSwap\VelvetSwap.cpp(127,72): error C3861: '_countof': identifier not found [C:\Users\Admin\Documents\VelvetAssassinModdingExperiment\build\VelvetSwap-r0-recheck\VelvetSwap.vcxproj]
+C:\Users\Admin\Documents\VelvetAssassinModdingExperiment\src\VelvetSwap\VelvetSwap.cpp(127,17): error C2737: 'dllPathLength': const object must be initialized [C:\Users\Admin\Documents\VelvetAssassinModdingExperiment\build\VelvetSwap-r0-recheck\VelvetSwap.vcxproj]
+C:\Users\Admin\Documents\VelvetAssassinModdingExperiment\src\VelvetSwap\VelvetSwap.cpp(128,64): error C3861: '_countof': identifier not found [C:\Users\Admin\Documents\VelvetAssassinModdingExperiment\build\VelvetSwap-r0-recheck\VelvetSwap.vcxproj]
+C:\Users\Admin\Documents\VelvetAssassinModdingExperiment\src\VelvetSwap\VelvetSwap.cpp(128,16): error C2737: 'dllHashKnown': const object must be initialized [C:\Users\Admin\Documents\VelvetAssassinModdingExperiment\build\VelvetSwap-r0-recheck\VelvetSwap.vcxproj]

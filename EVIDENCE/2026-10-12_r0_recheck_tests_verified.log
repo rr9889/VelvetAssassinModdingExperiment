@@ -1,0 +1,121 @@
+Internal ctest changing into directory: C:/Users/Admin/Documents/VelvetAssassinModdingExperiment/build/VelvetSwap-r0-recheck
+UpdateCTestConfiguration  from :C:/Users/Admin/Documents/VelvetAssassinModdingExperiment/build/VelvetSwap-r0-recheck/DartConfiguration.tcl
+Parse Config file:C:/Users/Admin/Documents/VelvetAssassinModdingExperiment/build/VelvetSwap-r0-recheck/DartConfiguration.tcl
+UpdateCTestConfiguration  from :C:/Users/Admin/Documents/VelvetAssassinModdingExperiment/build/VelvetSwap-r0-recheck/DartConfiguration.tcl
+Parse Config file:C:/Users/Admin/Documents/VelvetAssassinModdingExperiment/build/VelvetSwap-r0-recheck/DartConfiguration.tcl
+Test project C:/Users/Admin/Documents/VelvetAssassinModdingExperiment/build/VelvetSwap-r0-recheck
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+    Start 1: GuardedReadsAndIdentity
+
+1: Test command: C:\Users\Admin\Documents\VelvetAssassinModdingExperiment\build\VelvetSwap-r0-recheck\Release\RuntimeProbeTests.exe
+1: Test timeout computed to be: 1500
+1: PASS committed readable page
+1: PASS null rejection
+1: PASS overflow rejection
+1: PASS protect test-owned page
+1: PASS cross-page inaccessible read rejected
+1: PASS noaccess rejection
+1: PASS guard test-owned page
+1: PASS guard page rejected without consuming guard
+1: PASS guard preserved
+1: PASS release test-owned pages
+1: PASS freed memory rejection
+1: PASS preferred-image rebasing
+1: PASS below preferred base rejected
+1: PASS module boundary rejection
+1: PASS unverified image performs no game probe
+1: PASS protect synthetic object boundary page
+1: PASS synthetic host/context pointer read
+1: PASS namespace payload gated by exact known vtable
+1: PASS candidate owner/binding and CODE metadata read
+1: PASS embedded object address distinguished from wrong reference vtable; payload gated
+1: PASS exact rebased embedded REF_NAMESPACE gates its +0x18 payload read
+1: PASS preferred vtable literal rejected when fixture image is rebased
+1: PASS null bound payload recorded without following it
+1: PASS unreadable bound payload rejected
+1: PASS readable reference vtable cannot bypass inaccessible +0x18 payload
+1: PASS unknown vtables never enable typed payload reads
+1: PASS wrong CODE vtable disables embedded reference observation
+1: PASS unreadable candidate object rejected
+1: PASS wrong process fails closed
+1: PASS wrong-host SHA-256 retained
+1: PASS SHA-256 standard vector
+1/4 Test #1: GuardedReadsAndIdentity ..........   Passed    0.02 sec
+test 2
+    Start 2: CodeR0AndPassiveSlotBranches
+
+2: Test command: C:\Users\Admin\Documents\VelvetAssassinModdingExperiment\build\VelvetSwap-r0-recheck\Release\CodeR0Tests.exe
+2: Test timeout computed to be: 1500
+2: PASS fixture guard boundary
+2: PASS valid CODE reference table and exact rebased vtable
+2: PASS record zero receiver extraction
+2: PASS R0 equals host context by pointer equality
+2: PASS exact indexed accessor gate
+2: PASS safe index 055f count stride and record calculation
+2: PASS ordinary direct stored value observation
+2: PASS exact slot REF_NAMESPACE type gates payload metadata
+2: PASS historical CODE scope probe disabled by default
+2: PASS distinct R0 independently validated without host alias assumption
+2: PASS null R0 never followed
+2: PASS unreadable R0 rejected
+2: PASS wrong CODE vtable prevents table observation
+2: PASS empty reference table rejected
+2: PASS reversed reference bounds rejected
+2: PASS incompatible reference stride rejected
+2: PASS reference record crossing noaccess page rejected
+2: PASS unverified accessor prevents layout and slot reads
+2: PASS unresolved control prevents slot reads
+2: PASS null storage begin rejected
+2: PASS index equal to count rejected
+2: PASS reversed slot storage rejected
+2: PASS incompatible slot stride rejected
+2: PASS signed-count overflow range rejected
+2: PASS unresolved mirror branch never reads stored value pointer
+2: PASS flag bit2 validates direct return branch
+2: PASS mode4 nonnull local direct value
+2: PASS mode4 local null recorded without guessing fallback result
+2: PASS mode6 fallback also unresolved
+2: PASS ordinary null value recorded without following it
+2: PASS mode7 uses redirected storage and bypasses original control
+2: PASS null mode7 storage receiver rejected
+2: PASS unknown slot type never enables typed payload read
+2: PASS fully stable chain independently revalidated and accepted
+2: PASS current CODE turnover isolated from stable receiver identity
+2: PASS storage observed after independently revalidated CODE turnover, including final receiver recheck
+2: PASS valid reference table turnover preserves independently stable host receiver
+2: PASS R0 pointer change rejects storage
+2: PASS host context change rejects storage
+2: PASS receiver vtable change rejects storage
+2: PASS receiver getter change rejects storage
+2: PASS R0 becoming unreadable rejects storage and still logs all rechecks
+2: PASS CODE turnover is not accepted without independent host VMACHINE alias
+2: PASS invalidated after-reference bounds reject even a stable host pointer
+2: PASS full DWORD record flags observed; bit2 alone selects direct branch
+2: PASS mode4 local NULL selects unresolved fallback before common control dereference
+2: PASS mode6 nonnull local predicate does not enable unresolved mirror value observation
+2: PASS unverified executable performs no R0 or slot probe
+2/4 Test #2: CodeR0AndPassiveSlotBranches .....   Passed    0.02 sec
+test 3
+    Start 3: WrongHostFailsClosed
+
+3: Test command: C:\Users\Admin\Documents\VelvetAssassinModdingExperiment\build\VelvetSwap-r0-recheck\Release\DllSmokeTest.exe "C:/Users/Admin/Documents/VelvetAssassinModdingExperiment/build/VelvetSwap-r0-recheck/Release/VelvetSwap-R0Recheck.dll" "C:/Users/Admin/Documents/VelvetAssassinModdingExperiment/build/VelvetSwap-r0-recheck/logs/VelvetSwap.log" "host is not replay.exe"
+3: Test timeout computed to be: 1500
+3: DLL wrong-host status=2 (expected 2); no game process used
+3/4 Test #3: WrongHostFailsClosed .............   Passed    0.05 sec
+test 4
+    Start 4: WrongReplayHashFailsClosed
+
+4: Test command: C:\Users\Admin\Documents\VelvetAssassinModdingExperiment\build\VelvetSwap-r0-recheck\identity-fixture\replay.exe "C:/Users/Admin/Documents/VelvetAssassinModdingExperiment/build/VelvetSwap-r0-recheck/Release/VelvetSwap-R0Recheck.dll" "C:/Users/Admin/Documents/VelvetAssassinModdingExperiment/build/VelvetSwap-r0-recheck/logs/VelvetSwap.log" "executable SHA-256 mismatch"
+4: Test timeout computed to be: 1500
+4: DLL wrong-host status=2 (expected 2); no game process used
+4/4 Test #4: WrongReplayHashFailsClosed .......   Passed    0.06 sec
+
+100% tests passed, 0 tests failed out of 4
+
+Total Test time (real) =   0.16 sec

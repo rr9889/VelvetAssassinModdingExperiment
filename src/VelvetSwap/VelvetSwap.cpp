@@ -16,19 +16,59 @@ const char* Describe(RuntimeProbe::Value value, char (&text)[32]) noexcept {
     else strcpy_s(text, "UNRESOLVED");
     return text;
 }
-void LogBindingScope(const RuntimeProbe::Snapshot& s, const char* reason) noexcept {
-    char a[32]{}, b[32]{}, c[32]{}, d[32]{}, e[32]{};
-    Logger::Line("[BINDING_SCOPE] reason=%s code=%s ref_object=%s ref_vtable=%s ref_vtable_match=%u namespace_payload_candidate=%s payload_nonnull=%u payload_readable=%u payload_first_word=%s payload_identity=UNRESOLVED",
-        reason, Describe(s.ownerBinding, a), Describe(s.embeddedReference, b),
-        Describe(s.bindingScopeWord, c), s.bindingScopeMatchesReferenceVtable ? 1u : 0u,
-        Describe(s.boundNamespacePayloadCandidate, d),
-        s.boundNamespacePayloadCandidate.readable && s.boundNamespacePayloadCandidate.raw ? 1u : 0u,
-        s.boundNamespacePayloadFirstWord.readable ? 1u : 0u,
-        Describe(s.boundNamespacePayloadFirstWord, e));
+void LogR0(const RuntimeProbe::Snapshot& s, const char* reason) noexcept {
+    const auto& r = s.r0;
+    const auto& slot = r.slot;
+    char a[32]{}, b[32]{}, c[32]{}, d[32]{}, e[32]{}, f[32]{}, g[32]{}, h[32]{}, i[32]{}, j[32]{};
+    Logger::Line("[CODE_R0] reason=%s code=%s code_vtable=%s matches_CODE=%u ref_table=%s ref_end=%s ref_count=%s ref_bounds_valid=%u record_index=0 record_address=%s receiver_R0=%s receiver_readable=%u host_context=%s equals_host_context=%u comparison=%s snapshot_class=%s receiver_revalidated=%u status=%s",
+        reason, Describe(s.currentCode, a), Describe(r.codeVtable, b), r.codeMatches ? 1u : 0u,
+        Describe(r.tableBegin, c), Describe(r.tableEnd, d), Describe(r.tableCount, e),
+        r.tableBoundsValid ? 1u : 0u, Describe(r.record0, f), Describe(r.receiver, g),
+        r.receiverReadable ? 1u : 0u, Describe(s.context, h), r.equalsHostContext ? 1u : 0u,
+        r.comparisonKnown ? (r.equalsHostContext ? "EQUAL" : "DIFFERENT") : "UNAVAILABLE",
+        r.snapshotClass, r.receiverRevalidated ? 1u : 0u, r.reason);
+    for (const auto& check : r.rechecks) {
+        if (!r.recheckAttempted) break;
+        Logger::Line("[R0_RECHECK] reason=%s field=%s before=%s after=%s same=%u before_readable=%u after_readable=%u snapshot_class=%s after_ref_bounds_valid=%u table_source=captured_CODE receiver_metadata_source=captured_R0",
+            reason, check.name, Describe(check.before, a), Describe(check.after, b), check.same ? 1u : 0u,
+            check.before.readable ? 1u : 0u, check.after.readable ? 1u : 0u,
+            r.snapshotClass, r.afterTableBoundsValid ? 1u : 0u);
+    }
+    Logger::Line("[R0_RECEIVER] reason=%s r0=%s vtable=%s virtual_98=%s matches_FUN_00459940=%u mode=%s field_90=%s field_9c=%s control_14=%s storage_begin=%s storage_end=%s fallback_2c=%s",
+        reason, Describe(r.receiver, a), Describe(r.vtable, b), Describe(r.virtual98, c),
+        r.matchesAccessor ? 1u : 0u, Describe(r.mode, d), Describe(r.field90, e),
+        Describe(r.field9c, f), Describe(r.control14, g), Describe(r.storageBegin, h),
+        Describe(r.storageEnd, i), Describe(r.fallback2c, j));
+    Logger::Line("[R0_STORAGE_STATE] reason=%s r0=%s snapshot_class=%s mode=%s field_90=%s field_9c=%s control_14=%s storage_begin=%s storage_end=%s fallback_2c=%s",
+        reason, Describe(r.receiver, a), r.snapshotClass, Describe(r.mode, b), Describe(r.field90, c),
+        Describe(r.field9c, d), Describe(r.control14, e), Describe(r.storageBegin, f),
+        Describe(r.storageEnd, g), Describe(r.fallback2c, h));
+    for (const auto& check : slot.rechecks) {
+        if (!slot.recheckAttempted) break;
+        if (std::strcmp(check.name, "unavailable") == 0) continue;
+        Logger::Line("[SLOT_RECHECK] reason=%s field=%s before=%s after=%s same=%u before_readable=%u after_readable=%u",
+            reason, check.name, Describe(check.before, a), Describe(check.after, b), check.same ? 1u : 0u,
+            check.before.readable ? 1u : 0u, check.after.readable ? 1u : 0u);
+    }
+    if (slot.localPointerForFallbackCheck.readable)
+        Logger::Line("[SLOT_LOCAL_NULL_CHECK] reason=%s mode=%s local_pointer=%s predicate_only=1 fallback_calls=0 value_metadata_reads=%u",
+            reason, Describe(r.mode, a), Describe(slot.localPointerForFallbackCheck, b),
+            slot.valueVtable.readable ? 1u : 0u);
+    Logger::Line("[SLOT_055F_PASSIVE] reason=%s receiver=%s snapshot_class=%s storage_receiver=%s branch=%s index=0x055f count=%s storage_begin=%s storage_end=%s bounds_valid=%u record=%s flags=%s stored_value_pointer=%s stored_pointer_field_read=%u safe_read=%u slot_consistent=%u status=%s global_ownership=UNRESOLVED",
+        reason, Describe(r.receiver, a), r.snapshotClass, Describe(slot.storageReceiver, b), slot.branch,
+        Describe(slot.count, c), Describe(slot.begin, d), Describe(slot.end, e),
+        slot.boundsValid ? 1u : 0u, Describe(slot.record, f), Describe(slot.flags, g),
+        Describe(slot.storedPointer, h), slot.storedPointer.readable ? 1u : 0u,
+        slot.safeRead ? 1u : 0u, slot.consistent ? 1u : 0u, slot.reason);
+    Logger::Line("[SLOT_055F_TYPE] reason=%s value=%s value_vtable=%s matches_REF_NAMESPACE=%u known_type_match=%s reference_candidate=%s reference_first_word=%s camera_identity=UNRESOLVED",
+        reason, Describe(slot.storedPointer, a), Describe(slot.valueVtable, b),
+        slot.valueMatchesReferenceVtable ? 1u : 0u,
+        slot.valueMatchesReferenceVtable ? "REF_NAMESPACE" : "UNRESOLVED", Describe(slot.referenceCandidate, c),
+        Describe(slot.referenceFirstWord, d));
 }
 void LogSnapshot(const RuntimeProbe::Image& image, const RuntimeProbe::Snapshot& s,
                  const char* reason) noexcept {
-    char a[32]{}, b[32]{}, c[32]{}, d[32]{}, e[32]{}, f[32]{}, g[32]{}, h[32]{};
+    char a[32]{}, b[32]{}, c[32]{}, d[32]{}, e[32]{}, f[32]{};
     Logger::Line("[SNAPSHOT] reason=%s main_base=0x%08lX module_size=0x%08lX identity=VERIFIED observer_thread_only=1",
         reason, static_cast<unsigned long>(image.base), image.size);
     Logger::Line("[HOST] address=0x%08lX context=%s enabled=%s context_vtable=%s get_value_entry=%s",
@@ -37,13 +77,10 @@ void LogSnapshot(const RuntimeProbe::Image& image, const RuntimeProbe::Snapshot&
     Logger::Line("[VM_SAMPLE] depth=%s current_code=%s callback_head=%s candidate_owner=0x%08lX",
         Describe(s.invocationDepth, a), Describe(s.currentCode, b), Describe(s.callbackHead, c),
         static_cast<unsigned long>(s.candidateOwner));
-    Logger::Line("[BINDING_CANDIDATE] confidence=LIKELY binding=%s vtable=%s matches_CODE=%u scope_word=%s scope_semantics=UNRESOLVED",
-        Describe(s.ownerBinding, e), Describe(s.bindingVtable, f), s.bindingMatchesCodeVtable ? 1u : 0u,
-        Describe(s.bindingScopeWord, g));
-    LogBindingScope(s, reason);
-    Logger::Line("[REF_METADATA] context_matches_REF_NAMESPACE=%u payload=%s camera_identity=UNRESOLVED",
-        s.contextMatchesReferenceVtable ? 1u : 0u, Describe(s.contextNamespacePayload, h));
-    Logger::Line("[CAMERA] slot_0x055f_raw=UNRESOLVED candidate_camera=UNRESOLVED validation=UNRESOLVED reason=native_slot_storage_not_verified");
+    Logger::Line("[BINDING_CANDIDATE] confidence=LIKELY binding=%s vtable=%s matches_CODE=%u bound_scope_probe=DISABLED",
+        Describe(s.ownerBinding, e), Describe(s.bindingVtable, f), s.bindingMatchesCodeVtable ? 1u : 0u);
+    LogR0(s, reason);
+    Logger::Line("[CAMERA] candidate_camera=UNRESOLVED validation=UNRESOLVED reason=slot_reference_is_not_class_or_current_control_proof");
     Logger::Line("[OUTFIT] current=UNRESOLVED pending=UNRESOLVED normal_choice=UNRESOLVED reason=VM_indices_are_not_native_offsets");
     Logger::Line("[CALLBACK] update_thread=UNRESOLVED frequency=UNRESOLVED camera_in_context=UNRESOLVED hook=NONE touched_game_instructions=0 sample_is_not_callback_execution");
 }
@@ -59,7 +96,10 @@ bool Changed(const RuntimeProbe::Snapshot& a, const RuntimeProbe::Snapshot& b) n
         differs(a.bindingVtable, b.bindingVtable) || differs(a.bindingScopeWord, b.bindingScopeWord) ||
         differs(a.embeddedReference, b.embeddedReference) ||
         differs(a.boundNamespacePayloadCandidate, b.boundNamespacePayloadCandidate) ||
-        differs(a.boundNamespacePayloadFirstWord, b.boundNamespacePayloadFirstWord);
+        differs(a.boundNamespacePayloadFirstWord, b.boundNamespacePayloadFirstWord) ||
+        differs(a.r0.receiver, b.r0.receiver) || differs(a.r0.mode, b.r0.mode) ||
+        differs(a.r0.slot.storedPointer, b.r0.slot.storedPointer) ||
+        a.r0.slot.safeRead != b.r0.slot.safeRead;
 }
 DWORD WINAPI Observe(void*) noexcept {
     // Pin after loader lock is released. This v0.0 supports stop, not dynamic unmapping.
@@ -82,12 +122,20 @@ DWORD WINAPI Observe(void*) noexcept {
     Logger::Line("[IDENTITY] path=%ls main_base=0x%08lX module_size=0x%08lX pe_timestamp=0x%08lX sha256=%s result=%s",
         image.path, static_cast<unsigned long>(image.base), image.size, image.timestamp,
         image.sha256[0] ? image.sha256 : "UNRESOLVED", accepted ? "VERIFIED" : "REJECTED");
+    constexpr DWORD dllPathCapacity = 32768;
+    wchar_t dllPath[dllPathCapacity]{};
+    char dllSha256[65]{};
+    const DWORD dllPathLength = GetModuleFileNameW(dllModule, dllPath, dllPathCapacity);
+    const bool dllHashKnown = dllPathLength && dllPathLength < dllPathCapacity &&
+        RuntimeProbe::HashFile(dllPath, dllSha256);
+    Logger::Line("[DLL_IDENTITY] path=%ls sha256=%s hash_source=loaded_module_file",
+        dllPathLength ? dllPath : L"UNRESOLVED", dllHashKnown ? dllSha256 : "UNRESOLVED");
     if (!accepted) {
         Logger::Line("[DISABLED] %s; game probes=0 hotkey actions=0", image.rejection);
         Logger::Close(); InterlockedExchange(&status, 2); return 0;
     }
     Logger::Line("[POLICY] game_state_writes=0 game_function_calls=0 hooks=0 polling_ms=50 passive_sample_ms=1000 focus_gate=game_process module_pinned_until_process_exit=1");
-    Logger::Line("[PROBE_CONTRACT] revision=bound_namespace_payload_v1 embedded_ref_offset=0x24 exact_REF_NAMESPACE_vtable_gate=1 payload_offset=0x18 passive_scope_samples=1");
+    Logger::Line("[PROBE_CONTRACT] revision=r0_recheck_v1 current_CODE_only=1 reference_stride=0x20 record0_receiver_offset=0x18 exact_accessor_gate=1 independent_host_VMACHINE_revalidation=1 field_by_field_rechecks=1 slot_index=0x055f slot_stride=0x10 legacy_CODE_scope_probe=DISABLED");
     auto previous = RuntimeProbe::Capture(image);
     LogSnapshot(image, previous, "startup");
     InterlockedExchange(&status, 1);
@@ -115,7 +163,7 @@ DWORD WINAPI Observe(void*) noexcept {
         if (now - lastSample >= 1000) {
             const auto sample = RuntimeProbe::Capture(image);
             ++samples;
-            LogBindingScope(sample, "passive_sample");
+            LogR0(sample, "passive_sample");
             if (Changed(previous, sample)) {
                 ++changes;
                 Logger::Line("[PASSIVE_CHANGE] sample=%llu changes=%llu correlation=UNRESOLVED not_OnLoad_or_HandlePlayerSwitches_event", samples, changes);

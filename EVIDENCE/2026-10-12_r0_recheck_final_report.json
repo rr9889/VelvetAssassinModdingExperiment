@@ -1,0 +1,364 @@
+{
+  "recorded_utc": "2026-10-12T15:24:48.975406+00:00",
+  "authority": "Authoritative STOP A result for this pass",
+  "head": "0ade08b2409efbe999e7e563535f6d7e28622d2d",
+  "repository_branch": "runtime-outfit-swap",
+  "worktree": "DIRTY on entry and completion; previous work preserved; no commit/push",
+  "dll_path": "C:\\Users\\Admin\\Documents\\VelvetAssassinModdingExperiment\\build\\VelvetSwap-r0-recheck\\Release\\VelvetSwap-R0Recheck.dll",
+  "dll_sha256": "ce20030d388be94eba554f4f823269072ffcc2dc4c32f1cde7163aac01f5bf60",
+  "build_tests": "4/4 CTest; 31 original and 48 R0/storage assertions passed",
+  "clean_process_deployment": {
+    "recorded_utc": "2026-10-12T15:24:48.975406+00:00",
+    "zero_process_baseline": {
+      "recorded_utc": "2026-10-12T15:19:16.9458925Z",
+      "replay_processes": [],
+      "authority": "Read-only Win32_Process inventory before manual deployment"
+    },
+    "fresh_process_inventory": {
+      "recorded_utc": "2026-10-12T15:20:27.8978014Z",
+      "replay_processes": [
+        {
+          "ProcessId": 11040,
+          "CreationDate": "2026-10-12T11:19:55.263764-04:00",
+          "ExecutablePath": "C:\\Users\\Admin\\Documents\\Velvet Assassin\\replay.exe"
+        }
+      ],
+      "authority": "Read-only process inventory during requested clean-process manual deployment"
+    },
+    "start_line": "[2026-10-12T15:20:48.907Z] [observer_tid=34488] [START] VelvetSwap v0.0 x86 observation_only=1 pid=11040 dll_base=0x60D50000 load_utc=2026-10-12T15:20:48.899Z",
+    "dll_identity_line": "[2026-10-12T15:20:48.915Z] [observer_tid=34488] [DLL_IDENTITY] path=C:\\Users\\Admin\\Documents\\VelvetAssassinModdingExperiment\\build\\VelvetSwap-r0-recheck\\Release\\VelvetSwap-R0Recheck.dll sha256=ce20030d388be94eba554f4f823269072ffcc2dc4c32f1cde7163aac01f5bf60 hash_source=loaded_module_file",
+    "identity_line": "[2026-10-12T15:20:48.907Z] [observer_tid=34488] [IDENTITY] path=C:\\Users\\Admin\\Documents\\Velvet Assassin\\replay.exe main_base=0x00400000 module_size=0x00585E84 pe_timestamp=0x49EF137B sha256=9d18ef1a841526c0c91ce8af5b952c46c7ca0a8a6e8d169e99cc78cf34f8c132 result=VERIFIED",
+    "user_confirmation": "done \u2014 fresh process, only R0Recheck loaded",
+    "user_F1_completion": "F1 done",
+    "process_freshness": "RUNTIME-VERIFIED by empty inventory then sole process creation before correct DLL load",
+    "only_new_observer": "User-confirmed; no module inventory is claimed. Earlier process/observers could not survive the recorded zero-process baseline.",
+    "loading_sessions": 1,
+    "game_state_writes": 0,
+    "game_function_calls": 0,
+    "hooks": 0
+  },
+  "observed_CODE_values": [
+    "0x00000000",
+    "0x2701E7A4",
+    "0x270228DC",
+    "0x27029E70",
+    "0x27133188",
+    "0x2724455C",
+    "0x2725239C",
+    "0x273D9FF8",
+    "0x27A6B300",
+    "0x27A6CD8C"
+  ],
+  "CODE_after_recheck_values": [
+    "0x27029CEC",
+    "0x27029E70",
+    "0x27065F50",
+    "0x271326EC",
+    "0x27244864",
+    "0x273D955C",
+    "0x277356C4",
+    "0x27A6B300"
+  ],
+  "R0_values": [
+    "0x0370BD00"
+  ],
+  "independent_valid_R0_samples": 9,
+  "R0_recheck_matrix": {
+    "code": {
+      "same": 2,
+      "changed": 7,
+      "before_values": [
+        "0x2701E7A4",
+        "0x270228DC",
+        "0x27029E70",
+        "0x27133188",
+        "0x2724455C",
+        "0x2725239C",
+        "0x273D9FF8",
+        "0x27A6B300",
+        "0x27A6CD8C"
+      ],
+      "after_values": [
+        "0x27029CEC",
+        "0x27029E70",
+        "0x27065F50",
+        "0x271326EC",
+        "0x27244864",
+        "0x273D955C",
+        "0x277356C4",
+        "0x27A6B300"
+      ]
+    },
+    "code_vtable": {
+      "same": 9,
+      "changed": 0,
+      "before_values": [
+        "0x007E0434"
+      ],
+      "after_values": [
+        "0x007E0434"
+      ]
+    },
+    "ref_table": {
+      "same": 9,
+      "changed": 0,
+      "before_values": [
+        "0x270F53A0",
+        "0x27146440",
+        "0x2742B578",
+        "0x2742C808",
+        "0x2754B1A0",
+        "0x27943928",
+        "0x27943970",
+        "0x2796DCD8",
+        "0x27970D38"
+      ],
+      "after_values": [
+        "0x270F53A0",
+        "0x27146440",
+        "0x2742B578",
+        "0x2742C808",
+        "0x2754B1A0",
+        "0x27943928",
+        "0x27943970",
+        "0x2796DCD8",
+        "0x27970D38"
+      ]
+    },
+    "ref_end": {
+      "same": 9,
+      "changed": 0,
+      "before_values": [
+        "0x270F53C0",
+        "0x27146480",
+        "0x2742B5B8",
+        "0x2742C848",
+        "0x2754B1E0",
+        "0x27943968",
+        "0x279439B0",
+        "0x2796DD18",
+        "0x27970D78"
+      ],
+      "after_values": [
+        "0x270F53C0",
+        "0x27146480",
+        "0x2742B5B8",
+        "0x2742C848",
+        "0x2754B1E0",
+        "0x27943968",
+        "0x279439B0",
+        "0x2796DD18",
+        "0x27970D78"
+      ]
+    },
+    "ref_count": {
+      "same": 9,
+      "changed": 0,
+      "before_values": [
+        "0x00000001",
+        "0x00000002"
+      ],
+      "after_values": [
+        "0x00000001",
+        "0x00000002"
+      ]
+    },
+    "record0": {
+      "same": 9,
+      "changed": 0,
+      "before_values": [
+        "0x270F53A0",
+        "0x27146440",
+        "0x2742B578",
+        "0x2742C808",
+        "0x2754B1A0",
+        "0x27943928",
+        "0x27943970",
+        "0x2796DCD8",
+        "0x27970D38"
+      ],
+      "after_values": [
+        "0x270F53A0",
+        "0x27146440",
+        "0x2742B578",
+        "0x2742C808",
+        "0x2754B1A0",
+        "0x27943928",
+        "0x27943970",
+        "0x2796DCD8",
+        "0x27970D38"
+      ]
+    },
+    "r0": {
+      "same": 9,
+      "changed": 0,
+      "before_values": [
+        "0x0370BD00"
+      ],
+      "after_values": [
+        "0x0370BD00"
+      ]
+    },
+    "host": {
+      "same": 9,
+      "changed": 0,
+      "before_values": [
+        "0x0370BD00"
+      ],
+      "after_values": [
+        "0x0370BD00"
+      ]
+    },
+    "r0_vtable": {
+      "same": 9,
+      "changed": 0,
+      "before_values": [
+        "0x0081FC04"
+      ],
+      "after_values": [
+        "0x0081FC04"
+      ]
+    },
+    "virtual98": {
+      "same": 9,
+      "changed": 0,
+      "before_values": [
+        "0x00459940"
+      ],
+      "after_values": [
+        "0x00459940"
+      ]
+    }
+  },
+  "slot_recheck_matrix": {
+    "host": {
+      "same": 9,
+      "changed": 0
+    },
+    "r0_vtable": {
+      "same": 9,
+      "changed": 0
+    },
+    "virtual98": {
+      "same": 9,
+      "changed": 0
+    },
+    "mode": {
+      "same": 9,
+      "changed": 0
+    },
+    "storage_begin": {
+      "same": 9,
+      "changed": 0
+    },
+    "storage_end": {
+      "same": 9,
+      "changed": 0
+    },
+    "stored_pointer": {
+      "same": 9,
+      "changed": 0
+    },
+    "flags": {
+      "same": 9,
+      "changed": 0
+    },
+    "field9c": {
+      "same": 9,
+      "changed": 0
+    },
+    "control14": {
+      "same": 9,
+      "changed": 0
+    }
+  },
+  "code_turnover": {
+    "status": "RUNTIME-VERIFIED",
+    "samples": 7,
+    "first_before": "0x2725239C",
+    "first_after": "0x27065F50"
+  },
+  "snapshot_classes": {
+    "UNAVAILABLE": 154,
+    "RECEIVER_STABLE_CODE_TURNOVER": 7,
+    "FULL_CHAIN_STABLE": 2
+  },
+  "R0_stability": "RUNTIME-VERIFIED unchanged readable R0/host/vtable/getter in all 9 independently revalidated samples; not lifecycle/ownership/atomicity proof",
+  "R0_equals_host_context": "RUNTIME-VERIFIED both 0x0370BD00 in all 9 valid samples",
+  "R0_vtable": "0x0081FC04",
+  "R0_getter": "0x00459940",
+  "R0_type": "STATIC-CONFIRMED VMACHINE identity; RUNTIME-VERIFIED exact vtable and getter match",
+  "accessor_mode": 1,
+  "accessor_branch": "OWN_STORAGE_COMMON",
+  "field_90": "0x00000000",
+  "field_9c": "0x0370BDA0",
+  "control_14": "0x00000000",
+  "fallback_2c": "0x00000000",
+  "storage_receiver": "0x0370BD00",
+  "storage_begin": "0x2725FE18",
+  "storage_end": "0x272685A8",
+  "storage_bytes": "0x8790",
+  "storage_count": 2169,
+  "storage_stride": "0x10",
+  "index": "0x055f",
+  "index_decimal": 1375,
+  "slot_record": "0x27265408",
+  "slot_flags_dword": "0x001C0001",
+  "slot_flags_semantics": "Native flag byte is low byte 0x01, bit mask2 clear. Dword logged as requested; remaining bytes are not assigned meanings or VMValue tags. control+14==0 bypasses special conversion.",
+  "slot_pointer_field": "0x27265414",
+  "raw_slot_pointer": "0x27631348",
+  "raw_slot_first_word_vtable": "0x007E0534",
+  "passive_formula": "D(D(R0+0xc0)+0x055f*0x10+0x0c), after all receiver/control/bounds/record/final-selection gates. Live: D(0x2725FE18+0x55fc)=D(0x27265414)=0x27631348.",
+  "slot_055f_passive_read_status": "RUNTIME-VERIFIED direct branch safe_read=1 with valid bounds and unchanged final receiver/storage fields in 9 independent samples",
+  "slot_type": "UNRESOLVED; raw first word/vtable observed, no validated type identity in this probe",
+  "reference_candidate": "UNRESOLVED; exact REF_NAMESPACE gate did not match, no payload read attempted",
+  "camera_current_control_identity": "UNRESOLVED; stability and raw vtable alone are insufficient",
+  "execution_thread": "UNRESOLVED; passive observer thread is not a safe game/update-thread handoff",
+  "v0_1": "NO-GO",
+  "exact_single_immediate_acquisition_blocker": "Unvalidated type/reference-payload mapping from slot value 0x27631348 (first word/vtable 0x007E0534) to the live Third_Person_Camera/current-control object.",
+  "remaining_GO_conditions": "Reliable live camera identity and safe game/update-thread execution are both required. The immediate acquisition blocker above is not claimed to be the only remaining v0.1 prerequisite.",
+  "exact_next_bounded_step": "Resolve only the existing static type and reference-payload contract for vtable 0x007E0534, then correlate its referenced object with Third_Person_Camera/current-control using established script/type evidence. No invocation or writes.",
+  "stop_condition": "A",
+  "first_safe_sample_utc": "2026-10-12T15:21:09.320Z",
+  "capture_sha256": "2acd83a60fb8cae197a442a23fe296d32e90bd87898c9a4a8f770671bff24d42",
+  "capture_records": 180,
+  "independent_capture_samples": 163,
+  "passive_records": 159,
+  "passive_span_seconds": 162.965,
+  "snapshot_reasons": {
+    "startup": 1,
+    "F2": 1,
+    "F3": 1,
+    "passive_change": 17,
+    "F1": 1
+  },
+  "prior_failure_diagnosis": "RUNTIME-VERIFIED current-CODE-only recheck failures in this pass. The previous opaque failure remains individually UNRESOLVED; common cause is LIKELY, not retroactively proved.",
+  "evidence_files": [
+    "EVIDENCE/2026-10-12_r0_recheck_build.json",
+    "EVIDENCE/2026-10-12_r0_recheck_deployment.json",
+    "EVIDENCE/2026-10-12_r0_recheck_live.log",
+    "EVIDENCE/2026-10-12_r0_recheck_live.json",
+    "EVIDENCE/2026-10-12_r0_recheck_live_samples.json"
+  ],
+  "limitations": [
+    "Non-atomic guarded observer samples; no lock, ABA exclusion, lifecycle or writable ownership proof",
+    "17 passive_change records repeat existing Capture results; 180 log groups correspond to 163 independent captures",
+    "154 independent captures had no available current CODE; no receiver/storage read was attempted in those cases",
+    "Startup/F1/F2/F3 each logged once; physical press count is not inferred from edges. F1 supplementation kept the same process and DLL",
+    "Critical slot result obtained at first safe sample; only capture completion, offline evidence checks and documentation followed. No further static RE or outfit work",
+    "Read-only observer remains pinned until game process exit; frozen evidence is a cutoff of the append log"
+  ],
+  "game_state_writes": 0,
+  "game_function_calls": 0,
+  "hooks": 0,
+  "executable_edits": 0,
+  "asset_edits": 0,
+  "legacy_CODE_scope_probe": "DISABLED",
+  "historical_hashes_verified_unchanged": {
+    "2026-10-12_code_r0_final_report.json": "4a5fbf305a4b16211ce26b5a0e8cf418aec891d16e1131d2f555a5285fdecead",
+    "2026-10-12_code_r0_live.log": "66575df2a36c42ab023b0d9125b4356b18192dcaf54d6d9f36c7558f1900aa9b",
+    "2026-10-12_code_r0_live_samples.json": "0e2d5bec3f90b0484503e67d11a11070f2dbf00ad08f2a348dee3aee0d9c70c8",
+    "2026-10-12_code_r0_build.json": "e59116f97e8e36df87c3c89ba1baa87783aa812fc8c6ad09c8b5bb6e27cba596",
+    "2026-10-12_slot_055f_storage_result.json": "b4a242dee73b7788a7ae56285aed596fc59ed0451fa383cf120f9e922fce8c53"
+  }
+}

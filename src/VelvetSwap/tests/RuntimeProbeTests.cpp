@@ -68,7 +68,8 @@ int main() {
     put(owner + 0x34, pointer(binding));
     put(binding, pointer(fixture + rva(0x007e0434)));
     put(binding + 0x24, 0xabcdef01);
-    const auto controlledSample = RuntimeProbe::Capture(controlled);
+    // Retain historical assertions in owned fixtures; the DLL leaves this opt-in disabled.
+    const auto controlledSample = RuntimeProbe::Capture(controlled, true);
     check(controlledSample.context.readable && controlledSample.context.raw == pointer(context),
         "synthetic host/context pointer read");
     check(controlledSample.contextMatchesReferenceVtable && controlledSample.contextNamespacePayload.raw == 0x12345678,
@@ -83,7 +84,7 @@ int main() {
     put(payload, 0x87654321);
     put(binding + 0x24, pointer(fixture + rva(0x007de8cc)));
     put(binding + 0x24 + 0x18, pointer(payload));
-    const auto boundScope = RuntimeProbe::Capture(controlled);
+    const auto boundScope = RuntimeProbe::Capture(controlled, true);
     check(boundScope.bindingScopeMatchesReferenceVtable &&
         boundScope.embeddedReference.raw == pointer(binding + 0x24) &&
         boundScope.boundNamespacePayloadCandidate.readable &&
@@ -92,19 +93,19 @@ int main() {
         boundScope.boundNamespacePayloadFirstWord.raw == 0x87654321,
         "exact rebased embedded REF_NAMESPACE gates its +0x18 payload read");
     put(binding + 0x24, 0x007de8cc);
-    const auto unrebasedScope = RuntimeProbe::Capture(controlled);
+    const auto unrebasedScope = RuntimeProbe::Capture(controlled, true);
     check(!unrebasedScope.bindingScopeMatchesReferenceVtable &&
         !unrebasedScope.boundNamespacePayloadCandidate.readable,
         "preferred vtable literal rejected when fixture image is rebased");
     put(binding + 0x24, pointer(fixture + rva(0x007de8cc)));
     put(binding + 0x3c, 0);
-    const auto nullPayload = RuntimeProbe::Capture(controlled);
+    const auto nullPayload = RuntimeProbe::Capture(controlled, true);
     check(nullPayload.boundNamespacePayloadCandidate.readable &&
         nullPayload.boundNamespacePayloadCandidate.raw == 0 &&
         !nullPayload.boundNamespacePayloadFirstWord.readable,
         "null bound payload recorded without following it");
     put(binding + 0x3c, 1);
-    const auto badPayload = RuntimeProbe::Capture(controlled);
+    const auto badPayload = RuntimeProbe::Capture(controlled, true);
     check(badPayload.boundNamespacePayloadCandidate.readable &&
         !badPayload.boundNamespacePayloadFirstWord.readable,
         "unreadable bound payload rejected");
@@ -112,14 +113,14 @@ int main() {
     put(edgeBinding, pointer(fixture + rva(0x007e0434)));
     put(edgeBinding + 0x24, pointer(fixture + rva(0x007de8cc)));
     put(owner + 0x34, pointer(edgeBinding));
-    const auto inaccessiblePayload = RuntimeProbe::Capture(controlled);
+    const auto inaccessiblePayload = RuntimeProbe::Capture(controlled, true);
     check(inaccessiblePayload.bindingScopeMatchesReferenceVtable &&
         !inaccessiblePayload.boundNamespacePayloadCandidate.readable,
         "readable reference vtable cannot bypass inaccessible +0x18 payload");
     put(owner + 0x34, pointer(binding));
     put(context, 0);
     put(binding, 0);
-    const auto wrongTypes = RuntimeProbe::Capture(controlled);
+    const auto wrongTypes = RuntimeProbe::Capture(controlled, true);
     check(!wrongTypes.contextNamespacePayload.readable && !wrongTypes.bindingScopeWord.readable,
         "unknown vtables never enable typed payload reads");
     check(!wrongTypes.embeddedReference.readable &&
