@@ -93,3 +93,11 @@ Documentation checkpoint summarizing the current conversation's prior investigat
 - Investigation is paused by user instruction until explicit authorization to continue.
 
 The timestamp is the documentation checkpoint, not a reconstructed timestamp for each earlier tool call. Original tool transcripts remain in the conversation; these notes are a summary.
+# Executive bounded pass — documentation reconciliation, 2026-10-11/12, Codex
+
+AUTHORIZED: correct stale documentation, enumerate slot 0x055f references, inspect only named camera outfit functions/direct callers and native 0x004b8bf0/0x004c60a0/0x0055da90 as needed. No OpenProcess, privilege changes, game edits, DLL implementation/build or broad VM investigation. Stop at criterion A/B or document the remaining gap.
+
+DISPROVED historical error, preserved: the previous pass called record 0x002e46ec a global `player` and proposed host -> Lookup("player") -> camera acquisition. RUNTIME_CAMERA_ROUTE_PROOF.md establishes it as local index 1 in DoWeaponSelection; that local reads unnamed global slot 0x055f. Current documents now supersede the erroneous acquisition premise. Earlier entries below retain the original history and evidence IDs.
+
+CONFIRMED: branch runtime-outfit-swap. Initial worktree contained existing untracked chat/archive/proof/evidence files; these were preserved. Sandbox exec failed with helper_unknown_error setup refresh errors; approved direct PowerShell was used. REA session is closed at entry. No target process access or execution occurred during reconciliation.
+

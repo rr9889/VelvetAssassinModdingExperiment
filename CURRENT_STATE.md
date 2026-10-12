@@ -5,8 +5,8 @@
 1. CONFIRMED: matching replay.exe session/hash; branch runtime-outfit-swap; no game edits, code, build, or outfit test.
 2. CONFIRMED static: Third_Person_Camera contains Player_Character member `ah`; wrapper name/body offsets 0x245d36/0x245d60.
 3. LIKELY semantics: SetInitialOutfit(choice) writes ah normal choice and calls SetOutfit(NORMAL,false,true); runtime repeated-call safety untested.
-4. CONFIRMED declaration: global `player` references camera class 0x516; corrected HandlePlayerSwitches body 0x33a9e7 conditionally assigns global 0x055f.
-5. LIKELY native acquisition candidate: host 0x8ec408 -> context+4 -> existing global-name lookup for player -> checked namespace-reference unwrapper 0x004cdc00.
+4. DISPROVED: record 0x2e46ec is a global named `player`; it is local index 1 in DoWeaponSelection. CONFIRMED: its body reads global slot 0x055f; HandlePlayerSwitches conditionally writes that slot under a camera-type operand comparison.
+5. SPECULATIVE: native acquisition through slot 0x055f. Its declaring namespace/name, concrete live value and lifetime are unresolved; Lookup("player") is not supported by the local declaration. See RUNTIME_CAMERA_ROUTE_PROOF.md.
 6. FAILED / DISPROVED: FUN_005059e0 is a generic inspection path; it is not an outfit setter or current-player getter.
 7. CONFIRMED generic CODE call boundary 0x00463ce0 -> 0x00461d40 mutates global VM state; thread safety remains unresolved.
 8. FAILED live read: OpenProcess error 5; current camera/Player_Character pointer, safe native wrapper call, and full F1-F5 contract remain unresolved.

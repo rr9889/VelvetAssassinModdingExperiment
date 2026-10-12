@@ -24,11 +24,11 @@ User requested the existing Third_Person_Camera wrapper as the preferred route, 
 
 ### Camera acquisition — precise static candidate, not live proof
 
-- CONFIRMED global declaration `player`, record 0x2e46ec, flags 01 00 14 00, type 0x31, camera class ID 0x516, default ff ff ff ff. This narrows the previous Actor-valued ActivePlayer/PlayerRoot leads.
-- CONFIRMED corrected HandlePlayerSwitches body at 0x33a9e7, 429 bytes: reads global operand 0x000a; gets member 0x87; compares Character method 0x803d result to global 0x0266; conditionally assigns that object to global 0x055f. LIKELY mapping to the typed global player/current controlled camera; exact symbolic global/type mappings and lifecycle clearing remain incomplete.
+- DISPROVED global-declaration interpretation: record 0x2e46ec is local index 1 named `player` in DoWeaponSelection, not a recovered global name. CONFIRMED local type 0x31/class 0x516 and body copy from unnamed global slot 0x055f. RUNTIME_CAMERA_ROUTE_PROOF.md supersedes the previous acquisition claim; the error remains in SESSION_LOG.md.
+- CONFIRMED corrected HandlePlayerSwitches body at 0x33a9e7, 429 bytes: reads global operand 0x000a; gets member 0x87; compares Character method 0x803d result to global 0x0266; conditionally assigns that object to global 0x055f. Third_Person_Camera::GetCharacterType returns the same operand. LIKELY camera-cache semantics; slot name/namespace, concrete live identity and lifecycle clearing remain incomplete.
 - Native host helper 0x004aafb0 returns 0x008ec408 (assembly Evidence `ev_320646b7eed27831e6ae670c00481cfec7645415abf836ea068901739c677633`). Host context is read through +4; native lookup helper 0x004c4030 uses context name-key slot +0xa8 then value slot +0x98 and returns the resulting VM value (`ev_bafd882e8920b81a13d116f63d32faa49c61007ed84719e20521ee184d423e1a`). It is an object lookup helper, not an outfit caller.
 - Native reference-unwrapping evidence: checked REF<NAMESPACE> table 0x007de8cc slot +0x40 points to 0x004cdc00 (`ev_8e9e185a95c1b7e50c2f03251d553ab0fd493c95dbc0bef4ec7ee137edf729e0`). Assembly `MOV EAX,[ECX+0x18]; RET` confirms `Namespace* __thiscall Unwrap(RefNamespace*)` for that type (`ev_1121e79a4b3afc02238ea150293c75b6128f1008b55bb8f8ceec3744b9badb72`). Type/lifetime checks are essential before applying it to a fetched live value.
-- LIKELY candidate: native host -> checked context -> existing lookup for narrow MirString name player -> checked reference unwrap -> camera script namespace -> ah namespace member -> camera outfit wrapper. No fully verified GetCurrentPlayer/GetCurrentCamera native routine, concrete type-validation API, or fixed ah byte offset can be supplied yet. NULL during menus/loading and pointer changes on level load are unknown; serialized defaults are not runtime observations.
+- DISPROVED premise for the former name-lookup candidate: local metadata does not establish a global named player. SPECULATIVE replacement: recover slot 0x055f's owning namespace/key, validate its value and unwrap only as required by its actual type. No verified GetCurrentPlayer/GetCurrentCamera routine or native ah offset exists; NULL/load behavior remains unobserved.
 
 ### FAILED / DISPROVED — earlier player/outfit candidates
 
@@ -51,7 +51,7 @@ Read-only OpenProcess(0x1010) for already-running PID 33896 failed with Windows 
 
 Other failed calls/parser diagnostics and bounded abandoned branches are logged in SESSION_LOG.md. [Evidence index](EVIDENCE/2026-10-11_focused_player_setoutfit_index.md) lists every retained relevant Evidence ID; [session JSON](EVIDENCE/2026-10-11_focused_player_setoutfit_session.json) preserves 232 earlier unique inline records plus the camera follow-up and scoped local outputs. They are custom preservation files, not a fresh REA export. Original transcript remains the source for outputs not retained in persistent bindings.
 
-Exact resume point: validate the typed global player/HandlePlayerSwitches mapping and the existing host-name-lookup/reference-unwrapper candidate, then resolve the existing camera wrapper/ChangeInitialOutfit completion call and safe thread. Do not restart FUN_005059e0, generic scene loading, input discovery, or broad VM investigation. Stop after this checkpoint; no native DLL contract is marked runtime-safe.
+Exact resume point: enumerate unnamed slot 0x055f references, examine the named camera functions/direct callers and established callback phase. Do not use Lookup("player") based on local metadata. Do not restart FUN_005059e0, generic scene loading, input discovery, or broad VM investigation. No native DLL contract is marked runtime-safe.
 
 ## Runtime DLL reconciliation — 2026-10-12 01:34 UTC, Codex
 

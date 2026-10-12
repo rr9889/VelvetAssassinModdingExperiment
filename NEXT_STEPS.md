@@ -6,7 +6,7 @@ Read [RUNTIME_OUTFIT_SWAP_CHECKPOINT.md](RUNTIME_OUTFIT_SWAP_CHECKPOINT.md) sect
 
 Do not continue investigation until explicitly resumed. No game edits, DLL/source/build creation, privilege escalation, or security changes.
 
-Exact resume point if authorized: use the global player declaration at 0x2e46ec (camera class 0x516), corrected HandlePlayerSwitches body at 0x33a9e7, and existing native host 0x004aafb0 / lookup 0x004c4030 / checked reference-unwrapper 0x004cdc00 evidence. Verify the concrete live camera/current-control/lifetime checks; follow its existing SetInitialOutfit(choice) wrapper at script 0x245d60 or stock ChangeInitialOutfit body 0x245ff7 to its apply/completion edge. Resolve a safe existing callable boundary/thread before any outfit-changing DLL test.
+DISPROVED: record 0x2e46ec declares global `player`; it is a DoWeaponSelection local. Read RUNTIME_CAMERA_ROUTE_PROOF.md first. Current explicitly authorized pass: enumerate references to unnamed global slot 0x055f; inspect SetInitialOutfit, ChangeInitialOutfit, StartChangeUniform, HandlePlayerSwitches and their direct callers; reuse the existing 0x004b8bf0 -> 0x004c60a0 -> 0x0055da90 callback evidence. Stop at criterion A or B, or document the precise unresolved contract. No OpenProcess, privilege changes, game edits or DLL build.
 
 Campaign/Pilot/Nightdress camera choices are 0/1/2 while the immediate wrapper calls runtime NORMAL=0. SS is runtime 3 and has a separate guarded stock workflow. F5 restoration is not verified. ah operand 0xaf is a VM member index, not a native byte offset. OpenProcess error 5 is recorded; do not retry through escalation. Generic CODE dispatch evidence is background; do not broaden the VM.
 

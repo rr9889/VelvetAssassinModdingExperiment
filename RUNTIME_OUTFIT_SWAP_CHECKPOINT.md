@@ -22,15 +22,15 @@ Repeated calls: no initialization-only guard appears in the 143-byte wrapper; `b
 
 ### B. Camera acquisition candidate
 
-CONFIRMED serialized declaration: global `player`, record `0x002e46ec`, type `0x31`, referenced class ID `0x0516` (Third_Person_Camera), default `0xffffffff`. This is more specific than the Actor-valued `ActivePlayer` and `PlayerRoot` declarations.
+DISPROVED acquisition premise: record `0x002e46ec` is not a global named `player`; it is local index 1 in DoWeaponSelection. Its type `0x31`, class ID `0x0516` and default `0xffffffff` describe that local. CONFIRMED: the function copies global slot `0x055f` into it. The later RUNTIME_CAMERA_ROUTE_PROOF.md supersedes this checkpoint's former interpretation; SESSION_LOG.md preserves the historical error.
 
-CONFIRMED bytecode: `HandlePlayerSwitches`, body `0x0033a9e7`, 429 bytes, reads global operand `0x000a`, obtains an object through member operand `0x0087`, checks a Character method operand `0x803d` against global `0x0266`, and assigns it to global `0x055f` on the matching branch. LIKELY: this publishes the controlled player as the typed global `player`. Complete global-index and symbolic type-predicate mapping remains unverified; the assignment is conditional and is not proof that this reference is always current or cleared in menus.
+CONFIRMED bytecode: `HandlePlayerSwitches`, body `0x0033a9e7`, 429 bytes, reads global operand `0x000a`, obtains an object through member operand `0x0087`, checks a Character method operand `0x803d` against global `0x0266`, and assigns it to global `0x055f` on the matching branch. Third_Person_Camera::GetCharacterType returns the same operand `0x0266`. LIKELY: the slot caches a controlled camera reference. Its declaring namespace/name and concrete live value remain unresolved; the assignment is conditional and does not establish clearing in menus.
 
 Static native candidate, NOT an approved/live-verified GetCurrentCamera/GetCurrentPlayer implementation:
 
 1. `0x004aafb0`: no-argument helper returns VM host address `0x008ec408` in EAX; caller-style no-argument ABI. It returns a host, not a camera.
 2. Read the host's context pointer at `host+4` (`0x008ec40c`); check for NULL before lookup. The host/context relation is assembly-supported.
-3. `0x004c4030`: `VMValue* __thiscall Lookup(VMHost* ECX, MirString* name)`; uses the context's name-to-key slot `+0xa8` and value slot `+0x98`. Candidate name: `player`. Name lookup uses the game's narrow string object, not a raw char pointer. Missing-name handling can throw; use the already identified non-throwing key lookup/validation if needed.
+3. `0x004c4030`: `VMValue* __thiscall Lookup(VMHost* ECX, MirString* name)`; uses the context's name-to-key slot `+0xa8` and value slot `+0x98`. CONFIRMED helper mechanics; SPECULATIVE application to slot `0x055f` because no owning namespace/global name is recovered. Do not use `player` based on the disproved declaration. Name lookup requires the game's narrow string object and can throw for missing names.
 4. Only after verifying that the returned value has the expected namespace-reference type, unwrap it through virtual slot `+0x40`. For the checked REF<NAMESPACE> vtable `0x007de8cc`, this slot is `0x004cdc00`: `Namespace* __thiscall Unwrap(RefNamespace* ECX)`, returning `[ECX+0x18]` in EAX. This offset is assembly-derived for this reference type, not a camera field offset.
 5. Validate the resulting namespace's concrete camera type, `ah`, wrapper binding, and relationship to the currently controlled actor. No exact validated native routine for those complete checks was established.
 
@@ -73,9 +73,9 @@ The wrapper pushes `[CODE+0x3c]` and CODE* onto global VM state at `0x008e9b90`,
 
 ### G. Remaining blocker and exact resume point
 
-No first outfit-changing DLL test is ready: validate the live `player` namespace/camera relationship, bind its existing one-number wrapper or stock ChangeInitialOutfit entry, and establish a safe execution thread/lifetime and loaded mesh prerequisites. Native scalar-value construction and complete F5 restoration are still unverified if no typed helper removes those needs.
+No first outfit-changing DLL test is ready: resolve unnamed global slot `0x055f` and validate its live camera relationship, bind the existing one-number wrapper or stock ChangeInitialOutfit entry, and establish a safe execution thread/lifetime and loaded mesh prerequisites. Native scalar-value construction and complete F5 restoration are still unverified if no typed helper removes those needs.
 
-On explicit resumption, start with the saved global `player` declaration and corrected HandlePlayerSwitches record, then the already identified host/name-lookup/reference-unwrapper candidate. Resolve only the missing concrete type/current-control checks and existing camera wrapper caller/completion edge. Do not revisit FUN_005059e0 as an outfit path, generic loaders, input discovery, or whole-VM dispatch.
+On explicit resumption, start with the correction in RUNTIME_CAMERA_ROUTE_PROOF.md, enumerate references to unnamed slot `0x055f`, and examine the named camera wrappers/direct callers and established stock callback phase only. The local `player` declaration cannot justify a native global-name lookup. Do not revisit FUN_005059e0 as an outfit path, generic loaders, input discovery, or whole-VM dispatch.
 
 FAILED external observation: replay process PID 33896 was already present; read-only OpenProcess(0x1010) returned Windows error 5 (access denied). No process memory was read, no target invocation performed, and no privilege/security change attempted. No live Player_Character or camera pointer was validated.
 
