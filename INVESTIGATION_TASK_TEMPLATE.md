@@ -1,5 +1,7 @@
 # INVESTIGATION TASK TEMPLATE
 
+> RECONCILIATION: See [RUNTIME_OUTFIT_SWAP_CHECKPOINT.md](RUNTIME_OUTFIT_SWAP_CHECKPOINT.md). SetOutfit examples below are templates, not completed verification or authorization. Its 0x0020ef0b location is script bytecode, not a native VA; the shown cdecl/ECX/EDX signatures, assembly percentages, and test results are unsupported examples. For the next task, use the saved native VM call boundary and evidence-backed object/ABI/thread criteria; do not compile an imagined x86 SetOutfit implementation to validate custom VM bytecode. Current pass creates documentation only, no harness or implementation code.
+
 Use this template for EVERY reverse-engineering task. Copy, fill in ALL fields, commit to repo BEFORE starting work.
 
 ---

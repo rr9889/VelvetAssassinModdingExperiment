@@ -1,5 +1,13 @@
 # Next Steps
 
+## Current instructions — runtime DLL resumption
+
+The current user request supersedes the historical documentation-only pause below. Read [RUNTIME_OUTFIT_SWAP_CHECKPOINT.md](RUNTIME_OUTFIT_SWAP_CHECKPOINT.md) first. Target VelvetSwap.dll, x86/Win32, with the requested F1-F5 controls. This pass reconciles documentation and identity; no game edits or implementation code.
+
+Immediate next milestone: verify the native-to-script SetOutfit invocation contract and live Player_Character lifetime. Reuse the completed archived MirPtr work; start at the exact FUN_005059e0 indirect-call boundary and its recorded object update path, without repeating whole registration/loader/input discovery. Script file offset 0x0020ef0b is not callable native code; initial outfit IDs differ from the reported runtime modes. Require receiver/method/typed arguments/ABI/thread evidence before DLL invocation code, then resolve asset availability and full-state restoration for F1-F5.
+
+Keep all source, builds, logs, and generated documentation inside this repository. Historical instructions below are context, not the current plan.
+
 CONFIRMED milestone: the user successfully tested THE LOST Part 1 with a fresh level start. In aio\levelstructure.aio [level1] (ID=TL_1; SceneName=Levels\\Lost1.scene), Outfit=1 produced Pilot Violette and Outfit=0 produced Campaign Violette. This configuration directly controls the tested outfit selection at level load; no replay.exe patch was required.
 
 Do not execute further investigation or change game files until explicitly instructed. The current request authorizes documentation updates only.

@@ -1,5 +1,7 @@
 # Bytecode Patch Strategy: Runtime Outfit Swap
 
+> SUPERSEDED PLAN: Current scope and checkpoint are [RUNTIME_OUTFIT_SWAP_CHECKPOINT.md](RUNTIME_OUTFIT_SWAP_CHECKPOINT.md): VelvetSwap.dll, x86/Win32, F1-F5, no game edits in this pass. Bytecode insertion, compiler support, and CLI examples below are unimplemented proposals, not proved capabilities. SetOutfit has reported runtime mode semantics distinct from initial Campaign/Pilot/Nightdress IDs. Resolve its existing live object/VM invocation contract before choosing any patch strategy. Generate all files inside the repository.
+
 ## Overview
 
 Target: `src\live3d.mir.bin` — compiled script bytecode containing `Player_Character::SetOutfit` and game logic.

@@ -1,5 +1,13 @@
 # Confirmed
 
+## Runtime DLL reconciliation — 2026-10-12 01:34 UTC, Codex
+
+See [RUNTIME_OUTFIT_SWAP_CHECKPOINT.md](RUNTIME_OUTFIT_SWAP_CHECKPOINT.md). CONFIRMED: current filesystem executable/script hashes match the documented identities; REA opened replay.exe as PE/x86 with Ghidra 12.1.4 and the same hash. No fresh function analysis was performed.
+
+LIKELY, preserved archived report (ARCHIVE/copypaste of last session.txt lines 636-638): SetOutfit has a number and two boolean arguments; its runtime modes are Normal=0, Vision=1, Morphine=2, SS=3. Campaign/Pilot use a separate normal-outfit field; the mode also affects IsCamouflaged. The raw supporting script decoding is not present in this excerpt, so these are not promoted to runtime-confirmed facts. Do not conflate initial Outfit=0/1/2 with runtime modes.
+
+UNRESOLVED: a verified live Player_Character pointer, method resolution, argument/ABI contract, and game-thread invocation point. Saved MirPtr update/call candidates and Evidence IDs are indexed in the checkpoint; registration and generic LoadScene adapters are not a proved SetOutfit API. Earlier unsupported native-signature examples in planning/template files are superseded.
+
 ## Successful in-game test — THE LOST Part 1
 
 Evidence source: the user's explicit report of the successful in-game test. Recorded 2026-10-11 15:13:55 America/Toronto / 19:13:55 UTC; exact execution time was not supplied. This was not a runtime test executed or independently observed by the assistant.

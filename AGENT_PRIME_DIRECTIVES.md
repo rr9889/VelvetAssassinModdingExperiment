@@ -1,5 +1,7 @@
 # RE GROUND TRUTH PROTOCOL: Agent Prime Directives
 
+> RECONCILIATION: Read [RUNTIME_OUTFIT_SWAP_CHECKPOINT.md](RUNTIME_OUTFIT_SWAP_CHECKPOINT.md). The SetOutfit native-address/signature/actor+0x80/VERIFIED examples in this document are illustrative and unsupported; 0x0020ef0b is a custom script-bytecode file offset. Global compiler/calling-convention assumptions and x86 assembly-match percentages do not verify this VM method. Preserve assembly authority for native code and bounded evidence work, using the actual VM records for script claims. Current scope is documentation/identity reconciliation for VelvetSwap.dll, F1-F5, with no code or game edits.
+
 **Foundation**: This document defines how reverse-engineering work achieves maximum fidelity. It establishes an unambiguous hierarchy of truth and prevents the common trap of over-relying on decompiler output.
 
 **Core Principle**: Assembly is law. Decompilation is a hint.

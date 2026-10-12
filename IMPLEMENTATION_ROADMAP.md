@@ -1,5 +1,7 @@
 # Implementation Roadmap: Runtime Hotkey Outfit Swap
 
+> SUPERSEDED PLAN: Follow [RUNTIME_OUTFIT_SWAP_CHECKPOINT.md](RUNTIME_OUTFIT_SWAP_CHECKPOINT.md) for VelvetSwap.dll, x86/Win32, F1-F5. Current milestone is verification of live Player_Character acquisition and the native-to-script SetOutfit contract. Addresses, signatures, global memory, bytecode opcodes, compiler/CLI support, timings, and Ctrl+Q patch steps below are proposals/examples, not implementation evidence. FUN_006140e0 is registration code; script offset 0x0020ef0b is not native executable code. All generated work belongs in this repository; no game files may be modified in the current pass.
+
 **Goal**: Press a hotkey during gameplay to cycle Violette's outfit (Campaign ↔ Pilot ↔ Nightdress) without reloading the level.
 
 **Current State**: Configuration-based outfit selection confirmed working. Now: inject runtime hotkey detection and call `Player_Character::SetOutfit` mid-game.

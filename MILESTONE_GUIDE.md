@@ -1,5 +1,7 @@
 # HOTKEY OUTFIT SWAP MOD: FINAL MILESTONE GUIDE
 
+> SUPERSEDED PLAN: See [RUNTIME_OUTFIT_SWAP_CHECKPOINT.md](RUNTIME_OUTFIT_SWAP_CHECKPOINT.md). Current target is VelvetSwap.dll, x86/Win32, F1-F5. The Ctrl+Q/native-patch steps below are historical proposals, not completed milestones or current authorization. SetOutfit is script bytecode, not a native function at 0x0020ef0b; the shown signature/registers/actor field and verification examples are unsupported. Current blocker is live Player_Character acquisition plus the native-to-script invocation contract. All generated work belongs in the Git repository, never the game directory.
+
 **End State**: Press Ctrl+Q during gameplay → outfit cycles (Campaign ↔ Pilot ↔ Nightdress) visibly in-game.
 
 ---

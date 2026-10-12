@@ -1,5 +1,17 @@
 # Session Log
 
+## 2026-10-12 01:34 UTC / 2026-10-11 21:34 America/Toronto — runtime milestone reconciliation, Codex
+
+AUTHORIZED: user requested document reconciliation, branch/worktree checks, REA binary_session and matching replay.exe identity, a milestone summary and immediate DLL blocker. No game edits, broad RE, or code before reconciliation.
+
+- Read all ten requested documents, session/entry-point notes, and the relevant archived focused pass. Archived lessons record a failed prior runtime-documentation patch; its discoveries were not present in top-level checkpoint files.
+- CONFIRMED: branch runtime-outfit-swap, HEAD cd0b32f; clean entry worktree. No checkout, commit, or push.
+- CONFIRMED: replay.exe is 5,164,544 bytes; filesystem SHA-256 matches 9d18ef1a841526c0c91ce8af5b952c46c7ca0a8a6e8d169e99cc78cf34f8c132. Script hash matches 404f2905e3eb693745d40a4868d6068b784c46661487dbb6cf7cde27cf4ff099.
+- REA 6.4.0 binary_session initially open=false; open_binary used provider_id=ghidra; subsequent session confirmed documented path/hash, PE/x86, Ghidra 12.1.4, run ccb75d1f-9e0d-486a-8b79-0b85287d17ac. No function-analysis query; activity not_observed. close_binary rejected: "MCP tool call requires approval, but approval policy is never"; session remains open. No alternate close route attempted.
+- Preserved archived LIKELY correction: SetOutfit has number/two boolean script arguments and Normal/Vision/Morphine/SS modes; Campaign/Pilot use a separate normal-outfit field. Raw script decoding supporting that report is absent from the saved excerpt; no runtime confirmation claimed.
+- Added RUNTIME_OUTFIT_SWAP_CHECKPOINT.md and supersession notes to current state/findings/plans/templates; clarified FUNCTIONS.csv. Immediate blocker is a verified live Player_Character and native-to-script invocation contract. Existing MirPtr call evidence is indexed for bounded follow-up.
+- No game files modified, game launched, runtime invocation, broad RE, source/build files, or tests. Repository documentation only. Sandbox shell setup failed; approved elevated read commands supplied the filesystem checks.
+
 ## 2026-10-11 15:13:55 America/Toronto / 19:13:55 UTC — successful user-reported in-game test
 
 - Evidence source: user report; exact test time not supplied. Timestamp records this documentation update.

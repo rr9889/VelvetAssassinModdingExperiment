@@ -1,4 +1,10 @@
-Continue the Velvet Assassin player-model / Violette model-selection investigation only when explicitly instructed by the user.
+CURRENT CONTINUATION: Work in C:\Users\Admin\Documents\VelvetAssassinModdingExperiment, branch runtime-outfit-swap. Read RUNTIME_OUTFIT_SWAP_CHECKPOINT.md and current state/findings/function index/session log/next steps first. The historical prompt below is superseded; do not resume generic loader discovery or use the old game-directory research workspace.
+
+Target VelvetSwap.dll, x86/Win32: F1=Campaign, F2=Pilot, F3=Nightdress, F4=SS uniform, F5=restore previous/original. Immediate blocker is the live Player_Character and verified native-to-script SetOutfit contract: method identity, typed arguments, ABI/cleanup, lifetime, safe game-thread execution. Reuse the archived FUN_005059e0/FUN_004ff7b0 evidence and investigate only its exact indirect-call/object boundary when authorized. Script offset 0x0020ef0b is not a native VA. Archived runtime mode/three-argument findings remain LIKELY; initial outfit IDs differ from runtime modes. Do not assume ECX/EDX or actor+0x80.
+
+Use REA binary_session first, verify path/hash, and reuse a matching session. Follow current user scope; no game changes or code until authorized and supported by the reconciled invocation contract. Keep all generated source, builds, logs, evidence, and documentation in this Git repository. No broad loader/input/VM discovery.
+
+HISTORICAL PROMPT (superseded): Continue the Velvet Assassin player-model / Violette model-selection investigation only when explicitly instructed by the user.
 
 First read all documentation in C:\Users\Admin\Documents\Velvet Assassin\VA_RESEARCH, including README.md, CURRENT_STATE.md, FINDINGS.md, FUNCTIONS.csv, SESSION_LOG.md, NEXT_STEPS.md, and the EVIDENCE/BACKUPS READMEs. Treat notes as prior observations, not verified current session state.
 

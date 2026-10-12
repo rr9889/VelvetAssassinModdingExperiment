@@ -1,5 +1,15 @@
 # Current State
 
+## Reconciled runtime DLL milestone — 2026-10-11 21:34 America/Toronto
+
+See [RUNTIME_OUTFIT_SWAP_CHECKPOINT.md](RUNTIME_OUTFIT_SWAP_CHECKPOINT.md) for the authoritative eight-line milestone, identity checks, archived focused work, and next bounded task. Target: VelvetSwap.dll, x86/Win32, F1=Campaign, F2=Pilot, F3=Nightdress, F4=SS, F5=restore previous/original.
+
+CONFIRMED: branch runtime-outfit-swap; clean worktree before this documentation pass; executable/script hashes match documented identities. REA/Ghidra binding was verified without analysis queries. The close request was rejected by client approval policy; session remains open.
+
+UNRESOLVED immediate blocker: live Player_Character acquisition and a verified native-to-script SetOutfit invocation contract (method, typed arguments, ABI, lifetime, safe thread). SetOutfit's file offset is not a native address. LIKELY archived correction: three script arguments and Normal/Vision/Morphine/SS runtime modes; Campaign/Pilot use a separate normal-outfit field. Earlier native-signature milestone examples are unsupported.
+
+Historical checkpoints below retain their original scope and timestamps. Fresh-level config success is not proof of runtime hot swapping. No game files or implementation code were changed in this resumption.
+
 ## Current milestone — successful in-game outfit test
 
 Recorded: 2026-10-11 15:13:55 America/Toronto / 19:13:55 UTC. This is the documentation timestamp; the exact test time was not supplied.
