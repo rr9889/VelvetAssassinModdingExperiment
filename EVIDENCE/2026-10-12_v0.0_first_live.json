@@ -1,0 +1,127 @@
+{
+  "captured_utc": "2026-10-12T04:01:25.572196+00:00",
+  "authority": "live runtime log produced by observation-only DLL; not a debugger trace",
+  "source_log_path": "C:\\Users\\Admin\\Documents\\VelvetAssassinModdingExperiment\\build\\VelvetSwap-v0.0\\logs\\VelvetSwap.log",
+  "capture_path": "C:\\Users\\Admin\\Documents\\VelvetAssassinModdingExperiment\\EVIDENCE\\2026-10-12_v0.0_first_live.log",
+  "capture_sha256": "c35e5516534355e868aff4e3f20cd9911f00f7c844076fb1e624db17e8c0ce48",
+  "capture_bytes": 79248,
+  "start_line": "[2026-10-12T03:56:49.856Z] [observer_tid=27936] [START] VelvetSwap v0.0 x86 observation_only=1 pid=3220 dll_base=0x6B610000 load_utc=2026-10-12T03:56:49.850Z",
+  "identity_line": "[2026-10-12T03:56:49.859Z] [observer_tid=27936] [IDENTITY] path=C:\\Users\\Admin\\Documents\\Velvet Assassin\\replay.exe main_base=0x00400000 module_size=0x00585E84 pe_timestamp=0x49EF137B sha256=9d18ef1a841526c0c91ce8af5b952c46c7ca0a8a6e8d169e99cc78cf34f8c132 result=VERIFIED",
+  "identity": "VERIFIED exact actual executable path and documented SHA-256",
+  "snapshot_count": 53,
+  "snapshot_reasons": {
+    "F3": 7,
+    "F1": 13,
+    "passive_change": 25,
+    "startup": 1,
+    "F2": 7
+  },
+  "hotkey_log_counts": {
+    "F1": 13,
+    "F2": 7,
+    "F3": 7
+  },
+  "values": {
+    "HOST": {
+      "address": [
+        "0x008EC408"
+      ],
+      "context": [
+        "0x0357BD00"
+      ],
+      "enabled": [
+        "0x00000001"
+      ],
+      "context_vtable": [
+        "0x0081FC04"
+      ],
+      "get_value_entry": [
+        "0x00459940"
+      ]
+    },
+    "VM_SAMPLE": {
+      "depth": [
+        "0x00000000",
+        "0x00000001",
+        "0x00000002",
+        "0x00000003",
+        "0x00000004",
+        "0x00000005",
+        "0x00000006",
+        "0x00000008"
+      ],
+      "current_code": [
+        "0x00000000",
+        "0x26EA3138",
+        "0x26EA9E70",
+        "0x26EAFC80",
+        "0x26ED6C94",
+        "0x2725955C",
+        "0x274EBFF4",
+        "0x275B88D4",
+        "0x279BB3A8",
+        "0x279BF664"
+      ],
+      "callback_head": [
+        "0x26E1EE5C"
+      ],
+      "candidate_owner": [
+        "0x26E1EE48"
+      ]
+    },
+    "BINDING_CANDIDATE": {
+      "binding": [
+        "0x279BF664"
+      ],
+      "vtable": [
+        "0x007E0434"
+      ],
+      "matches_CODE": [
+        "1"
+      ],
+      "scope_word": [
+        "0x007DE8CC"
+      ]
+    },
+    "REF_METADATA": {
+      "context_matches_REF_NAMESPACE": [
+        "0"
+      ],
+      "payload": [
+        "UNRESOLVED"
+      ]
+    }
+  },
+  "conclusions": {
+    "CONFIRMED": [
+      "Real target DLL startup and VERIFIED identity; F1/F2/F3 observation snapshots recorded",
+      "Host/context and first callback candidate/binding stable across retained snapshots",
+      "Binding vtable matches CODE; raw CODE+0x24 word equals known REF_NAMESPACE vtable",
+      "Current CODE sometimes equals candidate stored binding while depth is nonzero",
+      "Host context does not match REF_NAMESPACE; payload intentionally unresolved"
+    ],
+    "LIKELY": [
+      "Candidate stored binding participates in stock VM execution",
+      "CODE contains an embedded REF_NAMESPACE at +0x24, consistent with prior static scope reconstruction"
+    ],
+    "UNRESOLVED": [
+      "Actual camera identity, slot 0x055f storage and outfit state",
+      "Actual update-thread ID or callback frequency",
+      "Concrete namespace referenced by bound CODE scope"
+    ]
+  },
+  "next_blocker": "Capture and identify the namespace payload of the CODE-bound reference; scope_word is a vtable address, not the namespace/camera pointer.",
+  "source_evidence_ids": [
+    "ev_63d079e0393f7e915b60a26b517ccef7fafa4baae7d10a54a96bdeec7012dd1b",
+    "ev_d5481ee94d8c60eae30aad76f0cc87c30bf1870c63b3cd3faa5cf4093610fc0a",
+    "ev_cf1790d3209bdb40681f764086560dafc3d501e49b6d5a9279d3521f8ab8ad9c",
+    "ev_1121e79a4b3afc02238ea150293c75b6128f1008b55bb8f8ceec3744b9badb72"
+  ],
+  "limitations": [
+    "Non-atomic passive snapshots sampled by observer worker, not at callback entry",
+    "No direct camera identity evidence; stability is not identity",
+    "First live log does not itself identify level or loading procedure used",
+    "Multiple F1/F2/F3 request edges were recorded; do not describe this as exactly one key press each",
+    "No new game memory reads, source changes, REA calls, hooks or outfit writes during log analysis"
+  ]
+}

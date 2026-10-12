@@ -1,0 +1,4 @@
+LIBRARY VelvetSwap
+EXPORTS
+    VelvetSwapStop=_VelvetSwapStop@4
+    VelvetSwapStatus=_VelvetSwapStatus@4

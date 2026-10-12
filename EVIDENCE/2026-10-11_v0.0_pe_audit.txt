@@ -1,0 +1,279 @@
+Microsoft (R) COFF/PE Dumper Version 14.29.30159.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file build\VelvetSwap-v0.0\Release\VelvetSwap.dll
+
+PE signature found
+
+File Type: DLL
+
+FILE HEADER VALUES
+             14C machine (x86)
+               5 number of sections
+        6ACC57AD time date stamp Sun Oct 11 23:44:45 2026
+               0 file pointer to symbol table
+               0 number of symbols
+              E0 size of optional header
+            2102 characteristics
+                   Executable
+                   32 bit word machine
+                   DLL
+
+OPTIONAL HEADER VALUES
+             10B magic # (PE32)
+           14.29 linker version
+            2800 size of code
+            2200 size of initialized data
+               0 size of uninitialized data
+            2E20 entry point (10002E20)
+            1000 base of code
+            4000 base of data
+        10000000 image base (10000000 to 10008FFF)
+            1000 section alignment
+             200 file alignment
+            6.00 operating system version
+            0.00 image version
+            6.00 subsystem version
+               0 Win32 version
+            9000 size of image
+             400 size of headers
+               0 checksum
+               3 subsystem (Windows CUI)
+            4140 DLL characteristics
+                   Dynamic base
+                   NX compatible
+                   Control Flow Guard
+          100000 size of stack reserve
+            1000 size of stack commit
+          100000 size of heap reserve
+            1000 size of heap commit
+               0 loader flags
+              10 number of directories
+            4FB0 [      6C] RVA [size] of Export Directory
+            501C [      A0] RVA [size] of Import Directory
+            7000 [     1E0] RVA [size] of Resource Directory
+               0 [       0] RVA [size] of Exception Directory
+               0 [       0] RVA [size] of Certificates Directory
+            8000 [     290] RVA [size] of Base Relocation Directory
+            4B6C [      1C] RVA [size] of Debug Directory
+               0 [       0] RVA [size] of Architecture Directory
+               0 [       0] RVA [size] of Global Pointer Directory
+               0 [       0] RVA [size] of Thread Storage Directory
+            4B88 [      40] RVA [size] of Load Configuration Directory
+               0 [       0] RVA [size] of Bound Import Directory
+            4000 [     10C] RVA [size] of Import Address Table Directory
+               0 [       0] RVA [size] of Delay Import Directory
+               0 [       0] RVA [size] of COM Descriptor Directory
+               0 [       0] RVA [size] of Reserved Directory
+
+
+SECTION HEADER #1
+   .text name
+    27E2 virtual size
+    1000 virtual address (10001000 to 100037E1)
+    2800 size of raw data
+     400 file pointer to raw data (00000400 to 00002BFF)
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+60000020 flags
+         Code
+         Execute Read
+
+SECTION HEADER #2
+  .rdata name
+    1730 virtual size
+    4000 virtual address (10004000 to 1000572F)
+    1800 size of raw data
+    2C00 file pointer to raw data (00002C00 to 000043FF)
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+40000040 flags
+         Initialized Data
+         Read Only
+
+  Debug Directories
+
+        Time Type        Size      RVA  Pointer
+    -------- ------- -------- -------- --------
+    6ACC57AD coffgrp      250 00004CA8     38A8
+
+  Section contains the following exports for VelvetSwap.dll
+
+    00000000 characteristics
+    FFFFFFFF time date stamp
+        0.00 version
+           1 ordinal base
+           2 number of functions
+           2 number of names
+
+    ordinal hint RVA      name
+
+          1    0 00001B50 VelvetSwapStatus
+          2    1 00001B60 VelvetSwapStop
+
+  Section contains the following imports:
+
+    bcrypt.dll
+              100040F0 Import Address Table
+              100051AC Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                    D BCryptDestroyHash
+                   1B BCryptFinishHash
+                   23 BCryptHashData
+                    6 BCryptCreateHash
+                    2 BCryptCloseAlgorithmProvider
+                   27 BCryptOpenAlgorithmProvider
+
+    USER32.dll
+              10004078 Import Address Table
+              10005134 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                  121 GetAsyncKeyState
+                  156 GetForegroundWindow
+                  1F4 GetWindowThreadProcessId
+
+    KERNEL32.dll
+              10004000 Import Address Table
+              100050BC Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                  382 IsDebuggerPresent
+                  366 InitializeSListHead
+                  44F QueryPerformanceCounter
+                  389 IsProcessorFeaturePresent
+                  590 TerminateProcess
+                  571 SetUnhandledExceptionFilter
+                  3A8 K32GetModuleInformation
+                  27B GetModuleHandleW
+                  277 GetModuleFileNameW
+                  5D2 VirtualQuery
+                  41B OutputDebugStringW
+                   89 CloseHandle
+                  581 Sleep
+                  21B GetCurrentProcessId
+                   F6 CreateThread
+                  2EC GetSystemTimeAsFileTime
+                  30B GetTickCount64
+                  121 DisableThreadLibraryCalls
+                  27A GetModuleHandleExW
+                  16D FileTimeToSystemTime
+                   CE CreateFileW
+                  1A2 FlushFileBuffers
+                  25C GetFullPathNameW
+                  616 WriteFile
+                  21F GetCurrentThreadId
+                  2EA GetSystemTime
+                  475 ReadFile
+                  21A GetCurrentProcess
+                  5B1 UnhandledExceptionFilter
+
+    VCRUNTIME140.dll
+              10004088 Import Address Table
+              10005144 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                   46 memcpy
+                   1C __current_exception
+                   1D __current_exception_context
+                   35 _except_handler4_common
+                   25 __std_type_info_destroy_list
+                   4F wcsrchr
+                   48 memset
+
+    api-ms-win-crt-string-l1-1-0.dll
+              100040DC Import Address Table
+              10005198 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                   A1 wcscpy_s
+                   54 _wcsnicmp
+                   89 strcpy_s
+                   4A _wcsicmp
+
+    api-ms-win-crt-stdio-l1-1-0.dll
+              100040D0 Import Address Table
+              1000518C Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                    B __stdio_common_vsnprintf_s
+                    F __stdio_common_vsprintf_s
+
+    api-ms-win-crt-runtime-l1-1-0.dll
+              100040A8 Import Address Table
+              10005164 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                   24 _execute_onexit_table
+                   17 _cexit
+                   6A terminate
+                   38 _initterm
+                   39 _initterm_e
+                   41 _seh_filter_dll
+                   19 _configure_narrow_argv
+                   35 _initialize_narrow_environment
+                   36 _initialize_onexit_table
+
+SECTION HEADER #3
+   .data name
+     3B0 virtual size
+    6000 virtual address (10006000 to 100063AF)
+     200 size of raw data
+    4400 file pointer to raw data (00004400 to 000045FF)
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+C0000040 flags
+         Initialized Data
+         Read Write
+
+SECTION HEADER #4
+   .rsrc name
+     1E0 virtual size
+    7000 virtual address (10007000 to 100071DF)
+     200 size of raw data
+    4600 file pointer to raw data (00004600 to 000047FF)
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+40000040 flags
+         Initialized Data
+         Read Only
+
+SECTION HEADER #5
+  .reloc name
+     290 virtual size
+    8000 virtual address (10008000 to 1000828F)
+     400 size of raw data
+    4800 file pointer to raw data (00004800 to 00004BFF)
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+42000040 flags
+         Initialized Data
+         Discardable
+         Read Only
+
+  Summary
+
+        1000 .data
+        2000 .rdata
+        1000 .reloc
+        1000 .rsrc
+        3000 .text

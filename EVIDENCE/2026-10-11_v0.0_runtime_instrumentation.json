@@ -1,0 +1,132 @@
+{
+  "timestamp_utc": "2026-10-12T03:58:37.188543+00:00",
+  "phase": "VelvetSwap v0.0 build and first real-game live capture",
+  "dll_path": "C:\\Users\\Admin\\Documents\\VelvetAssassinModdingExperiment\\build\\VelvetSwap-v0.0\\Release\\VelvetSwap.dll",
+  "dll_sha256": "8b9c8d4bcccabfd36067dc0de3ac5ef4e5bec3a04894f16e336c41174c837f7e",
+  "dll_machine": "0x14c",
+  "dll_optional_magic": "0x10b",
+  "toolchain": "MSVC 19.29.30159 / v142 14.29.30133 / VS Build Tools 2019 / Windows SDK 10.0.19041.0 / Win32 Release / dynamic CRT",
+  "test_result": "3/3 CTest cases passed; guarded memory reads, synthetic metadata gates, SHA-256 vector, wrong host and renamed wrong-hash replay fixture",
+  "test_authority": "isolated fixture only; not real game",
+  "loader": {
+    "name": "Cheat Engine 7.7",
+    "registry_install_location": "C:\\Program Files\\Cheat Engine",
+    "x86_executable": "C:\\Program Files\\Cheat Engine\\cheatengine-i386.exe",
+    "exists": true
+  },
+  "runtime_log_path": "C:\\Users\\Admin\\Documents\\VelvetAssassinModdingExperiment\\build\\VelvetSwap-v0.0\\logs\\VelvetSwap.log",
+  "runtime_capture_status": "CONFIRMED real replay.exe live capture preserved",
+  "real_game_identity_verified": true,
+  "observed_live_values": {
+    "HOST": {
+      "address": [
+        "0x008EC408"
+      ],
+      "context": [
+        "0x0357BD00"
+      ],
+      "enabled": [
+        "0x00000001"
+      ],
+      "context_vtable": [
+        "0x0081FC04"
+      ],
+      "get_value_entry": [
+        "0x00459940"
+      ]
+    },
+    "VM_SAMPLE": {
+      "depth": [
+        "0x00000000",
+        "0x00000001",
+        "0x00000002",
+        "0x00000003",
+        "0x00000004",
+        "0x00000005",
+        "0x00000006",
+        "0x00000008"
+      ],
+      "current_code": [
+        "0x00000000",
+        "0x26EA3138",
+        "0x26EA9E70",
+        "0x26EAFC80",
+        "0x26ED6C94",
+        "0x2725955C",
+        "0x274EBFF4",
+        "0x275B88D4",
+        "0x279BB3A8",
+        "0x279BF664"
+      ],
+      "callback_head": [
+        "0x26E1EE5C"
+      ],
+      "candidate_owner": [
+        "0x26E1EE48"
+      ]
+    },
+    "BINDING_CANDIDATE": {
+      "binding": [
+        "0x279BF664"
+      ],
+      "vtable": [
+        "0x007E0434"
+      ],
+      "matches_CODE": [
+        "1"
+      ],
+      "scope_word": [
+        "0x007DE8CC"
+      ]
+    },
+    "REF_METADATA": {
+      "context_matches_REF_NAMESPACE": [
+        "0"
+      ],
+      "payload": [
+        "UNRESOLVED"
+      ]
+    }
+  },
+  "hook": "NONE",
+  "game_instructions_touched": 0,
+  "game_state_writes": 0,
+  "game_function_calls": 0,
+  "known_probe_addresses": {
+    "host": "0x008ec408",
+    "host_context_offset": "0x4",
+    "host_enabled_offset": "0x8",
+    "invocation_depth": "0x008e9b84",
+    "current_code": "0x008e9b88",
+    "callback_head": "0x008ec5cc",
+    "candidate_owner_adjustment": "-0x14 (LIKELY; saved dispatcher pseudocode)",
+    "binding_offset": "0x34",
+    "CODE_vtable": "0x007e0434",
+    "CODE_scope_word_offset": "0x24 (raw word only)",
+    "REF_NAMESPACE_vtable": "0x007de8cc",
+    "validated_ref_payload_offset": "0x18"
+  },
+  "unresolved": [
+    "slot 0x055f native storage/name/scope",
+    "camera/current-control identity",
+    "native outfit fields",
+    "actual callback/update thread and frequency"
+  ],
+  "source_evidence_ids": [
+    "ev_320646b7eed27831e6ae670c00481cfec7645415abf836ea068901739c677633",
+    "ev_bafd882e8920b81a13d116f63d32faa49c61007ed84719e20521ee184d423e1a",
+    "ev_49356be3f865dec974317bd683c9d7cc621a559f5dc0a1964749cd0d4ac8ee02",
+    "ev_63d079e0393f7e915b60a26b517ccef7fafa4baae7d10a54a96bdeec7012dd1b",
+    "ev_7ccb5de7db34de937523846b681a0d299999d530073ca9fc76798731b51429a3",
+    "ev_d5481ee94d8c60eae30aad76f0cc87c30bf1870c63b3cd3faa5cf4093610fc0a",
+    "ev_1121e79a4b3afc02238ea150293c75b6128f1008b55bb8f8ceec3744b9badb72",
+    "ev_cf1790d3209bdb40681f764086560dafc3d501e49b6d5a9279d3521f8ab8ad9c"
+  ],
+  "build_log": "EVIDENCE/2026-10-11_v0.0_build.log",
+  "tests_log": "EVIDENCE/2026-10-11_v0.0_tests.log",
+  "pe_audit": "EVIDENCE/2026-10-11_v0.0_pe_audit.txt",
+  "next_blocker": "Capture and identify the namespace payload of the CODE-bound reference; scope_word is a vtable address, not the namespace/camera pointer.",
+  "live_evidence": "EVIDENCE/2026-10-12_v0.0_first_live.log",
+  "live_summary": "EVIDENCE/2026-10-12_v0.0_first_live.json",
+  "live_capture_sha256": "c35e5516534355e868aff4e3f20cd9911f00f7c844076fb1e624db17e8c0ce48"
+}
